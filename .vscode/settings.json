@@ -57,6 +57,7 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
+    "*.css": "tailwindcss",
     "string": "cpp",
     "array": "cpp",
     "*.tcc": "cpp",
@@ -64,6 +65,11 @@
     "istream": "cpp",
     "functional": "cpp",
     "tuple": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "deque": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "system_error": "cpp",
+    "iostream": "cpp"
   }
 }

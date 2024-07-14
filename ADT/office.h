@@ -23,7 +23,6 @@ class office : public LinkedList<officeInformation> {
             current = current->next;
         }
     }
-
     ~office() {
         delete head;
     };

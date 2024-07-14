@@ -7,8 +7,14 @@
 #include "structData.h"
 class client : public LinkedList<clientData> {
    private:
+    struct Node {
+        clientData data;
+        Node *next;
+    };
+
     LinkedList<clientData> clientList;
     void getClientRentedSpaces(clientData client);
+    Node *head;
 
    public:
     client();
