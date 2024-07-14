@@ -5,7 +5,7 @@
 #include "../includes/LinkedList.h"
 #include "officeRental.h"
 #include "structData.h"
-class client : public LinkedList<clientData> {
+class client : LinkedList<clientData> {
    private:
     struct Node {
         clientData data;
@@ -13,7 +13,8 @@ class client : public LinkedList<clientData> {
     };
 
     LinkedList<clientData> clientList;
-    void getClientRentedSpaces(clientData client);
+    void getClientRentedSpaces(clientData client);  // temp void
+    int rentedSpaces = 0;
     Node *head;
 
    public:

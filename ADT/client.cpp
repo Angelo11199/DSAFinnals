@@ -2,13 +2,11 @@
 
 #include <iostream>
 
-client::client() {}
-client::~client() {}
+#include "LinkedList.h"
 
-void client::addClient(clientData data) {
-    clientList.add(data);
-}
-// todo : might need to change this. Might cause infinite loop
+client::client() : LinkedList() {};
+
+void client::addClient(clientData data) { LinkedList::add(data); };
 clientData client::getClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
@@ -17,10 +15,10 @@ clientData client::getClient(int clientId) {
         }
         current = current->next;
     }
-    return {};
+    return {};  // return empty clientData struct if not found
 }
 void client::removeClient(int clientId) {
-    Node* current = head->next;
+    Node* current = head;
     while (current != nullptr) {
         if (current->data.clientID == clientId) {
             clientList.remove(current->data);
@@ -31,7 +29,17 @@ void client::removeClient(int clientId) {
 }
 
 void client::printClients() {
+    Node* current = head;
+    while (current != nullptr) {
+        std::cout << "Client ID: " << current->data.clientID << std::endl;
+        std::cout << "Client Name: " << current->data.clientName << std::endl;
+        std::cout << "Client Phone: " << current->data.clientAddress << std::endl;
+        std::cout << "Client Rented Space: " << rentedSpaces << std::endl;
+        getClientRentedSpaces(current->data);
+        current = current->next;
+    }
 }
 
 void client::getClientRentedSpaces(clientData client) {
 }
+client::~client() { delete head; }
