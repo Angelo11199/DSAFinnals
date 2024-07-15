@@ -1,15 +1,26 @@
-//* srtictly for office that are ALREADY RENTED.
 #include "office.h"
 
 #include <iostream>
+#include <vector>
 
-office::office() : LinkedList() {};
+#include "../includes/utils.h"
+#include "fileHandling.h"
 
-void office::addOffice(officeInformation data) { add(data); }
-
-void office::rentOffice(officeInformation data) { remove(data); }
-
-void office::endRental(officeInformation data) { add(data); }
+office::office(int clientID) : LinkedList() {
+    fileHandling file = fileHandling("offices.csv");
+    std::vector<std::string> data = file.readFromFile();
+    for (std::string line : data) {
+        std::vector<std::string> officeData = splitData(line, ',');
+        officeInformation office;
+        office.officeID = std::stoi(officeData[0]);
+        office.officeName = officeData[1];
+        office.officeAddress = officeData[2];
+        office.officePrice = std::stoi(officeData[3]);
+        office.officeSize = officeData[4];
+        office.isRented = officeData[5] == "1";
+        add(office);
+    }
+};
 
 officeInformation office::getOffice(int officeId) {
     typename LinkedList<officeInformation>::Node* current = head;
@@ -21,8 +32,7 @@ officeInformation office::getOffice(int officeId) {
     }
     return officeInformation();
 }
-// returns a list of rented offices
-LinkedList<officeInformation> office::getRentedOffices(int offset = 0) {
+LinkedList<officeInformation> office::getRentedOffices() {
     LinkedList<officeInformation> rentedOfficesList;
     typename LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {
@@ -39,9 +49,10 @@ void LinkedList<officeInformation>::print() {
     while (current != nullptr) {
         std::string isRented = current->data.isRented ? "Yes" : "No";
         std::cout << "Office ID: " << current->data.officeID << std::endl;
+        std::cout << "Office Name: " << current->data.officeName << std::endl;
+        std::cout << "Office Address: " << current->data.officeAddress << std::endl;
         std::cout << "Office Size: " << current->data.officeSize << std::endl;
-        std::cout << "Office Price: " << current->data.officePrice << std::endl;
-        std::cout << "Is Office Rented? " << isRented << std::endl;
+        std::cout << "Price Bought: " << current->data.officePrice << std::endl;
         current = current->next;
     }
 }

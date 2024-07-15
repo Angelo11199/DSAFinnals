@@ -8,13 +8,14 @@ struct officeInformation {
     std::string officeName;
     std::string officeAddress;
     int officePrice;
-    int officeSize;
+    std::string officeSize;
     bool isRented;
 };
 struct clientData {
     int clientID;
     std::string clientName;
     std::string clientAddress;
+    bool isAdmin;
     LinkedList<officeInformation> rentedSpaces;
 };
 struct User {

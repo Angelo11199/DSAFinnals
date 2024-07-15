@@ -11,13 +11,13 @@ class office : public LinkedList<officeInformation> {
     };
 
    public:
-    office();
+    office(int clientID);
     void addOffice(officeInformation data);
     void rentOffice(officeInformation data);
     void endRental(officeInformation data);
     void printOffices();
     officeInformation getOffice(int officeId);
-    LinkedList<officeInformation> getRentedOffices(int offset = 0);
+    LinkedList<officeInformation> getRentedOffices();
     ~office();
 };
 #endif

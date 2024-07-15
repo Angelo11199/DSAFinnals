@@ -1,18 +1,28 @@
 #include "client.h"
 
 #include <iostream>
+#include <vector>
 
+#include "../includes/utils.h"
 #include "LinkedList.h"
-
+#include "fileHandling.h"
+#include "office.h"
 client::client(int clientID) : LinkedList() {
     clientId = clientID;
-    clientData client = getClient(clientID);
-    if (client.clientID == NULL) {
-        // throw error
-    }
-    rented = client.rentedSpaces;
+    fileHandling file = fileHandling("clients.csv");
+    std::vector<std::string> data = file.readFromFile();
+    for (std::string line : data) {
+        std::vector<std::string> clientData = splitData(line, ',');
+        if (clientID == std::stoi(clientData[0])) {
+            loggedClient.clientID = std::stoi(clientData[0]);
+            loggedClient.clientName = clientData[1];
+            loggedClient.clientAddress = clientData[2];
+            loggedClient.isAdmin = std::stoi(clientData[3]) == 1;
+            loggedClient.rentedSpaces = rented = office(clientID).getRentedOffices();
+        }
+        clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
+    };
 };
-
 void client::addClient(clientData data) { add(data); };
 clientData client::getClient(int clientId) {
     Node* current = head;

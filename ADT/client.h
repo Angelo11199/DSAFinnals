@@ -11,6 +11,7 @@ class client : LinkedList<clientData> {
     int clientId = NULL;  // currentlly logged in client
 
    private:
+    clientData loggedClient;
     LinkedList<clientData> clientList;
     Node *head;
     LinkedList<officeInformation> rented;

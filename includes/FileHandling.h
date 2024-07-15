@@ -17,7 +17,11 @@ class fileHandling {
    public:
     fileHandling(string filename) {
         this->filename = filename;
-        init();
+        outFile.open(filename);
+        if (!outFile.is_open()) {
+            cerr << "Unable to create file: " << filename << endl;
+        }
+        outFile.close();
     };
     ~fileHandling() {
         if (outFile.is_open()) {
@@ -43,29 +47,27 @@ class fileHandling {
         }
         outFile.close();
     }
-
-    vector<string> readFromFile() {
-        vector<string> data;
-        string line;
-        inFile.open(filename);
-        if (inFile.is_open()) {
-            while (getline(inFile, line)) {
-                data.push_back(line);
-            }
-        } else {
-            cerr << "Unable to open file for reading: " << filename << endl;
+    std::vector<std::string> fileHandling::readFromFile() {
+        std::ifstream file(filename);
+        if (!file) {
+            throw std::runtime_error("Error opening file");
         }
-        inFile.close();
+
+        std::vector<std::string> data;
+        std::string line;
+        while (std::getline(file, line)) {
+            data.push_back(line);
+        }
+
+        file.close();
+
+        bool isTampered = false;
+        if (isTampered) {
+            throw std::runtime_error("File data is tampered");
+        }
+
         return data;
-    }
-
-    bool init() {
-        outFile.open(filename);
-        if (!outFile.is_open()) {
-            cerr << "Unable to create file: " << filename << endl;
-        }
-        outFile.close();
-    }
+    };
 };
 
 #endif
