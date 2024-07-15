@@ -8,15 +8,11 @@
 class clientRent : public client, LinkedList<officeInformation> {
    private:
     int clientId;
-    struct Node {
-        officeInformation data;
-        Node* next;
-    };
 
    public:
     clientRent(int clientId);
     bool rentOffice(int officeId);
-    officeInformation* getRentedOffices();
+    void ShowAvailableOffices();
     ~clientRent();
 };
 #endif

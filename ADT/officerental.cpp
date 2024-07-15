@@ -1,6 +1,8 @@
 //* shows a list of AVAILABLE (NOT RENTED) offices.
 #include "officeRental.h"
 
+#include <iostream>
+
 #include "office.h"
 clientRent::clientRent(int clientId) : client(clientId), LinkedList<officeInformation>() {};
 bool clientRent::rentOffice(int officeId) {
@@ -14,11 +16,22 @@ bool clientRent::rentOffice(int officeId) {
             return false;
         }
         current->data.isRented = true;
-        addrentedSpaces(current->data);
+        addRentedSpace(current->data);
         return true;
     }
     return false;
 }
-officeInformation* getRentedOffices() {
-    return getRentedOffices();
+void clientRent::ShowAvailableOffices() {
+    LinkedList<officeInformation>::Node* current = LinkedList<officeInformation>::head;
+    while (current != nullptr) {
+        if (!current->data.isRented) {
+            std::cout << "Office ID: " << current->data.officeID << std::endl;
+            std::cout << "Office Size: " << current->data.officeSize << std::endl;
+            std::cout << "Office Price: " << current->data.officePrice << std::endl;
+        }
+        current = current->next;
+    }
+}
+clientRent::~clientRent() {
+    delete LinkedList<officeInformation>::head;
 }
