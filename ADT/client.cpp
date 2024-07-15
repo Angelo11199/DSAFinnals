@@ -7,19 +7,17 @@
 client::client(int clientID) : LinkedList() {
     clientId = clientID;
     clientData client = getClient(clientID);
-    // check if clientId exists
     if (client.clientID == NULL) {
         // throw error
     }
+    rented = client.rentedSpaces;
 };
 
 void client::addClient(clientData data) { add(data); };
 clientData client::getClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
-        if (current->data.clientID == clientId) {
-            return current->data;
-        }
+        if (current->data.clientID == clientId) return current->data;
         current = current->next;
     }
     return {};
@@ -50,19 +48,19 @@ void client::printClients() {
         std::cout << "Client ID: " << current->data.clientID << std::endl;
         std::cout << "Client Name: " << current->data.clientName << std::endl;
         std::cout << "Client Phone: " << current->data.clientAddress << std::endl;
-        LinkedList<officeInformation> rentedSpaces = getClientRentedSpaces(current->data.clientID);
-        std::cout << "Client Rented Space: " << rentedSpaces.getSize() << std::endl;
+        std::cout << "Client Rented Space: " << rented.getSize() << std::endl;
         current = current->next;
     }
 }
-LinkedList<officeInformation> client::getClientRentedSpaces(int clientId) {
+void client::addRentedSpace(officeInformation data) { rented.add(data); };
+void client::changeClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
         if (current->data.clientID == clientId) {
-            return current->data.rentedSpaces;
+            current->data = getClient(clientId);
+            break;
         }
         current = current->next;
     }
-    return LinkedList<officeInformation>();
 }
 client::~client() { delete head; }

@@ -7,22 +7,21 @@
 #include "officeRental.h"
 #include "structData.h"
 class client : LinkedList<clientData> {
-   private:
-    struct Node {
-        clientData data;
-        Node *next;
-    };
+   protected:
     int clientId = NULL;  // currentlly logged in client
+
+   private:
     LinkedList<clientData> clientList;
-    LinkedList<officeInformation> getClientRentedSpaces(int clientId);
-    int rentedSpaces = 0;
     Node *head;
+    LinkedList<officeInformation> rented;
 
    public:
     client(int clientId);
     ~client();
     void addClient(clientData data);
+    void addRentedSpace(officeInformation data);
     clientData getClient(int clientId);
+    void changeClient(int clientId);
     void removeClient(int data);
     void printClients();
 };

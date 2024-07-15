@@ -2,18 +2,22 @@
 #include "officeRental.h"
 
 #include "office.h"
-clientRent::clientRent(int clientId) : client(clientId) {
-    // enter file handling here. where it will read to availableOffices.csv
-    this->clientId = clientId;
-};
-bool rentOffice(int officeId) {
-    officeInformation office = getOffice(officeId);
-    if (office.isRented) {
-        return false;
+clientRent::clientRent(int clientId) : client(clientId), LinkedList<officeInformation>() {};
+bool clientRent::rentOffice(int officeId) {
+    LinkedList<officeInformation>::Node* current = LinkedList<officeInformation>::head;
+    while (current != nullptr) {
+        if (current->data.officeID != officeId) {
+            current = current->next;
+            continue;
+        }
+        if (current->data.isRented) {
+            return false;
+        }
+        current->data.isRented = true;
+        addrentedSpaces(current->data);
+        return true;
     }
-    office.isRented = true;
-    rentOffice(office);
-    return true;
+    return false;
 }
 officeInformation* getRentedOffices() {
     return getRentedOffices();
