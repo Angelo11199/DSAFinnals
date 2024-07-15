@@ -1,3 +1,4 @@
+//* customer parent
 #ifndef CLIENT_H
 #define CLIENT_H
 #include <string>
@@ -11,14 +12,14 @@ class client : LinkedList<clientData> {
         clientData data;
         Node *next;
     };
-
+    int clientId = NULL;  // currentlly logged in client
     LinkedList<clientData> clientList;
-    void getClientRentedSpaces(clientData client);  // temp void
+    LinkedList<officeInformation> getClientRentedSpaces(int clientId);
     int rentedSpaces = 0;
     Node *head;
 
    public:
-    client();
+    client(int clientId);
     ~client();
     void addClient(clientData data);
     clientData getClient(int clientId);

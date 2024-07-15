@@ -8,8 +8,6 @@ class LinkedList {
         Node* next;
     };
     Node* head;
-
-   private:
     Node* tail;
     int size;
 

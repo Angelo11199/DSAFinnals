@@ -2,29 +2,22 @@
 #define OFFICE_H
 #include "../includes/LinkedList.h"
 #include "structData.h"
+// responsible for storing office data. checking if an office is rented or not as well.
 class office : public LinkedList<officeInformation> {
    private:
-    int officeId;
-    int officeSize;
-    int officePrice;
-    bool isRented;
+    struct Node {
+        officeInformation data;
+        Node* next;
+    };
 
    public:
-    office() {}
-    void addOffice(officeInformation data) { LinkedList<officeInformation>::add(data); }
-    void rentOffice(officeInformation data) { LinkedList<officeInformation>::remove(data); }
-    void endRental(officeInformation data) { LinkedList<officeInformation>::add(data); }
-    officeInformation getOffice(int officeId) {
-        Node* current = head;
-        while (current != nullptr) {
-            if (current->data.officeID == officeId) {
-                return current->data;
-            }
-            current = current->next;
-        }
-    }
-    ~office() {
-        delete head;
-    };
+    office();
+    void addOffice(officeInformation data);
+    void rentOffice(officeInformation data);
+    void endRental(officeInformation data);
+    void printOffices();
+    officeInformation getOffice(int officeId);
+    LinkedList<officeInformation> getRentedOffices(int offset = 0);
+    ~office();
 };
 #endif

@@ -1,7 +1,7 @@
 #ifndef STRUCTDATA_H
 #define STRUCTDATA_H
 #include <string>
-
+// Data types for the program. Just to have a unified place to store  all data types plus intellisene support
 #include "../includes/LinkedList.h"
 struct officeInformation {
     int officeID;
