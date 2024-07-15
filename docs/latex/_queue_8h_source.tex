@@ -1,0 +1,84 @@
+\doxysection{Queue.\+h}
+\hypertarget{_queue_8h_source}{}\label{_queue_8h_source}\index{includes/Queue.h@{includes/Queue.h}}
+\mbox{\hyperlink{_queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ QUEUE\_H}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ QUEUE\_H}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00003}00003\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00004}\mbox{\hyperlink{class_queue}{00004}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_queue}{Queue}}\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00005}00005\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00007}00007\ \ \ \ \ \ \ \ \ T\ data;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00008}00008\ \ \ \ \ \ \ \ \ Node*\ next;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00009}00009\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00010}00010\ \ \ \ \ Node*\ head;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00011}00011\ \ \ \ \ Node*\ tail;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00014}00014\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00015}\mbox{\hyperlink{class_queue_af73bb29c868f7b37f369c668f114bd9f}{00015}}\ \ \ \ \ \mbox{\hyperlink{class_queue_af73bb29c868f7b37f369c668f114bd9f}{Queue}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00016}00016\ \ \ \ \ \ \ \ \ head\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ tail\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00020}\mbox{\hyperlink{class_queue_aa7eef1b427e24555780505de20e9acbc}{00020}}\ \ \ \ \ \mbox{\hyperlink{class_queue_aa7eef1b427e24555780505de20e9acbc}{\string~Queue}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ Node*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ Node*\ next;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ next\ =\ current-\/>next;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ current;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ next;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00029}\mbox{\hyperlink{class_queue_a02473fd094f2ad74b86c48f5af35c2a2}{00029}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_queue_a02473fd094f2ad74b86c48f5af35c2a2}{enqueue}}(T\ dataStruct)\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ Node*\ newNode\ =\ \textcolor{keyword}{new}\ Node;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ newNode-\/>data\ =\ dataStruct;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ newNode-\/>next\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ newNode;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ tail\ =\ newNode;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ tail-\/>next\ =\ newNode;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ tail\ =\ newNode;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ size++;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00042}\mbox{\hyperlink{class_queue_a25918244eb1e926c3958331a2cb33dac}{00042}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_queue_a25918244eb1e926c3958331a2cb33dac}{dequeue}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ Node*\ temp\ =\ head;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ head\ =\ head-\/>next;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ size-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00051}\mbox{\hyperlink{class_queue_a4d1b288024e0881880b2e915bc5498bf}{00051}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_queue_a4d1b288024e0881880b2e915bc5498bf}{print}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ Node*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ current-\/>data\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00059}\mbox{\hyperlink{class_queue_aefc2563a28b93c8216ced448158ffebf}{00059}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_queue_aefc2563a28b93c8216ced448158ffebf}{getSize}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00062}\mbox{\hyperlink{class_queue_a515bd72c9d7d2bc12add78c0d2e79762}{00062}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_queue_a515bd72c9d7d2bc12add78c0d2e79762}{isEmpty}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size\ ==\ 0;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00065}\mbox{\hyperlink{class_queue_a8b5b32ea305ed921bd06ab62bd53bc1b}{00065}}\ \ \ \ \ T\ \mbox{\hyperlink{class_queue_a8b5b32ea305ed921bd06ab62bd53bc1b}{front}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head-\/>data;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00071}\mbox{\hyperlink{class_queue_adefb0ff29eae5f2f92397fa44fca396f}{00071}}\ \ \ \ \ T\ \mbox{\hyperlink{class_queue_adefb0ff29eae5f2f92397fa44fca396f}{back}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tail\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tail-\/>data;}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00077}00077\ \};}
+\DoxyCodeLine{\Hypertarget{_queue_8h_source_l00078}00078\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

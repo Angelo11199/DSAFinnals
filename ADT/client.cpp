@@ -7,6 +7,12 @@
 #include "LinkedList.h"
 #include "fileHandling.h"
 #include "office.h"
+/**
+ * @brief Construct a new client::client object with the client ID
+ * @class client
+ *
+ * @param clientID int
+ */
 client::client(int clientID) : LinkedList() {
     clientId = clientID;
     fileHandling file = fileHandling("clients.csv");
@@ -23,6 +29,13 @@ client::client(int clientID) : LinkedList() {
         clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
     };
 };
+/**
+ * @brief add a client to the client list with the selected data structure
+ * @class client
+ * @param data clientData
+ *
+ * @return void
+ */
 void client::addClient(clientData data) { add(data); };
 clientData client::getClient(int clientId) {
     Node* current = head;
@@ -32,6 +45,11 @@ clientData client::getClient(int clientId) {
     }
     return {};
 }
+/**
+ * @brief remove a client from the client list
+ *
+ * @param clientId
+ */
 void client::removeClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {

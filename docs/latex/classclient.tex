@@ -1,0 +1,181 @@
+\doxysection{client Class Reference}
+\hypertarget{classclient}{}\label{classclient}\index{client@{client}}
+
+
+Construct a new \doxylink{classclient_a73c905f01932e6f5411930241b96c09f}{client\+::client} object with the client ID.  
+
+
+
+
+{\ttfamily \#include $<$client.\+h$>$}
+
+Inheritance diagram for client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classclient}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclient_a73c905f01932e6f5411930241b96c09f}{client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
+\item 
+\mbox{\hyperlink{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9}{\texorpdfstring{$\sim$}{\string~}client}} ()
+\item 
+void \mbox{\hyperlink{classclient_a9f71dbfc5651b32d3b1f120acd2550a4}{add\+Client}} (\mbox{\hyperlink{structclient_data}{client\+Data}} data)
+\begin{DoxyCompactList}\small\item\em add a client to the client list with the selected data structure \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclient_aa2e50f0061a672960762e9d17ea4fbc8}{add\+Rented\+Space}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data)
+\item 
+\mbox{\hyperlink{structclient_data}{client\+Data}} \mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{get\+Client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
+\item 
+void \mbox{\hyperlink{classclient_adb9e839f07bd89b82a16b2aefac14837}{change\+Client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
+\item 
+void \mbox{\hyperlink{classclient_a8a6629a2513487793f12ccc02ea935c4}{remove\+Client}} (int data)
+\begin{DoxyCompactList}\small\item\em remove a client from the client list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclient_a1cfaa24b1f47f7c2035549f874b69ea1}{print\+Clients}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Construct a new \doxylink{classclient_a73c905f01932e6f5411930241b96c09f}{client\+::client} object with the client ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+ID} & int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{client_8h_source_l00009}{9}} of file \mbox{\hyperlink{client_8h_source}{client.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classclient_a73c905f01932e6f5411930241b96c09f}\index{client@{client}!client@{client}}
+\index{client@{client}!client@{client}}
+\doxysubsubsection{\texorpdfstring{client()}{client()}}
+{\footnotesize\ttfamily \label{classclient_a73c905f01932e6f5411930241b96c09f} 
+client\+::client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
+
+\Hypertarget{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9}\index{client@{client}!````~client@{\texorpdfstring{$\sim$}{\string~}client}}
+\index{````~client@{\texorpdfstring{$\sim$}{\string~}client}!client@{client}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}client()}{\string~client()}}
+{\footnotesize\ttfamily \label{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9} 
+client\+::\texorpdfstring{$\sim$}{\string~}client (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classclient_a9f71dbfc5651b32d3b1f120acd2550a4}\index{client@{client}!addClient@{addClient}}
+\index{addClient@{addClient}!client@{client}}
+\doxysubsubsection{\texorpdfstring{addClient()}{addClient()}}
+{\footnotesize\ttfamily \label{classclient_a9f71dbfc5651b32d3b1f120acd2550a4} 
+void client\+::add\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structclient_data}{client\+Data}}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+add a client to the client list with the selected data structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \doxylink{structclient_data}{client\+Data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
+
+\Hypertarget{classclient_aa2e50f0061a672960762e9d17ea4fbc8}\index{client@{client}!addRentedSpace@{addRentedSpace}}
+\index{addRentedSpace@{addRentedSpace}!client@{client}}
+\doxysubsubsection{\texorpdfstring{addRentedSpace()}{addRentedSpace()}}
+{\footnotesize\ttfamily \label{classclient_aa2e50f0061a672960762e9d17ea4fbc8} 
+void client\+::add\+Rented\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoffice_information}{office\+Information}}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
+
+\Hypertarget{classclient_adb9e839f07bd89b82a16b2aefac14837}\index{client@{client}!changeClient@{changeClient}}
+\index{changeClient@{changeClient}!client@{client}}
+\doxysubsubsection{\texorpdfstring{changeClient()}{changeClient()}}
+{\footnotesize\ttfamily \label{classclient_adb9e839f07bd89b82a16b2aefac14837} 
+void client\+::change\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
+
+\Hypertarget{classclient_aa7eb5b91b3398910fe41ae20bac16714}\index{client@{client}!getClient@{getClient}}
+\index{getClient@{getClient}!client@{client}}
+\doxysubsubsection{\texorpdfstring{getClient()}{getClient()}}
+{\footnotesize\ttfamily \label{classclient_aa7eb5b91b3398910fe41ae20bac16714} 
+\mbox{\hyperlink{structclient_data}{client\+Data}} client\+::get\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
+
+\Hypertarget{classclient_a1cfaa24b1f47f7c2035549f874b69ea1}\index{client@{client}!printClients@{printClients}}
+\index{printClients@{printClients}!client@{client}}
+\doxysubsubsection{\texorpdfstring{printClients()}{printClients()}}
+{\footnotesize\ttfamily \label{classclient_a1cfaa24b1f47f7c2035549f874b69ea1} 
+void client\+::print\+Clients (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
+
+\Hypertarget{classclient_a8a6629a2513487793f12ccc02ea935c4}\index{client@{client}!removeClient@{removeClient}}
+\index{removeClient@{removeClient}!client@{client}}
+\doxysubsubsection{\texorpdfstring{removeClient()}{removeClient()}}
+{\footnotesize\ttfamily \label{classclient_a8a6629a2513487793f12ccc02ea935c4} 
+void client\+::remove\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
+
+
+
+remove a client from the client list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Id} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}\index{client@{client}!clientId@{clientId}}
+\index{clientId@{clientId}!client@{client}}
+\doxysubsubsection{\texorpdfstring{clientId}{clientId}}
+{\footnotesize\ttfamily \label{classclient_a75855c00fdfc491d5ec5ecf1508db6eb} 
+int client\+::client\+Id = NULL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{client_8h_source_l00011}{11}} of file \mbox{\hyperlink{client_8h_source}{client.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ADT/\mbox{\hyperlink{client_8h}{client.\+h}}\item 
+ADT/\mbox{\hyperlink{client_8cpp}{client.\+cpp}}\end{DoxyCompactItemize}

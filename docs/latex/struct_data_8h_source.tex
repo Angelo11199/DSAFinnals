@@ -1,0 +1,33 @@
+\doxysection{struct\+Data.\+h}
+\hypertarget{struct_data_8h_source}{}\label{struct_data_8h_source}\index{ADT/structData.h@{ADT/structData.h}}
+\mbox{\hyperlink{struct_data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ STRUCTDATA\_H}}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ STRUCTDATA\_H}}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00004}00004\ \textcolor{comment}{//\ Data\ types\ for\ the\ program.\ Just\ to\ have\ a\ unified\ place\ to\ store\ \ all\ data\ types\ plus\ intellisene\ support}}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_linked_list_8h}{../includes/LinkedList.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00006}\mbox{\hyperlink{structoffice_information}{00006}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structoffice_information}{officeInformation}}\ \{}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00007}\mbox{\hyperlink{structoffice_information_a89e3034e7f240ca9513ec67e12e5832c}{00007}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structoffice_information_a89e3034e7f240ca9513ec67e12e5832c}{officeID}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00008}\mbox{\hyperlink{structoffice_information_a1777759322428f573a31f81100c637f5}{00008}}\ \ \ \ \ std::string\ \mbox{\hyperlink{structoffice_information_a1777759322428f573a31f81100c637f5}{officeName}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00009}\mbox{\hyperlink{structoffice_information_a3d12d9835d989b693ee00442400f5170}{00009}}\ \ \ \ \ std::string\ \mbox{\hyperlink{structoffice_information_a3d12d9835d989b693ee00442400f5170}{officeAddress}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00010}\mbox{\hyperlink{structoffice_information_af96310199f49ab6c7c2a122606c5b1d8}{00010}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structoffice_information_af96310199f49ab6c7c2a122606c5b1d8}{officePrice}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00011}\mbox{\hyperlink{structoffice_information_a2eda87bd6168bb26af8e8cc67e3703a6}{00011}}\ \ \ \ \ std::string\ \mbox{\hyperlink{structoffice_information_a2eda87bd6168bb26af8e8cc67e3703a6}{officeSize}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00012}\mbox{\hyperlink{structoffice_information_a8dc545ed9d6125a55d8562ca04d3e18b}{00012}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structoffice_information_a8dc545ed9d6125a55d8562ca04d3e18b}{isRented}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00013}00013\ \};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00014}\mbox{\hyperlink{structclient_data}{00014}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structclient_data}{clientData}}\ \{}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00015}\mbox{\hyperlink{structclient_data_ad5ffdc829ff6ac86ecba4294a973dde8}{00015}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structclient_data_ad5ffdc829ff6ac86ecba4294a973dde8}{clientID}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00016}\mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{00016}}\ \ \ \ \ std::string\ \mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{clientName}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00017}\mbox{\hyperlink{structclient_data_af291f8f1bdafcf0d81caa96ed7bb5a1e}{00017}}\ \ \ \ \ std::string\ \mbox{\hyperlink{structclient_data_af291f8f1bdafcf0d81caa96ed7bb5a1e}{clientAddress}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00018}\mbox{\hyperlink{structclient_data_aa7d4e5bdebb195966e8a52b9c9afe443}{00018}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structclient_data_aa7d4e5bdebb195966e8a52b9c9afe443}{isAdmin}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00019}\mbox{\hyperlink{structclient_data_a960edd7aca53bfb60668bbe5024f8cf4}{00019}}\ \ \ \ \ \mbox{\hyperlink{class_linked_list}{LinkedList<officeInformation>}}\ \mbox{\hyperlink{structclient_data_a960edd7aca53bfb60668bbe5024f8cf4}{rentedSpaces}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00020}00020\ \};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00021}\mbox{\hyperlink{struct_user}{00021}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_user}{User}}\ \{}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00022}\mbox{\hyperlink{struct_user_aacbb807e514280f69e00bec7d71f3aee}{00022}}\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_user_aacbb807e514280f69e00bec7d71f3aee}{username}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00023}\mbox{\hyperlink{struct_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{00023}}\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00024}\mbox{\hyperlink{struct_user_a2ec7c3e3fddee7bd3d9ef64f7df3c808}{00024}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_user_a2ec7c3e3fddee7bd3d9ef64f7df3c808}{role}};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00025}00025\ \};}
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{struct_data_8h_source_l00027}00027\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
