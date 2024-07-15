@@ -18,6 +18,7 @@ office::office(int clientID) : LinkedList() {
         office.officePrice = std::stoi(officeData[3]);
         office.officeSize = officeData[4];
         office.isRented = officeData[5] == "1";
+        if (office.officeID != clientID) continue;
         add(office);
     }
 };
