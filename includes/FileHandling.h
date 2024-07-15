@@ -16,6 +16,8 @@ class fileHandling {
 
    public:
     fileHandling(string filename) {
+        this->filename = filename;
+        init();
     };
     ~fileHandling() {
         if (outFile.is_open()) {
@@ -25,11 +27,17 @@ class fileHandling {
             inFile.close();
         }
     }
-
-    void writeToFile(const string& data) {
+    template <typename T, typename... Args>
+    void writeToFile(const T& first, const Args&... args) {
         outFile.open(filename, ios::app);
         if (outFile.is_open()) {
-            outFile << data << endl;
+            outFile << first << ",";
+            if constexpr (sizeof...(args) > 0) {
+                outFile << ",";
+                writeToFile(args...);
+            } else {
+                outFile << endl;
+            }
         } else {
             cerr << "Unable to open file for writing: " << filename << endl;
         }
@@ -51,7 +59,7 @@ class fileHandling {
         return data;
     }
 
-    void init() {
+    bool init() {
         outFile.open(filename);
         if (!outFile.is_open()) {
             cerr << "Unable to create file: " << filename << endl;
