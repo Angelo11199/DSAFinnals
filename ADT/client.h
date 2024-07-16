@@ -4,11 +4,10 @@
 #include <string>
 
 #include "../includes/LinkedList.h"
-#include "officeRental.h"
-#include "structData.h"
+#include "./structData.h"
 class client : LinkedList<clientData> {
    protected:
-    int clientId = NULL;  // currentlly logged in client
+    int clientId = 0;  // currentlly logged in client
 
    private:
     clientData loggedClient;
@@ -18,6 +17,7 @@ class client : LinkedList<clientData> {
 
    public:
     client(int clientId);
+    client();
     ~client();
     void addClient(clientData data);
     void addRentedSpace(officeInformation data);

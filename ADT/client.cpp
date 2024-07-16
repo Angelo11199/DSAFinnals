@@ -1,12 +1,14 @@
-#include "client.h"
+#ifndef CLIENT_CPP
+#define CLIENT_CPP
+#include "./client.h"
 
 #include <iostream>
 #include <vector>
 
+#include "../includes/FileHandling.h"
+#include "../includes/LinkedList.h"
 #include "../includes/utils.h"
-#include "LinkedList.h"
-#include "fileHandling.h"
-#include "office.h"
+#include "./office.h"
 /**
  * @brief Construct a new client::client object with the client ID
  * @class client
@@ -20,12 +22,20 @@ client::client(int clientID) : LinkedList() {
     for (std::string line : data) {
         std::vector<std::string> clientData = splitData(line, ',');
         if (clientID == std::stoi(clientData[0])) {
-            loggedClient.clientID = std::stoi(clientData[0]);
+            loggedClient.id = std::stoi(clientData[0]);
             loggedClient.clientName = clientData[1];
             loggedClient.clientAddress = clientData[2];
             loggedClient.isAdmin = std::stoi(clientData[3]) == 1;
             loggedClient.rentedSpaces = rented = office(clientID).getRentedOffices();
         }
+        clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
+    };
+};
+client::client() : LinkedList() {
+    fileHandling file = fileHandling("clients.csv");
+    std::vector<std::string> data = file.readFromFile();
+    for (std::string line : data) {
+        std::vector<std::string> clientData = splitData(line, ',');
         clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
     };
 };
@@ -40,7 +50,7 @@ void client::addClient(clientData data) { add(data); };
 clientData client::getClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
-        if (current->data.clientID == clientId) return current->data;
+        if (current->data.id == clientId) return current->data;
         current = current->next;
     }
     return {};
@@ -53,27 +63,27 @@ clientData client::getClient(int clientId) {
 void client::removeClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
-        if (current->data.clientID == clientId) {
+        if (current->data.id == clientId) {
             clientList.remove(current->data);
             break;
         }
         current = current->next;
     }
 }
-void LinkedList<officeInformation>::print() {
-    Node* current = head;
-    while (current != nullptr) {
-        std::cout << "Office ID: " << current->data.officeID << std::endl;
-        std::cout << "Office Size: " << current->data.officeSize << std::endl;
-        std::cout << "Office Price: " << current->data.officePrice << std::endl;
-        std::cout << "Is Office Rented? " << current->data.isRented << std::endl;
-        current = current->next;
-    }
-}
+// void LinkedList<officeInformation>::print() {
+//     Node* current = head;
+//     while (current != nullptr) {
+//         std::cout << "Office ID: " << current->data.officeID << std::endl;
+//         std::cout << "Office Size: " << current->data.officeSize << std::endl;
+//         std::cout << "Office Price: " << current->data.officePrice << std::endl;
+//         std::cout << "Is Office Rented? " << current->data.isRented << std::endl;
+//         current = current->next;
+//     }
+// }
 void client::printClients() {
     Node* current = head;
     while (current != nullptr) {
-        std::cout << "Client ID: " << current->data.clientID << std::endl;
+        std::cout << "Client ID: " << current->data.id << std::endl;
         std::cout << "Client Name: " << current->data.clientName << std::endl;
         std::cout << "Client Phone: " << current->data.clientAddress << std::endl;
         std::cout << "Client Rented Space: " << rented.getSize() << std::endl;
@@ -84,7 +94,7 @@ void client::addRentedSpace(officeInformation data) { rented.add(data); };
 void client::changeClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
-        if (current->data.clientID == clientId) {
+        if (current->data.id == clientId) {
             current->data = getClient(clientId);
             break;
         }
@@ -92,3 +102,4 @@ void client::changeClient(int clientId) {
     }
 }
 client::~client() { delete head; }
+#endif

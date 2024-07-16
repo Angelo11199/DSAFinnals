@@ -1,11 +1,11 @@
 //* child class of client. Responsible for renting an office, checking if an office is rented or not as well.
 #ifndef OFFICERENTAL_H
 #define OFFICERENTAL_H
-#include <string>
-
-#include "client.h"
+#include "../includes/LinkedList.h"
+#include "./client.h"
+#include "./office.h"
 // responsible for client renting an office, checking if an office is rented or not as well.
-class clientRent : public client, LinkedList<officeInformation> {
+class clientRent : public client, public LinkedList<officeInformation> {
    private:
     int clientId;
 

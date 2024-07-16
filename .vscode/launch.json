@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/AISUKURIMU/Documents/Activities/finals",
-      "program": "c:/Users/AISUKURIMU/Documents/Activities/finals/build/Debug/outDebug",
+      "cwd": "c:/Users/AISUKURIMU/Documents/Activities/finals/ADT",
+      "program": "c:/Users/AISUKURIMU/Documents/Activities/finals/ADT/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1,11 +1,14 @@
 //* shows a list of AVAILABLE (NOT RENTED) offices.
-#include "officeRental.h"
+#ifndef OFFICERENTAL_CPP
+#define OFFICERENTAL_CPP
+#include "./officeRental.h"
 
 #include <iostream>
 
-#include "FileHandling.h"
-#include "office.h"
-#include "utils.h"
+#include "../includes/FileHandling.h"
+#include "../includes/utils.h"
+#include "./client.h"
+#include "./office.h"
 clientRent::clientRent(int clientId) : client(clientId), LinkedList<officeInformation>() {
     this->clientId = clientId;
     fileHandling file = fileHandling("offices.csv");
@@ -13,7 +16,7 @@ clientRent::clientRent(int clientId) : client(clientId), LinkedList<officeInform
     for (std::string line : data) {
         std::vector<std::string> officeData = splitData(line, ',');
         officeInformation office;
-        office.officeID = std::stoi(officeData[0]);
+        office.id = std::stoi(officeData[0]);
         office.officeName = officeData[1];
         office.officeAddress = officeData[2];
         office.officePrice = std::stoi(officeData[3]);
@@ -25,7 +28,7 @@ clientRent::clientRent(int clientId) : client(clientId), LinkedList<officeInform
 bool clientRent::rentOffice(int officeId) {
     LinkedList<officeInformation>::Node* current = LinkedList<officeInformation>::head;
     while (current != nullptr) {
-        if (current->data.officeID != officeId) {
+        if (current->data.id != officeId) {
             current = current->next;
             continue;
         }
@@ -43,7 +46,7 @@ void clientRent::ShowAvailableOffices() {
     while (current != nullptr) {
         if (!current->data.isRented) {
             std::string isRented = current->data.isRented ? "Yes" : "No";
-            std::cout << "Office ID: " << current->data.officeID << std::endl;
+            std::cout << "Office ID: " << current->data.id << std::endl;
             std::cout << "Office Name: " << current->data.officeName << std::endl;
             std::cout << "Office Address: " << current->data.officeAddress << std::endl;
             std::cout << "Office Size: " << current->data.officeSize << std::endl;
@@ -55,3 +58,4 @@ void clientRent::ShowAvailableOffices() {
 clientRent::~clientRent() {
     delete LinkedList<officeInformation>::head;
 }
+#endif

@@ -4,7 +4,7 @@
 // Data types for the program. Just to have a unified place to store  all data types plus intellisene support
 #include "../includes/LinkedList.h"
 struct officeInformation {
-    int officeID;
+    int id;
     std::string officeName;
     std::string officeAddress;
     int officePrice;
@@ -12,7 +12,7 @@ struct officeInformation {
     bool isRented;
 };
 struct clientData {
-    int clientID;
+    int id;
     std::string clientName;
     std::string clientAddress;
     bool isAdmin;

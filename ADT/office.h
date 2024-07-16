@@ -1,7 +1,7 @@
 #ifndef OFFICE_H
 #define OFFICE_H
 #include "../includes/LinkedList.h"
-#include "structData.h"
+#include "./structData.h"
 // responsible for storing office data. checking if an office is rented or not as well.
 class office : public LinkedList<officeInformation> {
    private:

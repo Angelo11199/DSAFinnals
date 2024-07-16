@@ -1,5 +1,6 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
+#include <iostream>
 template <typename T>
 class LinkedList {
    protected:
@@ -43,7 +44,7 @@ class LinkedList {
         Node* current = head;
         Node* previous = nullptr;
         while (current != nullptr) {
-            if (current->data == data) {
+            if (current->data.id == data.id) {
                 if (previous == nullptr) {
                     head = current->next;
                 } else {

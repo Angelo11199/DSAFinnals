@@ -47,7 +47,7 @@ class fileHandling {
         }
         outFile.close();
     }
-    std::vector<std::string> fileHandling::readFromFile() {
+    std::vector<std::string> readFromFile() {
         std::ifstream file(filename);
         if (!file) {
             throw std::runtime_error("Error opening file");

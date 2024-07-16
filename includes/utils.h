@@ -1,9 +1,12 @@
+#ifndef UTILS_H
+#define UTILS_H
+
 #include <iostream>
 #include <sstream>
 #include <vector>
-#ifndef UTILS_H
-#define UTILS_H
-std::vector<std::string> splitData(const std::string& data, char delimiter) {
+
+// Definition of splitData function
+inline std::vector<std::string> splitData(const std::string& data, char delimiter) {
     std::vector<std::string> result;
     std::stringstream dataStream(data);
     std::string piece;
@@ -14,4 +17,5 @@ std::vector<std::string> splitData(const std::string& data, char delimiter) {
 
     return result;
 }
-#endif
+
+#endif  // UTILS_H

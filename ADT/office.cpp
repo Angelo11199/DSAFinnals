@@ -1,10 +1,14 @@
+
+#ifndef OFFICE_CPP
+#define OFFICE_CPP
 #include "office.h"
 
 #include <iostream>
 #include <vector>
 
+#include "../includes/LinkedList.h"
+#include "../includes/fileHandling.h"
 #include "../includes/utils.h"
-#include "fileHandling.h"
 
 office::office(int clientID) : LinkedList() {
     fileHandling file = fileHandling("offices.csv");
@@ -12,13 +16,13 @@ office::office(int clientID) : LinkedList() {
     for (std::string line : data) {
         std::vector<std::string> officeData = splitData(line, ',');
         officeInformation office;
-        office.officeID = std::stoi(officeData[0]);
+        office.id = std::stoi(officeData[0]);
         office.officeName = officeData[1];
         office.officeAddress = officeData[2];
         office.officePrice = std::stoi(officeData[3]);
         office.officeSize = officeData[4];
         office.isRented = officeData[5] == "1";
-        if (office.officeID != clientID) continue;
+        if (office.id != clientID) continue;
         add(office);
     }
 };
@@ -26,7 +30,7 @@ office::office(int clientID) : LinkedList() {
 officeInformation office::getOffice(int officeId) {
     typename LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {
-        if (current->data.officeID == officeId) {
+        if (current->data.id == officeId) {
             return current->data;
         }
         current = current->next;
@@ -43,21 +47,9 @@ LinkedList<officeInformation> office::getRentedOffices() {
         current = current->next;
     }
     return rentedOfficesList;
-}
-
-void LinkedList<officeInformation>::print() {
-    typename LinkedList<officeInformation>::Node* current = head;
-    while (current != nullptr) {
-        std::string isRented = current->data.isRented ? "Yes" : "No";
-        std::cout << "Office ID: " << current->data.officeID << std::endl;
-        std::cout << "Office Name: " << current->data.officeName << std::endl;
-        std::cout << "Office Address: " << current->data.officeAddress << std::endl;
-        std::cout << "Office Size: " << current->data.officeSize << std::endl;
-        std::cout << "Price Bought: " << current->data.officePrice << std::endl;
-        current = current->next;
-    }
-}
+};
 
 office::~office() {
     delete head;
 }
+#endif
