@@ -11,7 +11,6 @@
 #include "../includes/utils.h"
 
 office::office(int clientID) : LinkedList() {
-    fileHandling file = fileHandling("offices.csv");
     std::vector<std::string> data = file.readFromFile();
     for (std::string line : data) {
         std::vector<std::string> officeData = splitData(line, ',');
@@ -26,7 +25,21 @@ office::office(int clientID) : LinkedList() {
         add(office);
     }
 };
-
+void office::addOffice(officeInformation data) {
+    add(data);
+    file.writeToFile(data.id, data.officeName, data.officeAddress, data.officePrice, data.officeSize, data.isRented);
+};
+void office::endRental(officeInformation data) {
+    LinkedList<officeInformation>::Node* current = head;
+    while (current != nullptr) {
+        if (current->data.id != data.id) {
+            current = current->next;
+            continue;
+        }
+        current->data.isRented = false;
+        file.writeToFile(data.id, data.officeName, data.officeAddress, data.officePrice, data.officeSize, data.isRented);
+    }
+}
 officeInformation office::getOffice(int officeId) {
     LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {
@@ -48,7 +61,17 @@ LinkedList<officeInformation> office::getRentedOffices() {
     }
     return rentedOfficesList;
 };
-
+void office::rentOffice(officeInformation data, int clientID) {
+    LinkedList<officeInformation>::Node* current = head;
+    while (current != nullptr) {
+        if (current->data.id != data.id) {
+            current = current->next;
+            continue;
+        }
+        current->data.isRented = true;
+        file.writeToFile(data.id, clientID);
+    }
+}
 office::~office() {
     std::cout << "Office Deleted" << std::endl;
     delete head;
