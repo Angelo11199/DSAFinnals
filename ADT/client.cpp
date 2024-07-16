@@ -31,14 +31,6 @@ client::client(int clientID) : LinkedList() {
         clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
     };
 };
-client::client() : LinkedList() {
-    fileHandling file = fileHandling("clients.csv");
-    std::vector<std::string> data = file.readFromFile();
-    for (std::string line : data) {
-        std::vector<std::string> clientData = splitData(line, ',');
-        clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
-    };
-};
 /**
  * @brief add a client to the client list with the selected data structure
  * @class client
@@ -101,5 +93,9 @@ void client::changeClient(int clientId) {
         current = current->next;
     }
 }
-client::~client() { delete head; }
+client::~client() {
+    std::cout << "Client Deleted" << std::endl;
+    if (head != nullptr) return;
+    delete head;
+}
 #endif

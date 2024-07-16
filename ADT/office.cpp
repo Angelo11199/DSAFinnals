@@ -28,7 +28,7 @@ office::office(int clientID) : LinkedList() {
 };
 
 officeInformation office::getOffice(int officeId) {
-    typename LinkedList<officeInformation>::Node* current = head;
+    LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {
         if (current->data.id == officeId) {
             return current->data;
@@ -39,7 +39,7 @@ officeInformation office::getOffice(int officeId) {
 }
 LinkedList<officeInformation> office::getRentedOffices() {
     LinkedList<officeInformation> rentedOfficesList;
-    typename LinkedList<officeInformation>::Node* current = head;
+    LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {
         if (current->data.isRented) {
             rentedOfficesList.add(current->data);
@@ -50,6 +50,7 @@ LinkedList<officeInformation> office::getRentedOffices() {
 };
 
 office::~office() {
+    std::cout << "Office Deleted" << std::endl;
     delete head;
 }
 #endif

@@ -27,7 +27,7 @@ int main() {
     client clientList = client(1);
     fileHandling officeFile("offices.txt");
     fileHandling clientFile("clients.txt");
-
+    cout << "Done. dapat sa baba nito deconstructor na. " << endl;
     // officeFile.init();
     // clientFile.init();
 

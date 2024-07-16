@@ -13,11 +13,10 @@ class client : LinkedList<clientData> {
     clientData loggedClient;
     LinkedList<clientData> clientList;
     Node *head;
-    LinkedList<officeInformation> rented;
+    LinkedList<officeInformation> rented = LinkedList<officeInformation>();
 
    public:
     client(int clientId);
-    client();
     ~client();
     void addClient(clientData data);
     void addRentedSpace(officeInformation data);

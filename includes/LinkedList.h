@@ -19,13 +19,16 @@ class LinkedList {
         size = 0;
     }
     ~LinkedList() {
+        std::cout << "Linked list Deleted" << std::endl;
         Node* current = head;
-        Node* next;
-        while (current != nullptr) {
-            next = current->next;
+        if (current != nullptr) {
             delete current;
-            current = next;
         }
+        // while (current != nullptr) {
+        //     next = current->next;
+        //     delete current;
+        //     current = next;
+        // }
     }
     void add(T dataStruct) {
         Node* newNode = new Node;

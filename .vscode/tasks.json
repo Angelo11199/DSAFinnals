@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${fileDirname}\\main.cpp",
                 "-I${fileDirname}/ADT", // Include directory for headers
                 "${fileDirname}\\ADT\\*.cpp",
                 "-I${fileDirname}\\includes",
