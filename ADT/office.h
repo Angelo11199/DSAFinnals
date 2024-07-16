@@ -20,6 +20,8 @@ class office : public LinkedList<officeInformation> {
         Node* next;
     };
     fileHandling file = fileHandling("offices.csv");
+    static office* instance;
+    office();  // Private constructor
 
    public:
     /**
@@ -71,7 +73,6 @@ class office : public LinkedList<officeInformation> {
      * @return LinkedList<officeInformation> List of rented offices
      */
     LinkedList<officeInformation> getRentedOffices();
-
     /**
      * @brief Destroy the office object
      *

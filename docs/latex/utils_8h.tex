@@ -1,23 +1,80 @@
 \doxysection{includes/utils.h File Reference}
-\hypertarget{utils_8h}{}\label{utils_8h}\index{includes/utils.h@{includes/utils.h}}
+\label{utils_8h}\index{includes/utils.h@{includes/utils.h}}
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$sstream$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{utils_8h_a8d57f89e6c7627a0ae40c4363c1601c0}{split\+Data}} (const std\+::string \&data, char delimiter)
-\end{DoxyCompactItemize}
+std\+::vector$<$ std\+::string $>$ \textbf{ split\+Data} (const std\+::string \&data, char delimiter)
+\begin{DoxyCompactList}\small\item\em Splits a string into parts based on a delimiter. \end{DoxyCompactList}\item 
+double \textbf{ get\+Double} (std\+::string prompt="{}"{})
+\begin{DoxyCompactList}\small\item\em Prompts the user to enter a double value. \end{DoxyCompactList}\item 
+int \textbf{ display\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Displays a menu for an office rental system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{utils_8h_a8d57f89e6c7627a0ae40c4363c1601c0}\index{utils.h@{utils.h}!splitData@{splitData}}
+\index{utils.h@{utils.h}!displayMenu@{displayMenu}}
+\index{displayMenu@{displayMenu}!utils.h@{utils.h}}
+\doxysubsubsection{displayMenu()}
+{\footnotesize\ttfamily \label{utils_8h_aad9ed7a055a99883645739e4bfca0e5e} 
+int display\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays a menu for an office rental system. 
+
+\begin{DoxyReturn}{Returns}
+int The user\textquotesingle{}s selected option from the menu 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 57} of file \textbf{ utils.\+h}.
+
+\index{utils.h@{utils.h}!getDouble@{getDouble}}
+\index{getDouble@{getDouble}!utils.h@{utils.h}}
+\doxysubsubsection{getDouble()}
+{\footnotesize\ttfamily \label{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6} 
+double get\+Double (\begin{DoxyParamCaption}\item[{std\+::string}]{prompt}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prompts the user to enter a double value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prompt} & Optional prompt message to display to the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The double value entered by the user 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 35} of file \textbf{ utils.\+h}.
+
+\index{utils.h@{utils.h}!splitData@{splitData}}
 \index{splitData@{splitData}!utils.h@{utils.h}}
-\doxysubsubsection{\texorpdfstring{splitData()}{splitData()}}
+\doxysubsubsection{splitData()}
 {\footnotesize\ttfamily \label{utils_8h_a8d57f89e6c7627a0ae40c4363c1601c0} 
-std\+::vector$<$ std\+::string $>$ split\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data}{, }\item[{char}]{delimiter}{}\end{DoxyParamCaption})}
+std\+::vector$<$ std\+::string $>$ split\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data}{, }\item[{char}]{delimiter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{utils_8h_source_l00006}{6}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+Splits a string into parts based on a delimiter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The string to be split \\
+\hline
+{\em delimiter} & The character to split the string by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$ Vector of strings containing the split parts 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 16} of file \textbf{ utils.\+h}.
 

@@ -1,0 +1,194 @@
+\indexentry{client@{client}}{7}
+\indexentry{client@{client}!client@{client}}{8}
+\indexentry{client@{client}!client@{client}}{8}
+\indexentry{client@{client}!````~client@{$\sim$client}}{8}
+\indexentry{````~client@{$\sim$client}!client@{client}}{8}
+\indexentry{client@{client}!addClient@{addClient}}{8}
+\indexentry{addClient@{addClient}!client@{client}}{8}
+\indexentry{client@{client}!addRentedSpace@{addRentedSpace}}{9}
+\indexentry{addRentedSpace@{addRentedSpace}!client@{client}}{9}
+\indexentry{client@{client}!changeClient@{changeClient}}{9}
+\indexentry{changeClient@{changeClient}!client@{client}}{9}
+\indexentry{client@{client}!getClient@{getClient}}{9}
+\indexentry{getClient@{getClient}!client@{client}}{9}
+\indexentry{client@{client}!printClients@{printClients}}{9}
+\indexentry{printClients@{printClients}!client@{client}}{9}
+\indexentry{client@{client}!removeClient@{removeClient}}{10}
+\indexentry{removeClient@{removeClient}!client@{client}}{10}
+\indexentry{client@{client}!clientId@{clientId}}{10}
+\indexentry{clientId@{clientId}!client@{client}}{10}
+\indexentry{client@{client}!file@{file}}{10}
+\indexentry{file@{file}!client@{client}}{10}
+\indexentry{clientData@{clientData}}{10}
+\indexentry{clientData@{clientData}!clientAddress@{clientAddress}}{11}
+\indexentry{clientAddress@{clientAddress}!clientData@{clientData}}{11}
+\indexentry{clientData@{clientData}!clientName@{clientName}}{11}
+\indexentry{clientName@{clientName}!clientData@{clientData}}{11}
+\indexentry{clientData@{clientData}!id@{id}}{11}
+\indexentry{id@{id}!clientData@{clientData}}{11}
+\indexentry{clientData@{clientData}!isAdmin@{isAdmin}}{11}
+\indexentry{isAdmin@{isAdmin}!clientData@{clientData}}{11}
+\indexentry{clientData@{clientData}!rentedSpaces@{rentedSpaces}}{11}
+\indexentry{rentedSpaces@{rentedSpaces}!clientData@{clientData}}{11}
+\indexentry{clientRent@{clientRent}}{12}
+\indexentry{clientRent@{clientRent}!clientRent@{clientRent}}{13}
+\indexentry{clientRent@{clientRent}!clientRent@{clientRent}}{13}
+\indexentry{clientRent@{clientRent}!````~clientRent@{$\sim$clientRent}}{14}
+\indexentry{````~clientRent@{$\sim$clientRent}!clientRent@{clientRent}}{14}
+\indexentry{clientRent@{clientRent}!rentOffice@{rentOffice}}{14}
+\indexentry{rentOffice@{rentOffice}!clientRent@{clientRent}}{14}
+\indexentry{clientRent@{clientRent}!ShowAvailableOffices@{ShowAvailableOffices}}{14}
+\indexentry{ShowAvailableOffices@{ShowAvailableOffices}!clientRent@{clientRent}}{14}
+\indexentry{fileHandling@{fileHandling}}{15}
+\indexentry{fileHandling@{fileHandling}!fileHandling@{fileHandling}}{15}
+\indexentry{fileHandling@{fileHandling}!fileHandling@{fileHandling}}{15}
+\indexentry{fileHandling@{fileHandling}!````~fileHandling@{$\sim$fileHandling}}{15}
+\indexentry{````~fileHandling@{$\sim$fileHandling}!fileHandling@{fileHandling}}{15}
+\indexentry{fileHandling@{fileHandling}!readFromFile@{readFromFile}}{16}
+\indexentry{readFromFile@{readFromFile}!fileHandling@{fileHandling}}{16}
+\indexentry{fileHandling@{fileHandling}!writeToFile@{writeToFile}}{16}
+\indexentry{writeToFile@{writeToFile}!fileHandling@{fileHandling}}{16}
+\indexentry{fileHandling@{fileHandling}!writeToFile@{writeToFile}}{16}
+\indexentry{writeToFile@{writeToFile}!fileHandling@{fileHandling}}{16}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{16}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!LinkedList@{LinkedList}}{17}
+\indexentry{LinkedList@{LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{17}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!````~LinkedList@{$\sim$LinkedList}}{17}
+\indexentry{````~LinkedList@{$\sim$LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{17}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!add@{add}}{17}
+\indexentry{add@{add}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{17}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getSize@{getSize}}{18}
+\indexentry{getSize@{getSize}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{18}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!print@{print}}{18}
+\indexentry{print@{print}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{18}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!remove@{remove}}{18}
+\indexentry{remove@{remove}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{18}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!head@{head}}{18}
+\indexentry{head@{head}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{18}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!size@{size}}{18}
+\indexentry{size@{size}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{18}
+\indexentry{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!tail@{tail}}{19}
+\indexentry{tail@{tail}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}{19}
+\indexentry{LinkedList$<$ T $>$::Node@{LinkedList$<$ T $>$::Node}}{19}
+\indexentry{LinkedList$<$ T $>$::Node@{LinkedList$<$ T $>$::Node}!data@{data}}{19}
+\indexentry{data@{data}!LinkedList$<$ T $>$::Node@{LinkedList$<$ T $>$::Node}}{19}
+\indexentry{LinkedList$<$ T $>$::Node@{LinkedList$<$ T $>$::Node}!next@{next}}{19}
+\indexentry{next@{next}!LinkedList$<$ T $>$::Node@{LinkedList$<$ T $>$::Node}}{19}
+\indexentry{office@{office}}{20}
+\indexentry{office@{office}!office@{office}}{21}
+\indexentry{office@{office}!office@{office}}{21}
+\indexentry{office@{office}!````~office@{$\sim$office}}{21}
+\indexentry{````~office@{$\sim$office}!office@{office}}{21}
+\indexentry{office@{office}!addOffice@{addOffice}}{22}
+\indexentry{addOffice@{addOffice}!office@{office}}{22}
+\indexentry{office@{office}!endRental@{endRental}}{22}
+\indexentry{endRental@{endRental}!office@{office}}{22}
+\indexentry{office@{office}!getOffice@{getOffice}}{22}
+\indexentry{getOffice@{getOffice}!office@{office}}{22}
+\indexentry{office@{office}!getRentedOffices@{getRentedOffices}}{22}
+\indexentry{getRentedOffices@{getRentedOffices}!office@{office}}{22}
+\indexentry{office@{office}!printOffices@{printOffices}}{23}
+\indexentry{printOffices@{printOffices}!office@{office}}{23}
+\indexentry{office@{office}!rentOffice@{rentOffice}}{23}
+\indexentry{rentOffice@{rentOffice}!office@{office}}{23}
+\indexentry{officeInformation@{officeInformation}}{23}
+\indexentry{officeInformation@{officeInformation}!id@{id}}{24}
+\indexentry{id@{id}!officeInformation@{officeInformation}}{24}
+\indexentry{officeInformation@{officeInformation}!isRented@{isRented}}{24}
+\indexentry{isRented@{isRented}!officeInformation@{officeInformation}}{24}
+\indexentry{officeInformation@{officeInformation}!officeAddress@{officeAddress}}{24}
+\indexentry{officeAddress@{officeAddress}!officeInformation@{officeInformation}}{24}
+\indexentry{officeInformation@{officeInformation}!officeName@{officeName}}{24}
+\indexentry{officeName@{officeName}!officeInformation@{officeInformation}}{24}
+\indexentry{officeInformation@{officeInformation}!officePrice@{officePrice}}{24}
+\indexentry{officePrice@{officePrice}!officeInformation@{officeInformation}}{24}
+\indexentry{officeInformation@{officeInformation}!officeSize@{officeSize}}{24}
+\indexentry{officeSize@{officeSize}!officeInformation@{officeInformation}}{24}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}}{25}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!Queue@{Queue}}{25}
+\indexentry{Queue@{Queue}!Queue$<$ T $>$@{Queue$<$ T $>$}}{25}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!````~Queue@{$\sim$Queue}}{25}
+\indexentry{````~Queue@{$\sim$Queue}!Queue$<$ T $>$@{Queue$<$ T $>$}}{25}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!back@{back}}{26}
+\indexentry{back@{back}!Queue$<$ T $>$@{Queue$<$ T $>$}}{26}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!dequeue@{dequeue}}{26}
+\indexentry{dequeue@{dequeue}!Queue$<$ T $>$@{Queue$<$ T $>$}}{26}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!enqueue@{enqueue}}{26}
+\indexentry{enqueue@{enqueue}!Queue$<$ T $>$@{Queue$<$ T $>$}}{26}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!front@{front}}{26}
+\indexentry{front@{front}!Queue$<$ T $>$@{Queue$<$ T $>$}}{26}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!getSize@{getSize}}{26}
+\indexentry{getSize@{getSize}!Queue$<$ T $>$@{Queue$<$ T $>$}}{26}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!isEmpty@{isEmpty}}{26}
+\indexentry{isEmpty@{isEmpty}!Queue$<$ T $>$@{Queue$<$ T $>$}}{26}
+\indexentry{Queue$<$ T $>$@{Queue$<$ T $>$}!print@{print}}{26}
+\indexentry{print@{print}!Queue$<$ T $>$@{Queue$<$ T $>$}}{26}
+\indexentry{Stack$<$ T $>$@{Stack$<$ T $>$}}{27}
+\indexentry{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}{27}
+\indexentry{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}{27}
+\indexentry{Stack$<$ T $>$@{Stack$<$ T $>$}!````~Stack@{$\sim$Stack}}{27}
+\indexentry{````~Stack@{$\sim$Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}{27}
+\indexentry{Stack$<$ T $>$@{Stack$<$ T $>$}!getSize@{getSize}}{28}
+\indexentry{getSize@{getSize}!Stack$<$ T $>$@{Stack$<$ T $>$}}{28}
+\indexentry{Stack$<$ T $>$@{Stack$<$ T $>$}!pop@{pop}}{28}
+\indexentry{pop@{pop}!Stack$<$ T $>$@{Stack$<$ T $>$}}{28}
+\indexentry{Stack$<$ T $>$@{Stack$<$ T $>$}!print@{print}}{28}
+\indexentry{print@{print}!Stack$<$ T $>$@{Stack$<$ T $>$}}{28}
+\indexentry{Stack$<$ T $>$@{Stack$<$ T $>$}!push@{push}}{28}
+\indexentry{push@{push}!Stack$<$ T $>$@{Stack$<$ T $>$}}{28}
+\indexentry{User@{User}}{28}
+\indexentry{User@{User}!password@{password}}{29}
+\indexentry{password@{password}!User@{User}}{29}
+\indexentry{User@{User}!role@{role}}{29}
+\indexentry{role@{role}!User@{User}}{29}
+\indexentry{User@{User}!username@{username}}{29}
+\indexentry{username@{username}!User@{User}}{29}
+\indexentry{ADT/client.cpp@{ADT/client.cpp}}{31}
+\indexentry{client.cpp@{client.cpp}!CLIENT\_CPP@{CLIENT\_CPP}}{31}
+\indexentry{CLIENT\_CPP@{CLIENT\_CPP}!client.cpp@{client.cpp}}{31}
+\indexentry{ADT/client.cpp@{ADT/client.cpp}}{31}
+\indexentry{ADT/client.h@{ADT/client.h}}{33}
+\indexentry{ADT/client.h@{ADT/client.h}}{33}
+\indexentry{ADT/office.cpp@{ADT/office.cpp}}{33}
+\indexentry{office.cpp@{office.cpp}!OFFICE\_CPP@{OFFICE\_CPP}}{34}
+\indexentry{OFFICE\_CPP@{OFFICE\_CPP}!office.cpp@{office.cpp}}{34}
+\indexentry{ADT/office.cpp@{ADT/office.cpp}}{34}
+\indexentry{ADT/office.h@{ADT/office.h}}{35}
+\indexentry{ADT/office.h@{ADT/office.h}}{35}
+\indexentry{ADT/officerental.cpp@{ADT/officerental.cpp}}{36}
+\indexentry{officerental.cpp@{officerental.cpp}!OFFICERENTAL\_CPP@{OFFICERENTAL\_CPP}}{36}
+\indexentry{OFFICERENTAL\_CPP@{OFFICERENTAL\_CPP}!officerental.cpp@{officerental.cpp}}{36}
+\indexentry{ADT/officerental.cpp@{ADT/officerental.cpp}}{36}
+\indexentry{ADT/officeRental.h@{ADT/officeRental.h}}{37}
+\indexentry{ADT/officeRental.h@{ADT/officeRental.h}}{37}
+\indexentry{ADT/structData.h@{ADT/structData.h}}{38}
+\indexentry{ADT/structData.h@{ADT/structData.h}}{38}
+\indexentry{includes/FileHandling.cpp@{includes/FileHandling.cpp}}{38}
+\indexentry{FileHandling.cpp@{FileHandling.cpp}!FILEHANDLING\_CPP@{FILEHANDLING\_CPP}}{39}
+\indexentry{FILEHANDLING\_CPP@{FILEHANDLING\_CPP}!FileHandling.cpp@{FileHandling.cpp}}{39}
+\indexentry{includes/FileHandling.cpp@{includes/FileHandling.cpp}}{39}
+\indexentry{includes/FileHandling.h@{includes/FileHandling.h}}{39}
+\indexentry{includes/FileHandling.h@{includes/FileHandling.h}}{40}
+\indexentry{includes/handlePrint.h@{includes/handlePrint.h}}{40}
+\indexentry{handlePrint.h@{handlePrint.h}!print@{print}}{41}
+\indexentry{print@{print}!handlePrint.h@{handlePrint.h}}{41}
+\indexentry{handlePrint.h@{handlePrint.h}!print@{print}}{41}
+\indexentry{print@{print}!handlePrint.h@{handlePrint.h}}{41}
+\indexentry{includes/handlePrint.h@{includes/handlePrint.h}}{41}
+\indexentry{includes/LinkedList.h@{includes/LinkedList.h}}{42}
+\indexentry{includes/LinkedList.h@{includes/LinkedList.h}}{42}
+\indexentry{includes/utils.h@{includes/utils.h}}{43}
+\indexentry{utils.h@{utils.h}!displayMenu@{displayMenu}}{43}
+\indexentry{displayMenu@{displayMenu}!utils.h@{utils.h}}{43}
+\indexentry{utils.h@{utils.h}!getDouble@{getDouble}}{43}
+\indexentry{getDouble@{getDouble}!utils.h@{utils.h}}{43}
+\indexentry{utils.h@{utils.h}!splitData@{splitData}}{44}
+\indexentry{splitData@{splitData}!utils.h@{utils.h}}{44}
+\indexentry{includes/utils.h@{includes/utils.h}}{44}
+\indexentry{main.cpp@{main.cpp}}{45}
+\indexentry{main.cpp@{main.cpp}!main@{main}}{46}
+\indexentry{main@{main}!main.cpp@{main.cpp}}{46}
+\indexentry{TEMP/Queue.h@{TEMP/Queue.h}}{48}
+\indexentry{TEMP/Queue.h@{TEMP/Queue.h}}{48}
+\indexentry{TEMP/Stack.h@{TEMP/Stack.h}}{49}
+\indexentry{TEMP/Stack.h@{TEMP/Stack.h}}{49}

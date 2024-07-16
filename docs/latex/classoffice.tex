@@ -1,5 +1,10 @@
 \doxysection{office Class Reference}
-\hypertarget{classoffice}{}\label{classoffice}\index{office@{office}}
+\label{classoffice}\index{office@{office}}
+
+
+Represents an office management class.  
+
+
 
 
 {\ttfamily \#include $<$office.\+h$>$}
@@ -13,127 +18,206 @@ Inheritance diagram for office\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classoffice_af15fc6e5c89037b1752f82f7477361bf}{office}} (int client\+ID)
-\item 
-void \mbox{\hyperlink{classoffice_aff0f126b758cb0ea6fb6c6659e74c0e3}{add\+Office}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data)
-\item 
-void \mbox{\hyperlink{classoffice_ae7db2f3fa1721408eddb10cc7dd08c0e}{rent\+Office}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data)
-\item 
-void \mbox{\hyperlink{classoffice_aeaf5d37ae0c53f2b1b81bf83af292933}{end\+Rental}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data)
-\item 
-void \mbox{\hyperlink{classoffice_a9a3a6c95088ad84512d197d1e23e07dc}{print\+Offices}} ()
-\item 
-\mbox{\hyperlink{structoffice_information}{office\+Information}} \mbox{\hyperlink{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2}{get\+Office}} (int office\+Id)
-\item 
-\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ \mbox{\hyperlink{structoffice_information}{office\+Information}} $>$ \mbox{\hyperlink{classoffice_a606ab7929ba91f4c5d2aaf1d77bd5c53}{get\+Rented\+Offices}} ()
-\item 
-\mbox{\hyperlink{classoffice_aaba7efd932fe96f6f1f38f51e963a93c}{\texorpdfstring{$\sim$}{\string~}office}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_linked_list}{Linked\+List$<$ office\+Information $>$}}}
+\textbf{ office} (int client\+ID)
+\begin{DoxyCompactList}\small\item\em Constructor for the office class. \end{DoxyCompactList}\item 
+void \textbf{ add\+Office} (\textbf{ office\+Information} data)
+\begin{DoxyCompactList}\small\item\em Adds a new office to the management system. \end{DoxyCompactList}\item 
+void \textbf{ rent\+Office} (\textbf{ office\+Information} data, int client\+ID)
+\begin{DoxyCompactList}\small\item\em Rents an office to a specified client. \end{DoxyCompactList}\item 
+void \textbf{ end\+Rental} (\textbf{ office\+Information} data)
+\begin{DoxyCompactList}\small\item\em Ends the rental of an office, making it available again. \end{DoxyCompactList}\item 
+void \textbf{ print\+Offices} ()
+\begin{DoxyCompactList}\small\item\em prints info about all offices in the system \end{DoxyCompactList}\item 
+\textbf{ office\+Information} \textbf{ get\+Office} (int office\+Id)
+\begin{DoxyCompactList}\small\item\em retrieves detailed info about a specific office \end{DoxyCompactList}\item 
+\textbf{ Linked\+List}$<$ \textbf{ office\+Information} $>$ \textbf{ get\+Rented\+Offices} ()
+\begin{DoxyCompactList}\small\item\em retrieves a list of offices currently rented out \end{DoxyCompactList}\item 
+\textbf{ $\sim$office} ()
+\begin{DoxyCompactList}\small\item\em Destroy the office object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ Linked\+List$<$ office\+Information $>$}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_linked_list_a3c20fcfec867e867f541061a09fc640c}{Linked\+List}} ()
-\item 
-\mbox{\hyperlink{class_linked_list_a7c37609df3b83bc4eb0281b852f93fd7}{\texorpdfstring{$\sim$}{\string~}\+Linked\+List}} ()
-\item 
-void \mbox{\hyperlink{class_linked_list_a0dac190d0708d024d60dbd8131adcde3}{add}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data\+Struct)
-\item 
-void \mbox{\hyperlink{class_linked_list_ab9aa6e03f271785f6b488d8c4cc3f3c7}{remove}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data)
-\item 
-void \mbox{\hyperlink{class_linked_list_a9675767b81fb9f1d8799444e4ee7f43b}{print}} ()
-\item 
-int \mbox{\hyperlink{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1}{get\+Size}} ()
-\end{DoxyCompactItemize}
+\textbf{ Linked\+List} ()
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the linked list. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Linked\+List} ()
+\begin{DoxyCompactList}\small\item\em Destructor to clean up memory allocated for the linked list. \end{DoxyCompactList}\item 
+void \textbf{ add} (\textbf{ office\+Information} data\+Struct)
+\begin{DoxyCompactList}\small\item\em Adds a new node with given data to the end of the linked list. \end{DoxyCompactList}\item 
+void \textbf{ remove} (\textbf{ office\+Information} data)
+\begin{DoxyCompactList}\small\item\em Removes the node with given data from the linked list. \end{DoxyCompactList}\item 
+void \textbf{ print} ()
+\begin{DoxyCompactList}\small\item\em Prints all elements in the linked list. \end{DoxyCompactList}\item 
+int \textbf{ get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Returns the current size of the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_linked_list}{Linked\+List$<$ office\+Information $>$}}}
+\doxysubsection*{Protected Attributes inherited from \textbf{ Linked\+List$<$ office\+Information $>$}}
 \begin{DoxyCompactItemize}
 \item 
-Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}{head}}
+Node $\ast$ \textbf{ head}
 \item 
-Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_a28c70a98efc1d17eead515e45177db77}{tail}}
+Node $\ast$ \textbf{ tail}
 \item 
-int \mbox{\hyperlink{class_linked_list_a18f1a30371a80bc8626b0c7762517d0b}{size}}
+int \textbf{ size}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Represents an office management class. 
 
+class manages office data including rental operations, which used a linked list structure. 
 
-Definition at line \mbox{\hyperlink{office_8h_source_l00006}{6}} of file \mbox{\hyperlink{office_8h_source}{office.\+h}}.
+Definition at line \textbf{ 12} of file \textbf{ office.\+h}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classoffice_af15fc6e5c89037b1752f82f7477361bf}\index{office@{office}!office@{office}}
 \index{office@{office}!office@{office}}
-\doxysubsubsection{\texorpdfstring{office()}{office()}}
+\index{office@{office}!office@{office}}
+\doxysubsubsection{office()}
 {\footnotesize\ttfamily \label{classoffice_af15fc6e5c89037b1752f82f7477361bf} 
 office\+::office (\begin{DoxyParamCaption}\item[{int}]{client\+ID}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{office_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{office_8cpp_source}{office.\+cpp}}.
+Constructor for the office class. 
 
-\Hypertarget{classoffice_aaba7efd932fe96f6f1f38f51e963a93c}\index{office@{office}!````~office@{\texorpdfstring{$\sim$}{\string~}office}}
-\index{````~office@{\texorpdfstring{$\sim$}{\string~}office}!office@{office}}
-\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}office()}{\string~office()}}
+
+\begin{DoxyParams}{Parameters}
+{\em client\+ID} & ID of the client using the office management system. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 13} of file \textbf{ office.\+cpp}.
+
+\index{office@{office}!````~office@{$\sim$office}}
+\index{````~office@{$\sim$office}!office@{office}}
+\doxysubsubsection{$\sim$office()}
 {\footnotesize\ttfamily \label{classoffice_aaba7efd932fe96f6f1f38f51e963a93c} 
-office\+::\texorpdfstring{$\sim$}{\string~}office (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+office\+::$\sim$office (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{office_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{office_8cpp_source}{office.\+cpp}}.
+Destroy the office object. 
+
+
+
+Definition at line \textbf{ 75} of file \textbf{ office.\+cpp}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classoffice_aff0f126b758cb0ea6fb6c6659e74c0e3}\index{office@{office}!addOffice@{addOffice}}
+\index{office@{office}!addOffice@{addOffice}}
 \index{addOffice@{addOffice}!office@{office}}
-\doxysubsubsection{\texorpdfstring{addOffice()}{addOffice()}}
+\doxysubsubsection{addOffice()}
 {\footnotesize\ttfamily \label{classoffice_aff0f126b758cb0ea6fb6c6659e74c0e3} 
-void office\+::add\+Office (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoffice_information}{office\+Information}}}]{data}{}\end{DoxyParamCaption})}
+void office\+::add\+Office (\begin{DoxyParamCaption}\item[{\textbf{ office\+Information}}]{data}{}\end{DoxyParamCaption})}
 
-\Hypertarget{classoffice_aeaf5d37ae0c53f2b1b81bf83af292933}\index{office@{office}!endRental@{endRental}}
+
+
+Adds a new office to the management system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & information about the office to be added \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 28} of file \textbf{ office.\+cpp}.
+
+\index{office@{office}!endRental@{endRental}}
 \index{endRental@{endRental}!office@{office}}
-\doxysubsubsection{\texorpdfstring{endRental()}{endRental()}}
+\doxysubsubsection{endRental()}
 {\footnotesize\ttfamily \label{classoffice_aeaf5d37ae0c53f2b1b81bf83af292933} 
-void office\+::end\+Rental (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoffice_information}{office\+Information}}}]{data}{}\end{DoxyParamCaption})}
+void office\+::end\+Rental (\begin{DoxyParamCaption}\item[{\textbf{ office\+Information}}]{data}{}\end{DoxyParamCaption})}
 
-\Hypertarget{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2}\index{office@{office}!getOffice@{getOffice}}
+
+
+Ends the rental of an office, making it available again. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Information about the office whose rental is ending \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 32} of file \textbf{ office.\+cpp}.
+
+\index{office@{office}!getOffice@{getOffice}}
 \index{getOffice@{getOffice}!office@{office}}
-\doxysubsubsection{\texorpdfstring{getOffice()}{getOffice()}}
+\doxysubsubsection{getOffice()}
 {\footnotesize\ttfamily \label{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2} 
-\mbox{\hyperlink{structoffice_information}{office\+Information}} office\+::get\+Office (\begin{DoxyParamCaption}\item[{int}]{office\+Id}{}\end{DoxyParamCaption})}
+\textbf{ office\+Information} office\+::get\+Office (\begin{DoxyParamCaption}\item[{int}]{office\+Id}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{office_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{office_8cpp_source}{office.\+cpp}}.
+retrieves detailed info about a specific office 
 
-\Hypertarget{classoffice_a606ab7929ba91f4c5d2aaf1d77bd5c53}\index{office@{office}!getRentedOffices@{getRentedOffices}}
+
+\begin{DoxyParams}{Parameters}
+{\em office\+Id} & ID of the office to retrieve information for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{office\+Information}{p.}{structoffice_information} Information about the requested office 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 43} of file \textbf{ office.\+cpp}.
+
+\index{office@{office}!getRentedOffices@{getRentedOffices}}
 \index{getRentedOffices@{getRentedOffices}!office@{office}}
-\doxysubsubsection{\texorpdfstring{getRentedOffices()}{getRentedOffices()}}
+\doxysubsubsection{getRentedOffices()}
 {\footnotesize\ttfamily \label{classoffice_a606ab7929ba91f4c5d2aaf1d77bd5c53} 
-\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ \mbox{\hyperlink{structoffice_information}{office\+Information}} $>$ office\+::get\+Rented\+Offices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\textbf{ Linked\+List}$<$ \textbf{ office\+Information} $>$ office\+::get\+Rented\+Offices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{office_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{office_8cpp_source}{office.\+cpp}}.
+retrieves a list of offices currently rented out 
 
-\Hypertarget{classoffice_a9a3a6c95088ad84512d197d1e23e07dc}\index{office@{office}!printOffices@{printOffices}}
+\begin{DoxyReturn}{Returns}
+\doxyref{Linked\+List$<$office\+Information$>$}{p.}{class_linked_list} List of rented offices 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 53} of file \textbf{ office.\+cpp}.
+
+\index{office@{office}!printOffices@{printOffices}}
 \index{printOffices@{printOffices}!office@{office}}
-\doxysubsubsection{\texorpdfstring{printOffices()}{printOffices()}}
+\doxysubsubsection{printOffices()}
 {\footnotesize\ttfamily \label{classoffice_a9a3a6c95088ad84512d197d1e23e07dc} 
 void office\+::print\+Offices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{classoffice_ae7db2f3fa1721408eddb10cc7dd08c0e}\index{office@{office}!rentOffice@{rentOffice}}
+
+
+prints info about all offices in the system 
+
+\index{office@{office}!rentOffice@{rentOffice}}
 \index{rentOffice@{rentOffice}!office@{office}}
-\doxysubsubsection{\texorpdfstring{rentOffice()}{rentOffice()}}
-{\footnotesize\ttfamily \label{classoffice_ae7db2f3fa1721408eddb10cc7dd08c0e} 
-void office\+::rent\+Office (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoffice_information}{office\+Information}}}]{data}{}\end{DoxyParamCaption})}
+\doxysubsubsection{rentOffice()}
+{\footnotesize\ttfamily \label{classoffice_add96666ca2b1aa88a8f694afdfd7b7d1} 
+void office\+::rent\+Office (\begin{DoxyParamCaption}\item[{\textbf{ office\+Information}}]{data}{, }\item[{int}]{client\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Rents an office to a specified client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Information about the office to be rented \\
+\hline
+{\em client\+ID} & ID of the client renting the office. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 64} of file \textbf{ office.\+cpp}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-ADT/\mbox{\hyperlink{office_8h}{office.\+h}}\item 
-ADT/\mbox{\hyperlink{office_8cpp}{office.\+cpp}}\end{DoxyCompactItemize}
+ADT/\textbf{ office.\+h}\item 
+ADT/\textbf{ office.\+cpp}\end{DoxyCompactItemize}

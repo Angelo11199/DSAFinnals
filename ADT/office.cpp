@@ -51,16 +51,14 @@ officeInformation office::getOffice(int officeId) {
     return officeInformation();
 }
 LinkedList<officeInformation> office::getRentedOffices() {
-    LinkedList<officeInformation> rentedOfficesList;
+    LinkedList<officeInformation> rentedOffices;
     LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {
-        if (current->data.isRented) {
-            rentedOfficesList.add(current->data);
-        }
+        rentedOffices.add(current->data);
         current = current->next;
     }
-    return rentedOfficesList;
-};
+    return rentedOffices;
+}
 void office::rentOffice(officeInformation data, int clientID) {
     LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {

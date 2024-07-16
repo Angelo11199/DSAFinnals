@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -50,17 +52,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('handle_print_8h.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -82,12 +96,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -101,9 +109,11 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a388f572c62279f839ee138a9afbdeeb5" id="r_a388f572c62279f839ee138a9afbdeeb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a388f572c62279f839ee138a9afbdeeb5">print</a> ()</td></tr>
+<tr class="memdesc:a388f572c62279f839ee138a9afbdeeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a newline character to terminate output.  <br /></td></tr>
 <tr class="separator:a388f572c62279f839ee138a9afbdeeb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01cb2e0ac4e1bf2072b875aadf5054c1" id="r_a01cb2e0ac4e1bf2072b875aadf5054c1"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:a01cb2e0ac4e1bf2072b875aadf5054c1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a01cb2e0ac4e1bf2072b875aadf5054c1">print</a> (const T &amp;first, const Args &amp;... args)</td></tr>
+<tr class="memdesc:a01cb2e0ac4e1bf2072b875aadf5054c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints multiple arguments separated by commas.  <br /></td></tr>
 <tr class="separator:a01cb2e0ac4e1bf2072b875aadf5054c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -122,7 +132,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handle_print_8h_source.html#l00004">4</a> of file <a class="el" href="handle_print_8h_source.html">handlePrint.h</a>.</p>
+<p>Prints a newline character to terminate output. </p>
+
+<p class="definition">Definition at line <a class="el" href="handle_print_8h_source.html#l00008">8</a> of file <a class="el" href="handle_print_8h_source.html">handlePrint.h</a>.</p>
 
 </div>
 </div>
@@ -147,15 +159,28 @@ template&lt;typename T , typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handle_print_8h_source.html#l00010">10</a> of file <a class="el" href="handle_print_8h_source.html">handlePrint.h</a>.</p>
+<p>Prints multiple arguments separated by commas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>The first argument to print </td></tr>
+    <tr><td class="paramname">args</td><td>The remaining arguments to print (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>template &lt;typename T, typename... Args&gt; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="handle_print_8h_source.html#l00021">21</a> of file <a class="el" href="handle_print_8h_source.html">handlePrint.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="handle_print_8h.html">handlePrint.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -50,19 +52,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="doc-content">
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('functions.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -89,7 +101,7 @@ $(function(){ initResizable(false); });
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>add()&#160;:&#160;<a class="el" href="class_linked_list.html#a0dac190d0708d024d60dbd8131adcde3">LinkedList&lt; T &gt;</a></li>
-<li>addClient()&#160;:&#160;<a class="el" href="classclient.html#a9f71dbfc5651b32d3b1f120acd2550a4">client</a></li>
+<li>addClient()&#160;:&#160;<a class="el" href="classclient.html#a733535fb656d02f5ab034f8b649cf3f0">client</a></li>
 <li>addOffice()&#160;:&#160;<a class="el" href="classoffice.html#aff0f126b758cb0ea6fb6c6659e74c0e3">office</a></li>
 <li>addRentedSpace()&#160;:&#160;<a class="el" href="classclient.html#aa2e50f0061a672960762e9d17ea4fbc8">client</a></li>
 </ul>
@@ -104,7 +116,6 @@ $(function(){ initResizable(false); });
 <li>changeClient()&#160;:&#160;<a class="el" href="classclient.html#adb9e839f07bd89b82a16b2aefac14837">client</a></li>
 <li>client()&#160;:&#160;<a class="el" href="classclient.html#a73c905f01932e6f5411930241b96c09f">client</a></li>
 <li>clientAddress&#160;:&#160;<a class="el" href="structclient_data.html#af291f8f1bdafcf0d81caa96ed7bb5a1e">clientData</a></li>
-<li>clientID&#160;:&#160;<a class="el" href="structclient_data.html#ad5ffdc829ff6ac86ecba4294a973dde8">clientData</a></li>
 <li>clientId&#160;:&#160;<a class="el" href="classclient.html#a75855c00fdfc491d5ec5ecf1508db6eb">client</a></li>
 <li>clientName&#160;:&#160;<a class="el" href="structclient_data.html#a12c7e81fbb3a0e65e6fa9b53b9415317">clientData</a></li>
 <li>clientRent()&#160;:&#160;<a class="el" href="classclient_rent.html#ac0eafe7c7b148c07f07f63dcc20d239d">clientRent</a></li>
@@ -124,7 +135,8 @@ $(function(){ initResizable(false); });
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
-<li>fileHandling()&#160;:&#160;<a class="el" href="classfile_handling.html#a6fadc448a15075bd12bdacee66d7ea4a">fileHandling</a></li>
+<li>file&#160;:&#160;<a class="el" href="classclient.html#a3edf9bfb9e9121c65951702cc5f7d3b0">client</a></li>
+<li>fileHandling()&#160;:&#160;<a class="el" href="classfile_handling.html#ac4ea9607ef136f721ebc8bb289fedf30">fileHandling</a></li>
 <li>front()&#160;:&#160;<a class="el" href="class_queue.html#a8b5b32ea305ed921bd06ab62bd53bc1b">Queue&lt; T &gt;</a></li>
 </ul>
 
@@ -143,6 +155,7 @@ $(function(){ initResizable(false); });
 
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>id&#160;:&#160;<a class="el" href="structclient_data.html#a8fb74b661df7758b247507c2fb52732a">clientData</a>, <a class="el" href="structoffice_information.html#a7a3c6134937483f15293173b5d0d0781">officeInformation</a></li>
 <li>isAdmin&#160;:&#160;<a class="el" href="structclient_data.html#aa7d4e5bdebb195966e8a52b9c9afe443">clientData</a></li>
 <li>isEmpty()&#160;:&#160;<a class="el" href="class_queue.html#a515bd72c9d7d2bc12add78c0d2e79762">Queue&lt; T &gt;</a></li>
 <li>isRented&#160;:&#160;<a class="el" href="structoffice_information.html#a8dc545ed9d6125a55d8562ca04d3e18b">officeInformation</a></li>
@@ -162,7 +175,6 @@ $(function(){ initResizable(false); });
 <h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
 <li>office()&#160;:&#160;<a class="el" href="classoffice.html#af15fc6e5c89037b1752f82f7477361bf">office</a></li>
 <li>officeAddress&#160;:&#160;<a class="el" href="structoffice_information.html#a3d12d9835d989b693ee00442400f5170">officeInformation</a></li>
-<li>officeID&#160;:&#160;<a class="el" href="structoffice_information.html#a89e3034e7f240ca9513ec67e12e5832c">officeInformation</a></li>
 <li>officeName&#160;:&#160;<a class="el" href="structoffice_information.html#a1777759322428f573a31f81100c637f5">officeInformation</a></li>
 <li>officePrice&#160;:&#160;<a class="el" href="structoffice_information.html#af96310199f49ab6c7c2a122606c5b1d8">officeInformation</a></li>
 <li>officeSize&#160;:&#160;<a class="el" href="structoffice_information.html#a2eda87bd6168bb26af8e8cc67e3703a6">officeInformation</a></li>
@@ -189,7 +201,7 @@ $(function(){ initResizable(false); });
 <li>remove()&#160;:&#160;<a class="el" href="class_linked_list.html#ab9aa6e03f271785f6b488d8c4cc3f3c7">LinkedList&lt; T &gt;</a></li>
 <li>removeClient()&#160;:&#160;<a class="el" href="classclient.html#a8a6629a2513487793f12ccc02ea935c4">client</a></li>
 <li>rentedSpaces&#160;:&#160;<a class="el" href="structclient_data.html#a960edd7aca53bfb60668bbe5024f8cf4">clientData</a></li>
-<li>rentOffice()&#160;:&#160;<a class="el" href="classclient_rent.html#a048ba46194aba6813cd16d8ae1d4fc4d">clientRent</a>, <a class="el" href="classoffice.html#ae7db2f3fa1721408eddb10cc7dd08c0e">office</a></li>
+<li>rentOffice()&#160;:&#160;<a class="el" href="classclient_rent.html#a048ba46194aba6813cd16d8ae1d4fc4d">clientRent</a>, <a class="el" href="classoffice.html#add96666ca2b1aa88a8f694afdfd7b7d1">office</a></li>
 <li>role&#160;:&#160;<a class="el" href="struct_user.html#a2ec7c3e3fddee7bd3d9ef64f7df3c808">User</a></li>
 </ul>
 
@@ -212,7 +224,7 @@ $(function(){ initResizable(false); });
 
 
 <h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
-<li>writeToFile()&#160;:&#160;<a class="el" href="classfile_handling.html#acf4f3a36436bcb8fbf835c4777898f6b">fileHandling</a></li>
+<li>writeToFile()&#160;:&#160;<a class="el" href="classfile_handling.html#a8c7f79a289885a8f9b723cbced0b5f86">fileHandling</a></li>
 </ul>
 
 
@@ -226,10 +238,12 @@ $(function(){ initResizable(false); });
 <li>~Stack()&#160;:&#160;<a class="el" href="class_stack.html#a9e7a00875aefbdac560ab189b7bc61d1">Stack&lt; T &gt;</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
 </body>
 </html>

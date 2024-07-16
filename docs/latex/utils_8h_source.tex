@@ -1,23 +1,58 @@
 \doxysection{utils.\+h}
-\hypertarget{utils_8h_source}{}\label{utils_8h_source}\index{includes/utils.h@{includes/utils.h}}
-\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
+\label{utils_8h_source}\index{includes/utils.h@{includes/utils.h}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <sstream>}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00005}00005\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00006}\mbox{\hyperlink{utils_8h_a8d57f89e6c7627a0ae40c4363c1601c0}{00006}}\ std::vector<std::string>\ \mbox{\hyperlink{utils_8h_a8d57f89e6c7627a0ae40c4363c1601c0}{splitData}}(\textcolor{keyword}{const}\ std::string\&\ data,\ \textcolor{keywordtype}{char}\ delimiter)\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00007}00007\ \ \ \ \ std::vector<std::string>\ result;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00008}00008\ \ \ \ \ std::stringstream\ dataStream(data);}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00009}00009\ \ \ \ \ std::string\ piece;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(dataStream,\ piece,\ delimiter))\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00012}00012\ \ \ \ \ \ \ \ \ result.push\_back(piece);}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00013}00013\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00016}00016\ \}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00017}00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Definition\ of\ splitData\ function}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{inline}\ std::vector<std::string>\ splitData(\textcolor{keyword}{const}\ std::string\&\ data,\ \textcolor{keywordtype}{char}\ delimiter)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::string>\ result;}
+\DoxyCodeLine{00018\ \ \ \ \ std::stringstream\ dataStream(data);}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ piece;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(dataStream,\ piece,\ delimiter))\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ result.push\_back(piece);}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ gets\ a\ number\ from\ the\ user}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ getDouble(std::string\ prompt\ =\ \textcolor{stringliteral}{"{}"{}})\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ num;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{char}*\ p;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::cout\ <<\ prompt;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::cin\ >>\ num;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ convertedNum\ =\ strtod(num.c\_str(),\ \&p);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*p)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ input"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ convertedNum;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ displayMenu()\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Office\ Space\ Rental\ System\(\backslash\)n"{}};}
+\DoxyCodeLine{00059\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ Add\ New\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{00060\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ Rent\ an\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{00061\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ Return\ an\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{00062\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[4]\ Show\ Office\ Details\(\backslash\)n"{}};}
+\DoxyCodeLine{00063\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[5]\ Display\ All\ Offices\(\backslash\)n"{}};}
+\DoxyCodeLine{00064\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[6]\ Add\ New\ Client\(\backslash\)n"{}};}
+\DoxyCodeLine{00065\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[7]\ Show\ Client\ Details\(\backslash\)n"{}};}
+\DoxyCodeLine{00066\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[8]\ Exit\(\backslash\)n"{}};}
+\DoxyCodeLine{00067\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Choose\ an\ option:\ "{}};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00069\ \}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ UTILS\_H}}
 
 \end{DoxyCode}

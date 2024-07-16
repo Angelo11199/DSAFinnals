@@ -8,8 +8,8 @@
 #include "../includes/FileHandling.h"
 #include "../includes/LinkedList.h"
 #include "../includes/utils.h"
-#include "./office.h"
-client::client(int clientID) : LinkedList() {
+// #include "./office.h"
+client::client(int clientID) {
     if (clientID == -1) return;
     clientId = clientID;
     std::vector<std::string> data = file.readFromFile();
@@ -20,9 +20,9 @@ client::client(int clientID) : LinkedList() {
             loggedClient.clientName = clientData[1];
             loggedClient.clientAddress = clientData[2];
             loggedClient.isAdmin = std::stoi(clientData[3]) == 1;
-            loggedClient.rentedSpaces = rented = office(clientID).getRentedOffices();
+            // loggedClient.rentedSpaces = rented = office(clientID).getRentedOffices();
         }
-        clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
+        add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
     };
     if (loggedClient.clientName == "") {
         std::cout << "Client not found" << std::endl;
@@ -40,6 +40,7 @@ void client::addClient(clientData data, bool current) {
 clientData client::getClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
+        // check if current->data has value
         if (current->data.id == clientId) return current->data;
         current = current->next;
     }
@@ -54,7 +55,7 @@ void client::removeClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
         if (current->data.id == clientId) {
-            clientList.remove(current->data);
+            remove(current->data);
             break;
         }
         current = current->next;
@@ -92,8 +93,5 @@ void client::changeClient(int clientId) {
     }
 }
 client::~client() {
-    std::cout << "Client Deleted" << std::endl;
-    if (head != nullptr) return;
-    delete head;
 }
 #endif

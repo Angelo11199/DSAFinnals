@@ -4,6 +4,6 @@ var searchData=
   ['remove_1',['remove',['../class_linked_list.html#ab9aa6e03f271785f6b488d8c4cc3f3c7',1,'LinkedList']]],
   ['removeclient_2',['removeClient',['../classclient.html#a8a6629a2513487793f12ccc02ea935c4',1,'client']]],
   ['rentedspaces_3',['rentedSpaces',['../structclient_data.html#a960edd7aca53bfb60668bbe5024f8cf4',1,'clientData']]],
-  ['rentoffice_4',['rentOffice',['../classoffice.html#ae7db2f3fa1721408eddb10cc7dd08c0e',1,'office::rentOffice()'],['../classclient_rent.html#a048ba46194aba6813cd16d8ae1d4fc4d',1,'clientRent::rentOffice()']]],
+  ['rentoffice_4',['rentOffice',['../classoffice.html#add96666ca2b1aa88a8f694afdfd7b7d1',1,'office::rentOffice()'],['../classclient_rent.html#a048ba46194aba6813cd16d8ae1d4fc4d',1,'clientRent::rentOffice()']]],
   ['role_5',['role',['../struct_user.html#a2ec7c3e3fddee7bd3d9ef64f7df3c808',1,'User']]]
 ];

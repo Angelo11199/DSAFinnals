@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['username_0',['username',['../struct_user.html#aacbb807e514280f69e00bec7d71f3aee',1,'User']]]
+  ['tail_0',['tail',['../class_linked_list.html#a28c70a98efc1d17eead515e45177db77',1,'LinkedList']]]
 ];

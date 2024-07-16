@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rentedspaces_0',['rentedSpaces',['../structclient_data.html#a960edd7aca53bfb60668bbe5024f8cf4',1,'clientData']]],
-  ['role_1',['role',['../struct_user.html#a2ec7c3e3fddee7bd3d9ef64f7df3c808',1,'User']]]
+  ['password_0',['password',['../struct_user.html#ac2f2e75b15e8eb6cbb030fc85a6cd59f',1,'User']]]
 ];

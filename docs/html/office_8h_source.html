@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -50,17 +52,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('office_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -82,12 +96,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_398e176834f55575ff8a406ce97fd01f.html">ADT</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">office.h</div></div>
 </div><!--header-->
@@ -95,46 +103,59 @@ $(function(){ initResizable(false); });
 <a href="office_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef OFFICE_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define OFFICE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_linked_list_8h.html">../includes/LinkedList.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="struct_data_8h.html">structData.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// responsible for storing office data. checking if an office is rented or not as well.</span></div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classoffice.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="classoffice.html">office</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_linked_list.html">LinkedList</a>&lt;officeInformation&gt; {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>   <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">struct </span>Node {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <a class="code hl_struct" href="structoffice_information.html">officeInformation</a> data;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        Node* next;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    };</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="classoffice.html#af15fc6e5c89037b1752f82f7477361bf">office</a>(<span class="keywordtype">int</span> clientID);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classoffice.html#aff0f126b758cb0ea6fb6c6659e74c0e3">   15</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classoffice.html#aff0f126b758cb0ea6fb6c6659e74c0e3">addOffice</a>(<a class="code hl_struct" href="structoffice_information.html">officeInformation</a> data);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classoffice.html#ae7db2f3fa1721408eddb10cc7dd08c0e">   16</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classoffice.html#ae7db2f3fa1721408eddb10cc7dd08c0e">rentOffice</a>(<a class="code hl_struct" href="structoffice_information.html">officeInformation</a> data);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classoffice.html#aeaf5d37ae0c53f2b1b81bf83af292933">   17</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classoffice.html#aeaf5d37ae0c53f2b1b81bf83af292933">endRental</a>(<a class="code hl_struct" href="structoffice_information.html">officeInformation</a> data);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classoffice.html#a9a3a6c95088ad84512d197d1e23e07dc">   18</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classoffice.html#a9a3a6c95088ad84512d197d1e23e07dc">printOffices</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_struct" href="structoffice_information.html">officeInformation</a> <a class="code hl_function" href="classoffice.html#ad4859f268ba0e77b6e0b7e77f6c287f2">getOffice</a>(<span class="keywordtype">int</span> officeId);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_class" href="class_linked_list.html">LinkedList&lt;officeInformation&gt;</a> <a class="code hl_function" href="classoffice.html#a606ab7929ba91f4c5d2aaf1d77bd5c53">getRentedOffices</a>();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="classoffice.html#aaba7efd932fe96f6f1f38f51e963a93c">~office</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_file_handling_8h.html">../includes/fileHandling.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="struct_data_8h.html">./structData.h</a>&quot;</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classoffice.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classoffice.html">office</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_linked_list.html">LinkedList</a>&lt;officeInformation&gt; {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">struct </span>Node {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_struct" href="structoffice_information.html">officeInformation</a> data;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        Node* next;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="classfile_handling.html">fileHandling</a> file = <a class="code hl_class" href="classfile_handling.html">fileHandling</a>(<span class="stringliteral">&quot;offices.csv&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="classoffice.html#af15fc6e5c89037b1752f82f7477361bf">office</a>(<span class="keywordtype">int</span> clientID);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classoffice.html#aff0f126b758cb0ea6fb6c6659e74c0e3">addOffice</a>(<a class="code hl_struct" href="structoffice_information.html">officeInformation</a> data);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classoffice.html#add96666ca2b1aa88a8f694afdfd7b7d1">rentOffice</a>(<a class="code hl_struct" href="structoffice_information.html">officeInformation</a> data, <span class="keywordtype">int</span> clientID);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classoffice.html#aeaf5d37ae0c53f2b1b81bf83af292933">endRental</a>(<a class="code hl_struct" href="structoffice_information.html">officeInformation</a> data);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classoffice.html#a9a3a6c95088ad84512d197d1e23e07dc">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classoffice.html#a9a3a6c95088ad84512d197d1e23e07dc">printOffices</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_struct" href="structoffice_information.html">officeInformation</a> <a class="code hl_function" href="classoffice.html#ad4859f268ba0e77b6e0b7e77f6c287f2">getOffice</a>(<span class="keywordtype">int</span> officeId);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_class" href="class_linked_list.html">LinkedList&lt;officeInformation&gt;</a> <a class="code hl_function" href="classoffice.html#a606ab7929ba91f4c5d2aaf1d77bd5c53">getRentedOffices</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_function" href="classoffice.html#aaba7efd932fe96f6f1f38f51e963a93c">~office</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_file_handling_8h_html"><div class="ttname"><a href="_file_handling_8h.html">FileHandling.h</a></div></div>
 <div class="ttc" id="a_linked_list_8h_html"><div class="ttname"><a href="_linked_list_8h.html">LinkedList.h</a></div></div>
-<div class="ttc" id="aclass_linked_list_html"><div class="ttname"><a href="class_linked_list.html">LinkedList</a></div><div class="ttdef"><b>Definition</b> <a href="_linked_list_8h_source.html#l00004">LinkedList.h:4</a></div></div>
-<div class="ttc" id="aclassoffice_html"><div class="ttname"><a href="classoffice.html">office</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">office.h:6</a></div></div>
-<div class="ttc" id="aclassoffice_html_a606ab7929ba91f4c5d2aaf1d77bd5c53"><div class="ttname"><a href="classoffice.html#a606ab7929ba91f4c5d2aaf1d77bd5c53">office::getRentedOffices</a></div><div class="ttdeci">LinkedList&lt; officeInformation &gt; getRentedOffices()</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00036">office.cpp:36</a></div></div>
-<div class="ttc" id="aclassoffice_html_a9a3a6c95088ad84512d197d1e23e07dc"><div class="ttname"><a href="classoffice.html#a9a3a6c95088ad84512d197d1e23e07dc">office::printOffices</a></div><div class="ttdeci">void printOffices()</div></div>
-<div class="ttc" id="aclassoffice_html_aaba7efd932fe96f6f1f38f51e963a93c"><div class="ttname"><a href="classoffice.html#aaba7efd932fe96f6f1f38f51e963a93c">office::~office</a></div><div class="ttdeci">~office()</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00061">office.cpp:61</a></div></div>
-<div class="ttc" id="aclassoffice_html_ad4859f268ba0e77b6e0b7e77f6c287f2"><div class="ttname"><a href="classoffice.html#ad4859f268ba0e77b6e0b7e77f6c287f2">office::getOffice</a></div><div class="ttdeci">officeInformation getOffice(int officeId)</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00026">office.cpp:26</a></div></div>
-<div class="ttc" id="aclassoffice_html_ae7db2f3fa1721408eddb10cc7dd08c0e"><div class="ttname"><a href="classoffice.html#ae7db2f3fa1721408eddb10cc7dd08c0e">office::rentOffice</a></div><div class="ttdeci">void rentOffice(officeInformation data)</div></div>
-<div class="ttc" id="aclassoffice_html_aeaf5d37ae0c53f2b1b81bf83af292933"><div class="ttname"><a href="classoffice.html#aeaf5d37ae0c53f2b1b81bf83af292933">office::endRental</a></div><div class="ttdeci">void endRental(officeInformation data)</div></div>
-<div class="ttc" id="aclassoffice_html_af15fc6e5c89037b1752f82f7477361bf"><div class="ttname"><a href="classoffice.html#af15fc6e5c89037b1752f82f7477361bf">office::office</a></div><div class="ttdeci">office(int clientID)</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00009">office.cpp:9</a></div></div>
-<div class="ttc" id="aclassoffice_html_aff0f126b758cb0ea6fb6c6659e74c0e3"><div class="ttname"><a href="classoffice.html#aff0f126b758cb0ea6fb6c6659e74c0e3">office::addOffice</a></div><div class="ttdeci">void addOffice(officeInformation data)</div></div>
+<div class="ttc" id="aclass_linked_list_html"><div class="ttname"><a href="class_linked_list.html">LinkedList</a></div><div class="ttdef"><b>Definition</b> <a href="_linked_list_8h_source.html#l00005">LinkedList.h:5</a></div></div>
+<div class="ttc" id="aclassfile_handling_html"><div class="ttname"><a href="classfile_handling.html">fileHandling</a></div><div class="ttdoc">Class for handling file operations such as reading from and writing to files.</div><div class="ttdef"><b>Definition</b> <a href="_file_handling_8h_source.html#l00013">FileHandling.h:13</a></div></div>
+<div class="ttc" id="aclassoffice_html"><div class="ttname"><a href="classoffice.html">office</a></div><div class="ttdoc">Represents an office management class.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">office.h:12</a></div></div>
+<div class="ttc" id="aclassoffice_html_a606ab7929ba91f4c5d2aaf1d77bd5c53"><div class="ttname"><a href="classoffice.html#a606ab7929ba91f4c5d2aaf1d77bd5c53">office::getRentedOffices</a></div><div class="ttdeci">LinkedList&lt; officeInformation &gt; getRentedOffices()</div><div class="ttdoc">retrieves a list of offices currently rented out</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00053">office.cpp:53</a></div></div>
+<div class="ttc" id="aclassoffice_html_a9a3a6c95088ad84512d197d1e23e07dc"><div class="ttname"><a href="classoffice.html#a9a3a6c95088ad84512d197d1e23e07dc">office::printOffices</a></div><div class="ttdeci">void printOffices()</div><div class="ttdoc">prints info about all offices in the system</div></div>
+<div class="ttc" id="aclassoffice_html_aaba7efd932fe96f6f1f38f51e963a93c"><div class="ttname"><a href="classoffice.html#aaba7efd932fe96f6f1f38f51e963a93c">office::~office</a></div><div class="ttdeci">~office()</div><div class="ttdoc">Destroy the office object.</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00075">office.cpp:75</a></div></div>
+<div class="ttc" id="aclassoffice_html_ad4859f268ba0e77b6e0b7e77f6c287f2"><div class="ttname"><a href="classoffice.html#ad4859f268ba0e77b6e0b7e77f6c287f2">office::getOffice</a></div><div class="ttdeci">officeInformation getOffice(int officeId)</div><div class="ttdoc">retrieves detailed info about a specific office</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00043">office.cpp:43</a></div></div>
+<div class="ttc" id="aclassoffice_html_add96666ca2b1aa88a8f694afdfd7b7d1"><div class="ttname"><a href="classoffice.html#add96666ca2b1aa88a8f694afdfd7b7d1">office::rentOffice</a></div><div class="ttdeci">void rentOffice(officeInformation data, int clientID)</div><div class="ttdoc">Rents an office to a specified client.</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00064">office.cpp:64</a></div></div>
+<div class="ttc" id="aclassoffice_html_aeaf5d37ae0c53f2b1b81bf83af292933"><div class="ttname"><a href="classoffice.html#aeaf5d37ae0c53f2b1b81bf83af292933">office::endRental</a></div><div class="ttdeci">void endRental(officeInformation data)</div><div class="ttdoc">Ends the rental of an office, making it available again.</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00032">office.cpp:32</a></div></div>
+<div class="ttc" id="aclassoffice_html_af15fc6e5c89037b1752f82f7477361bf"><div class="ttname"><a href="classoffice.html#af15fc6e5c89037b1752f82f7477361bf">office::office</a></div><div class="ttdeci">office(int clientID)</div><div class="ttdoc">Constructor for the office class.</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00013">office.cpp:13</a></div></div>
+<div class="ttc" id="aclassoffice_html_aff0f126b758cb0ea6fb6c6659e74c0e3"><div class="ttname"><a href="classoffice.html#aff0f126b758cb0ea6fb6c6659e74c0e3">office::addOffice</a></div><div class="ttdeci">void addOffice(officeInformation data)</div><div class="ttdoc">Adds a new office to the management system.</div><div class="ttdef"><b>Definition</b> <a href="office_8cpp_source.html#l00028">office.cpp:28</a></div></div>
 <div class="ttc" id="astruct_data_8h_html"><div class="ttname"><a href="struct_data_8h.html">structData.h</a></div></div>
-<div class="ttc" id="astructoffice_information_html"><div class="ttname"><a href="structoffice_information.html">officeInformation</a></div><div class="ttdef"><b>Definition</b> <a href="struct_data_8h_source.html#l00006">structData.h:6</a></div></div>
+<div class="ttc" id="astructoffice_information_html"><div class="ttname"><a href="structoffice_information.html">officeInformation</a></div><div class="ttdoc">Struct defining information about an office.</div><div class="ttdef"><b>Definition</b> <a href="struct_data_8h_source.html#l00013">structData.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_398e176834f55575ff8a406ce97fd01f.html">ADT</a></li><li class="navelem"><a class="el" href="office_8h.html">office.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -30,14 +30,12 @@ class LinkedList {
     ~LinkedList() {
         std::cout << "Linked list Deleted" << std::endl;
         Node* current = head;
-        if (current != nullptr) {
-            delete current;
+        while (current != nullptr) {
+            Node* next = current->next;  // Save next node
+            delete current;              // Delete the current node
+            current = next;              // Move to the next node
         }
-        // while (current != nullptr) {
-        //     next = current->next;
-        //     delete current;
-        //     current = next;
-        // }
+        head = nullptr;
     }
 
     /**

@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -50,19 +52,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="doc-content">
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('annotated.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -90,24 +102,26 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><div class="directory">
 <div class="levels">[detail level <span onclick="javascript:dynsection.toggleLevel(1);">1</span><span onclick="javascript:dynsection.toggleLevel(2);">2</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classclient.html" target="_self">client</a></td><td class="desc">Construct a new <a class="el" href="classclient.html#a73c905f01932e6f5411930241b96c09f">client::client</a> object with the client ID </td></tr>
-<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structclient_data.html" target="_self">clientData</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classclient_rent.html" target="_self">clientRent</a></td><td class="desc"></td></tr>
-<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classfile_handling.html" target="_self">fileHandling</a></td><td class="desc"></td></tr>
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classclient.html" target="_self">client</a></td><td class="desc">Client management class </td></tr>
+<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structclient_data.html" target="_self">clientData</a></td><td class="desc">Struct defining information about a client </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classclient_rent.html" target="_self">clientRent</a></td><td class="desc">Represents a client rental management class </td></tr>
+<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classfile_handling.html" target="_self">fileHandling</a></td><td class="desc">Class for handling file operations such as reading from and writing to files </td></tr>
 <tr id="row_4_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_4_" class="arrow" onclick="dynsection.toggleFolder('4_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_linked_list.html" target="_self">LinkedList</a></td><td class="desc"></td></tr>
 <tr id="row_4_0_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_linked_list_1_1_node.html" target="_self">Node</a></td><td class="desc"></td></tr>
-<tr id="row_5_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classoffice.html" target="_self">office</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structoffice_information.html" target="_self">officeInformation</a></td><td class="desc"></td></tr>
+<tr id="row_5_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classoffice.html" target="_self">office</a></td><td class="desc">Represents an office management class </td></tr>
+<tr id="row_6_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structoffice_information.html" target="_self">officeInformation</a></td><td class="desc">Struct defining information about an office </td></tr>
 <tr id="row_7_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_queue.html" target="_self">Queue</a></td><td class="desc"></td></tr>
 <tr id="row_8_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_stack.html" target="_self">Stack</a></td><td class="desc"></td></tr>
-<tr id="row_9_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_user.html" target="_self">User</a></td><td class="desc"></td></tr>
+<tr id="row_9_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_user.html" target="_self">User</a></td><td class="desc">Struct defining basic user information </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
 </body>
 </html>
