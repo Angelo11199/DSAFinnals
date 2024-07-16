@@ -31,6 +31,7 @@ client::client(int clientID) : LinkedList() {
         clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
     };
 };
+
 /**
  * @brief add a client to the client list with the selected data structure
  * @class client
@@ -38,7 +39,12 @@ client::client(int clientID) : LinkedList() {
  *
  * @return void
  */
-void client::addClient(clientData data) { add(data); };
+void client::addClient(clientData data, bool current) {
+    add(data);
+    if (current) {
+        clientId = data.id;
+    };
+}
 clientData client::getClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {

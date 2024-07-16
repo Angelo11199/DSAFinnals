@@ -18,7 +18,7 @@ class client : LinkedList<clientData> {
    public:
     client(int clientId);
     ~client();
-    void addClient(clientData data);
+    void addClient(clientData data, bool current = false);
     void addRentedSpace(officeInformation data);
     clientData getClient(int clientId);
     void changeClient(int clientId);

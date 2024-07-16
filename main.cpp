@@ -23,17 +23,19 @@ void displayMenu() {
 }
 
 int main() {
-    office officeList = office(1);
     client clientList = client(1);
-    fileHandling officeFile("offices.txt");
-    fileHandling clientFile("clients.txt");
-    int clientId = 1;
-    // officeFile.init();
-    // clientFile.init();
+    //* code made here.
+    //* prompt if user has an account or not
+    //* if user has an account, prompt for client ID
+    //* if user does not have an account, prompt for client ID and create a new account
+    office officeList = office(-1);  // change -1 to clientID. if user is not logged in, set to -
+    int clientId;
+    cout << "Enter your Client ID: ";
+    cin >> clientId;  //* error when I put letters here. causes infinite loop
+    cin.ignore();
     bool isRunning = true;
     int choice;
-    //* make this a while loop.
-    do {
+    while (true) {
         displayMenu();
         cin >> choice;
         cin.ignore();
@@ -52,7 +54,6 @@ int main() {
                 cout << "Enter Office Size: ";
                 cin >> newOffice.officeSize;
                 newOffice.isRented = false;
-
                 officeList.addOffice(newOffice);
                 cout << "New Office added successfully!\n";
                 break;
@@ -89,7 +90,7 @@ int main() {
             }
             case 4: {
                 int officeId;
-                cout << "Enter Office ID to show detials: ";
+                cout << "Enter Office ID to show details: ";
                 cin >> officeId;
 
                 officeInformation officeData = officeList.getOffice(officeId);
@@ -139,12 +140,13 @@ int main() {
             }
             case 8: {
                 cout << "Exiting program...\n";
-                break;
+                isRunning = false;
+                return 0;
             }
             default:
                 cout << "Invalid choice. Please try again.\n";
         }
-    } while (choice != 8);
+    }
 
     return 0;
 }
