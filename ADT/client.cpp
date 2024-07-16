@@ -9,15 +9,9 @@
 #include "../includes/LinkedList.h"
 #include "../includes/utils.h"
 #include "./office.h"
-/**
- * @brief Construct a new client::client object with the client ID
- * @class client
- *
- * @param clientID int
- */
 client::client(int clientID) : LinkedList() {
+    if (clientID == -1) return;
     clientId = clientID;
-    fileHandling file = fileHandling("clients.csv");
     std::vector<std::string> data = file.readFromFile();
     for (std::string line : data) {
         std::vector<std::string> clientData = splitData(line, ',');
@@ -30,17 +24,15 @@ client::client(int clientID) : LinkedList() {
         }
         clientList.add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
     };
+    if (loggedClient.clientName == "") {
+        std::cout << "Client not found" << std::endl;
+    }
 };
 
-/**
- * @brief add a client to the client list with the selected data structure
- * @class client
- * @param data clientData
- *
- * @return void
- */
 void client::addClient(clientData data, bool current) {
+    std::cout << data.isAdmin << std::endl;
     add(data);
+    file.writeToFile(data.id, data.clientName, data.clientAddress, data.isAdmin);
     if (current) {
         clientId = data.id;
     };

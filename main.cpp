@@ -1,4 +1,15 @@
 
+/**
+ * @file main.cpp
+ * @author group name here
+ * @brief para san to
+ * @version 0.5
+ * @date 2024-07-16 when weas this created
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
+
 #include <iostream>
 #include <string>
 
@@ -6,39 +17,45 @@
 #include "./ADT/office.h"
 #include "./ADT/structData.h"
 #include "./includes/fileHandling.h"
+#include "./includes/utils.h"
 
 using namespace std;
 
-void displayMenu() {
-    cout << "Office Space Rental System\n";
-    cout << "[1] Add New Office\n";
-    cout << "[2] Rent an Office\n";
-    cout << "[3] Return an Office\n";
-    cout << "[4] Show Office Details\n";
-    cout << "[5] Display All Offices\n";
-    cout << "[6] Add New Client\n";
-    cout << "[7] Show Client Details\n";
-    cout << "[8] Exit\n";
-    cout << "Choose an option: ";
-}
-
 int main() {
-    client clientList = client(1);
-    //* code made here.
-    //* prompt if user has an account or not
-    //* if user has an account, prompt for client ID
-    //* if user does not have an account, prompt for client ID and create a new account
-    office officeList = office(-1);  // change -1 to clientID. if user is not logged in, set to -
+    client clientList = client(-1);
     int clientId;
-    cout << "Enter your Client ID: ";
-    cin >> clientId;  //* error when I put letters here. causes infinite loop
-    cin.ignore();
+    char hasAccount;
+    cout << "Welcome to Office Space Rental System\n";
+    cout << "Do you have an account? (y/n): ";
+    cin.get(hasAccount);
+    hasAccount = static_cast<char>(toupper(hasAccount));
+    switch (hasAccount) {
+        case 'Y': {
+            clientId = (int)getDouble("Enter your Client ID: ");
+            clientList = client(clientId);
+            break;
+        }
+        case 'N': {
+            clientData currentClient;
+            currentClient.id = clientId = (int)getDouble("Enter new Client ID: ");
+            currentClient.isAdmin = false;
+            cout << currentClient.id << endl;
+            cout << "Enter new Client Name: ";
+            getline(cin, currentClient.clientName);
+            cout << "Enter new Client Address: ";
+            getline(cin, currentClient.clientAddress);
+            clientList.addClient(currentClient, true);
+            cout << "New client added and logged in successfully!\n";
+            clientId = currentClient.id;
+            break;
+        }
+    }
+    office officeList(clientId);
     bool isRunning = true;
     int choice;
-    while (true) {
+    while (isRunning) {
         displayMenu();
-        cin >> choice;
-        cin.ignore();
+        choice = (int)getDouble("Enter your choice: ");
         switch (choice) {
             case 1: {
                 officeInformation newOffice;
@@ -125,7 +142,6 @@ int main() {
                 break;
             }
             case 7: {
-                int clientId;
                 cout << "Enter Client ID to show details: ";
                 cin >> clientId;
                 clientData client = clientList.getClient(clientId);

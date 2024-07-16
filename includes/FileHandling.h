@@ -6,66 +6,81 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
+/**
+ * @brief Class for handling file operations such as reading from and writing to files
+ *
+ */
 class fileHandling {
    private:
-    string filename;
-    ofstream outFile;
-    ifstream inFile;
+    std::string filename;
+    template <typename T>
+    void writeToFileHelper(std::ofstream& file, const T& last) {
+        file << last << std::endl;
+    }
+
+    template <typename T, typename... Args>
+    void writeToFileHelper(std::ofstream& file, const T& first, const Args&... args) {
+        file << first;
+        if constexpr (sizeof...(args) > 0) {
+            file << ", ";
+            writeToFileHelper(file, args...);
+        } else {
+            file << std::endl;
+        }
+    }
 
    public:
-    fileHandling(string filename) {
-        this->filename = filename;
-        outFile.open(filename);
-        if (!outFile.is_open()) {
-            cerr << "Unable to create file: " << filename << endl;
-        }
-        outFile.close();
-    };
-    ~fileHandling() {
-        if (outFile.is_open()) {
-            outFile.close();
-        }
-        if (inFile.is_open()) {
-            inFile.close();
-        }
-    }
-    template <typename T, typename... Args>
-    void writeToFile(const T& first, const Args&... args) {
-        outFile.open(filename, ios::app);
-        if (outFile.is_open()) {
-            outFile << first << ",";
-            if constexpr (sizeof...(args) > 0) {
-                outFile << ",";
-                writeToFile(args...);
-            } else {
-                outFile << endl;
-            }
-        } else {
-            cerr << "Unable to open file for writing: " << filename << endl;
-        }
-        outFile.close();
-    }
-    std::vector<std::string> readFromFile() {
-        std::ifstream file(filename);
-        if (!file) {
-            throw std::runtime_error("Error opening file");
-        }
+    /**
+     * @brief Constructor to initialize the file handler with a specified filename
+     *
+     * @param filename Name of the file to be handled
+     */
+    fileHandling(std::string filename);
 
+    /**
+     * @brief Destructor to clean up resources associated with the file handler
+     *
+     */
+    ~fileHandling();
+
+    /**
+     * @brief Writes data to the file
+     *
+     * @tparam Type of the last argument to write
+     * @param last Last argument to write to the file
+     */
+    template <typename T>
+    void writeToFile(const T& last) {
+        std::ofstream file;
+        file.open(filename, std::ios::app);
+        file << last << std::endl;  // Writes the last (or only) item followed by a newline
+        file.close();
+    }
+
+    template <typename... Args>
+    void writeToFile(const Args&... args) {
+        std::ofstream file(filename, std::ios::app);  // Open file once
+        if (!file.is_open()) {
+            std::cerr << "Error opening file" << std::endl;
+            return;
+        }
+        writeToFileHelper(file, args...);  // Start the recursive writing with the file stream
+        file.close();                      // Close file after all writing is done
+    }
+
+    std::vector<std::string> readFromFile() {
         std::vector<std::string> data;
+        std::ifstream file;
+        file.open(filename);
+        if (!file.is_open()) {
+            std::cerr << "Error opening file" << std::endl;
+            return data;
+        }
         std::string line;
         while (std::getline(file, line)) {
             data.push_back(line);
         }
-
         file.close();
-
-        bool isTampered = false;
-        if (isTampered) {
-            throw std::runtime_error("File data is tampered");
-        }
-
         return data;
     };
 };

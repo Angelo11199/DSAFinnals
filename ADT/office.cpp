@@ -74,6 +74,7 @@ void office::rentOffice(officeInformation data, int clientID) {
 }
 office::~office() {
     std::cout << "Office Deleted" << std::endl;
+    if (head != nullptr) return;
     delete head;
 }
 #endif

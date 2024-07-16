@@ -56,6 +56,8 @@ void clientRent::ShowAvailableOffices() {
     }
 }
 clientRent::~clientRent() {
-    delete LinkedList<officeInformation>::head;
+    if (LinkedList<officeInformation>::head != nullptr)
+        delete LinkedList<officeInformation>::head;
+    return;
 }
 #endif

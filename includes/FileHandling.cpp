@@ -1,11 +1,16 @@
-#ifndef FILEHANDLING_H
-#define FILEHANDLING_H
-#include "FileHandling.h"
+#ifndef FILEHANDLING_CPP
+#define FILEHANDLING_CPP
+#include "./FileHandling.h"
 
 #include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+fileHandling::fileHandling(std::string filename) {
+    this->filename = filename;
+}
+fileHandling::~fileHandling() {
+    return;
+}
 
-// fileHandling::fileHandling(std::string filename) {
-//     this->filename = filename;
-// }
 #endif
-// todo : returns, a vector of data that was read in csv file. Check if tampered, if yes, return an error and throw an exception error.
