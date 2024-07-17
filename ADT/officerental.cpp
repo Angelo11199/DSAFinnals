@@ -35,6 +35,7 @@ bool clientRent::rentOffice(std::string officeId) {
         }
     }
     file.writeToFile(clientId, officeId);
+    return true;
 }
 void clientRent::showRentedOffices() {
     auto currentOffice = office(clientId).getHead();

@@ -135,7 +135,7 @@ int main() {
             //* not yet tested. incomplete
             case 5: {
                 cout << "Displaying all offices: \n";
-                officeList.print();
+                officeList.printOffices();
                 break;
             }
             //* working and tested.
