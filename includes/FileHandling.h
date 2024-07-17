@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 
+#include "./LinkedList.h"  // Include the header file for the LinkedList class
+
 /**
  * @brief Class for handling file operations such as reading from and writing to files
  *
@@ -36,7 +38,7 @@ class fileHandling {
      * @param filename Name of the file to be handled
      */
     fileHandling(std::string filename);
-
+    int size;
     /**
      * @brief Destructor to clean up resources associated with the file handler
      *
@@ -68,8 +70,8 @@ class fileHandling {
         file.close();                      // Close file after all writing is done
     }
 
-    std::vector<std::string> readFromFile() {
-        std::vector<std::string> data;
+    LinkedList<std::string> readFromFile() {
+        LinkedList<std::string> data;
         std::ifstream file;
         file.open(filename);
         if (!file.is_open()) {
@@ -78,11 +80,11 @@ class fileHandling {
         }
         std::string line;
         while (std::getline(file, line)) {
-            data.push_back(line);
+            data.add(line);  // Assuming LinkedList has a push_back method similar to std::vector
         }
         file.close();
         return data;
-    };
+    }
 };
 
 #endif

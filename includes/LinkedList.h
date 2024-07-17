@@ -22,6 +22,9 @@ class LinkedList {
         tail = nullptr;
         size = 0;
     }
+    Node* getHead() {
+        return head;
+    }
 
     /**
      * @brief Destructor to clean up memory allocated for the linked list
@@ -29,13 +32,13 @@ class LinkedList {
      */
     ~LinkedList() {
         std::cout << "Linked list Deleted" << std::endl;
-        Node* current = head;
-        while (current != nullptr) {
-            Node* next = current->next;  // Save next node
-            delete current;              // Delete the current node
-            current = next;              // Move to the next node
-        }
-        head = nullptr;
+        // Node* current = head;
+        // while (current != nullptr) {
+        //     Node* next = current->next;  // Save next node
+        //     delete current;              // Delete the current node
+        //     current = next;              // Move to the next node
+        // }
+        // head = nullptr;
     }
 
     /**

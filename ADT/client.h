@@ -20,8 +20,6 @@ class client : LinkedList<clientData> {
    private:
     clientData loggedClient;
     LinkedList<clientData> clientList;
-    Node *head;
-    LinkedList<officeInformation> rented = LinkedList<officeInformation>();
 
    public:
     /**

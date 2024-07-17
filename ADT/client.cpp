@@ -2,6 +2,7 @@
 #define CLIENT_CPP
 #include "./client.h"
 
+#include <array>
 #include <iostream>
 #include <vector>
 
@@ -12,22 +13,27 @@
 client::client(int clientID) {
     if (clientID == -1) return;
     clientId = clientID;
-    std::vector<std::string> data = file.readFromFile();
-    for (std::string line : data) {
-        std::vector<std::string> clientData = splitData(line, ',');
-        if (clientID == std::stoi(clientData[0])) {
-            loggedClient.id = std::stoi(clientData[0]);
-            loggedClient.clientName = clientData[1];
-            loggedClient.clientAddress = clientData[2];
-            loggedClient.isAdmin = std::stoi(clientData[3]) == 1;
+    LinkedList<std::string> data = file.readFromFile();
+    auto current = data.getHead();
+    const std::size_t size = 4;
+    bool isUser = false;
+    while (current != nullptr) {
+        std::array<std::string, size> output;
+        splitData(current->data, ',', output);
+        current = current->next;
+        if (clientID == std::stoi(output[0])) {
+            loggedClient.id = std::stoi(output[0]);
+            loggedClient.clientName = output[1];
+            loggedClient.clientAddress = output[2];
+            loggedClient.isAdmin = std::stoi(output[3]) == 1;
             // loggedClient.rentedSpaces = rented = office(clientID).getRentedOffices();
         }
-        add({std::stoi(clientData[0]), clientData[1], clientData[2], std::stoi(clientData[3]) == 1});
-    };
+        add({std::stoi(output[0]), output[1], output[2], std::stoi(output[3]) == 1});
+    }
     if (loggedClient.clientName == "") {
         std::cout << "Client not found" << std::endl;
     }
-};
+}
 
 void client::addClient(clientData data, bool current) {
     std::cout << data.isAdmin << std::endl;
@@ -38,9 +44,8 @@ void client::addClient(clientData data, bool current) {
     };
 }
 clientData client::getClient(int clientId) {
-    Node* current = head;
+    Node* current = this->head;
     while (current != nullptr) {
-        // check if current->data has value
         if (current->data.id == clientId) return current->data;
         current = current->next;
     }
@@ -77,11 +82,11 @@ void client::printClients() {
         std::cout << "Client ID: " << current->data.id << std::endl;
         std::cout << "Client Name: " << current->data.clientName << std::endl;
         std::cout << "Client Phone: " << current->data.clientAddress << std::endl;
-        std::cout << "Client Rented Space: " << rented.getSize() << std::endl;
+        std::cout << "Client Rented Space: " << current->data.rentedSpaces.getSize() << std::endl;
         current = current->next;
     }
 }
-void client::addRentedSpace(officeInformation data) { rented.add(data); };
+void client::addRentedSpace(officeInformation data) { head->data.rentedSpaces.add(data); };
 void client::changeClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {
@@ -93,5 +98,14 @@ void client::changeClient(int clientId) {
     }
 }
 client::~client() {
+    std::cout << "Client Deleted" << std::endl;
+    // if (head != nullptr) {
+    //     Node* current = head;
+    //     while (current != nullptr) {
+    //         Node* temp = current;
+    //         current = current->next;
+    //         delete temp;
+    //     }
+    // }
 }
 #endif

@@ -3,27 +3,29 @@
 #define OFFICE_CPP
 #include "office.h"
 
+#include <array>
 #include <iostream>
-#include <vector>
 
 #include "../includes/LinkedList.h"
 #include "../includes/fileHandling.h"
 #include "../includes/utils.h"
 
 office::office(int clientID) : LinkedList() {
-    std::vector<std::string> data = file.readFromFile();
-    for (std::string line : data) {
-        std::vector<std::string> officeData = splitData(line, ',');
-        officeInformation office;
-        office.id = std::stoi(officeData[0]);
-        office.officeName = officeData[1];
-        office.officeAddress = officeData[2];
-        office.officePrice = std::stoi(officeData[3]);
-        office.officeSize = officeData[4];
-        office.isRented = officeData[5] == "1";
-        if (office.id != clientID) continue;
-        add(office);
-    }
+    LinkedList<std::string> data = file.readFromFile();
+    const std::size_t size = 6;
+    std::array<std::string, size> output;
+    // while (current != nullptr) {
+    //     (current->data, ',', output);
+    //     officeInformation office;
+    //     office.id = std::stoi(officeData[0]);
+    //     office.officeName = officeData[1];
+    //     office.officeAddress = officeData[2];
+    //     office.officePrice = std::stoi(officeData[3]);
+    //     office.officeSize = officeData[4];
+    //     office.isRented = officeData[5] == "1";
+    //     add(office);
+    //     current = current->next;
+    // }
 };
 void office::addOffice(officeInformation data) {
     add(data);

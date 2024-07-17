@@ -33,16 +33,9 @@ struct clientData {
     LinkedList<officeInformation> rentedSpaces;
 };
 
-/**
- * @brief Struct defining basic user information
- *
- * @details Contains basic information about a user, such as username,
- * password, and role
- */
-struct User {
-    std::string username;
-    std::string password;
-    int role;
+struct FileNode {
+    std::string data;
+    FileNode* next;
 };
 
 #endif

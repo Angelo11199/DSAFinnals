@@ -150,7 +150,7 @@ int main() {
                 // officeList.print();
                 break;
             }
-            //* not yet tested
+            //* working and tested.
             case 7: {
                 cout << "Enter Client ID to show details: ";
                 cin >> clientId;

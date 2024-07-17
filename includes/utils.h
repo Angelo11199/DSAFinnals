@@ -1,10 +1,11 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#include <array>
 #include <iostream>
 #include <sstream>
-#include <vector>
 
+#include "./LinkedList.h"
 /**
  * @brief Splits a string into parts based on a delimiter
  *
@@ -13,18 +14,16 @@
  * @return std::vector<std::string> Vector of strings containing the split parts
  */
 // Definition of splitData function
-inline std::vector<std::string> splitData(const std::string& data, char delimiter) {
-    std::vector<std::string> result;
-    std::stringstream dataStream(data);
-    std::string piece;
+template <size_t N>
+void splitData(const std::string& input, char delimiter, std::array<std::string, N>& output) {
+    std::istringstream stream(input);
+    std::string token;
+    size_t index = 0;
 
-    while (std::getline(dataStream, piece, delimiter)) {
-        result.push_back(piece);
+    while (std::getline(stream, token, delimiter) && index < N) {
+        output[index++] = token;
     }
-
-    return result;
 }
-
 /**
  * @brief Prompts the user to enter a double value
  *
