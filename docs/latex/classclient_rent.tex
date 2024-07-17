@@ -1,5 +1,5 @@
 \doxysection{client\+Rent Class Reference}
-\label{classclient_rent}\index{clientRent@{clientRent}}
+\hypertarget{classclient_rent}{}\label{classclient_rent}\index{clientRent@{clientRent}}
 
 
 Represents a client rental management class.  
@@ -7,75 +7,81 @@ Represents a client rental management class.
 
 
 
-{\ttfamily \#include $<$office\+Rental.\+h$>$}
+{\ttfamily \#include $<$client\+Rent.\+h$>$}
 
-Inheritance diagram for client\+Rent\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=3.000000cm]{classclient_rent}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for client\+Rent\+:
+% FIG 0
+
+
+Collaboration diagram for client\+Rent\+:
+% FIG 1
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ client\+Rent} (int client\+Id)
-\begin{DoxyCompactList}\small\item\em Constructor for the \doxyref{client\+Rent}{p.}{classclient_rent} class. \end{DoxyCompactList}\item 
-bool \textbf{ rent\+Office} (int office\+Id)
+\mbox{\hyperlink{classclient_rent_a5e2a9313c3e186e68de297559349d32f}{client\+Rent}} (int client\+ID)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classclient_rent}{client\+Rent} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classclient_rent_a048ba46194aba6813cd16d8ae1d4fc4d}{rent\+Office}} (int office\+Id)
 \begin{DoxyCompactList}\small\item\em Rents an office for the client. \end{DoxyCompactList}\item 
-void \textbf{ Show\+Available\+Offices} ()
+void \mbox{\hyperlink{classclient_rent_a18095e06209ac8de0b7fdbded86fa57f}{show\+Rented\+Offices}} ()
 \begin{DoxyCompactList}\small\item\em Shows available offices that can be rented. \end{DoxyCompactList}\item 
-\textbf{ $\sim$client\+Rent} ()
+\mbox{\hyperlink{classclient_rent_abce770e2f95bfad319fb5fb6fb16181f}{\texorpdfstring{$\sim$}{\string~}client\+Rent}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the client Rent object. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \textbf{ client}}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classclient}{client}}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ client} (int \textbf{ client\+Id})
+\mbox{\hyperlink{classclient_a73c905f01932e6f5411930241b96c09f}{client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
 \begin{DoxyCompactList}\small\item\em Constructor for the client class. \end{DoxyCompactList}\item 
-\textbf{ $\sim$client} ()
+\mbox{\hyperlink{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9}{\texorpdfstring{$\sim$}{\string~}client}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the client object. \end{DoxyCompactList}\item 
-void \textbf{ add\+Client} (\textbf{ client\+Data} data, bool current=false)
+void \mbox{\hyperlink{classclient_a733535fb656d02f5ab034f8b649cf3f0}{add\+Client}} (\mbox{\hyperlink{structclient_data}{client\+Data}} data, bool current=false)
 \begin{DoxyCompactList}\small\item\em Adds a new client to the management system. \end{DoxyCompactList}\item 
-void \textbf{ add\+Rented\+Space} (\textbf{ office\+Information} data)
+void \mbox{\hyperlink{classclient_aa2e50f0061a672960762e9d17ea4fbc8}{add\+Rented\+Space}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data)
 \begin{DoxyCompactList}\small\item\em Adds information about an office rented by a client. \end{DoxyCompactList}\item 
-\textbf{ client\+Data} \textbf{ get\+Client} (int \textbf{ client\+Id})
+\mbox{\hyperlink{structclient_data}{client\+Data}} \mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{get\+Client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
 \begin{DoxyCompactList}\small\item\em Retrieves information about a specific client. \end{DoxyCompactList}\item 
-void \textbf{ change\+Client} (int \textbf{ client\+Id})
+void \mbox{\hyperlink{classclient_adb9e839f07bd89b82a16b2aefac14837}{change\+Client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
 \begin{DoxyCompactList}\small\item\em Changes the information of a specific client. \end{DoxyCompactList}\item 
-void \textbf{ remove\+Client} (int data)
+void \mbox{\hyperlink{classclient_a3d443d75aae88598edc548e41181a4e6}{remove\+Client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
 \begin{DoxyCompactList}\small\item\em Removes a client from the management system. \end{DoxyCompactList}\item 
-void \textbf{ print\+Clients} ()
+void \mbox{\hyperlink{classclient_a1cfaa24b1f47f7c2035549f874b69ea1}{print\+Clients}} ()
 \begin{DoxyCompactList}\small\item\em Prints information about all clients in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \textbf{ Linked\+List$<$ office\+Information $>$}}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_linked_list}{Linked\+List$<$ client\+Rent\+Data $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Linked\+List} ()
+\mbox{\hyperlink{class_linked_list_a3c20fcfec867e867f541061a09fc640c}{Linked\+List}} ()
 \begin{DoxyCompactList}\small\item\em Constructor to initialize the linked list. \end{DoxyCompactList}\item 
-\textbf{ $\sim$\+Linked\+List} ()
+Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_a377652e6c6b03abd7af62d3a22a7078f}{get\+Head}} ()
+\item 
+\mbox{\hyperlink{class_linked_list_a7c37609df3b83bc4eb0281b852f93fd7}{\texorpdfstring{$\sim$}{\string~}\+Linked\+List}} ()
 \begin{DoxyCompactList}\small\item\em Destructor to clean up memory allocated for the linked list. \end{DoxyCompactList}\item 
-void \textbf{ add} (\textbf{ office\+Information} data\+Struct)
+void \mbox{\hyperlink{class_linked_list_a0dac190d0708d024d60dbd8131adcde3}{add}} (\mbox{\hyperlink{structclient_rent_data}{client\+Rent\+Data}} data\+Struct)
 \begin{DoxyCompactList}\small\item\em Adds a new node with given data to the end of the linked list. \end{DoxyCompactList}\item 
-void \textbf{ remove} (\textbf{ office\+Information} data)
+void \mbox{\hyperlink{class_linked_list_ab9aa6e03f271785f6b488d8c4cc3f3c7}{remove}} (\mbox{\hyperlink{structclient_rent_data}{client\+Rent\+Data}} data)
 \begin{DoxyCompactList}\small\item\em Removes the node with given data from the linked list. \end{DoxyCompactList}\item 
-void \textbf{ print} ()
+void \mbox{\hyperlink{class_linked_list_a9675767b81fb9f1d8799444e4ee7f43b}{print}} ()
 \begin{DoxyCompactList}\small\item\em Prints all elements in the linked list. \end{DoxyCompactList}\item 
-int \textbf{ get\+Size} ()
-\begin{DoxyCompactList}\small\item\em Returns the current size of the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current size of the linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_list_a6648a0323bed961bc3e4a4088c8fad22}{clean}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all nodes in the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Attributes inherited from \textbf{ client}}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classclient}{client}}}
 \begin{DoxyCompactItemize}
 \item 
-int \textbf{ client\+Id} = 0
+int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}} = 0
 \item 
-\textbf{ file\+Handling} \textbf{ file} = \textbf{ file\+Handling}("{}clients.\+csv"{})
+\mbox{\hyperlink{classfile_handling}{file\+Handling}} \mbox{\hyperlink{classclient_a3edf9bfb9e9121c65951702cc5f7d3b0}{file}} = \mbox{\hyperlink{classfile_handling}{file\+Handling}}("{}clients.\+csv"{})
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes inherited from \textbf{ Linked\+List$<$ office\+Information $>$}}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_linked_list}{Linked\+List$<$ client\+Rent\+Data $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-Node $\ast$ \textbf{ head}
+Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}{head}}
 \item 
-Node $\ast$ \textbf{ tail}
+Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_a28c70a98efc1d17eead515e45177db77}{tail}}
 \item 
-int \textbf{ size}
+int \mbox{\hyperlink{class_linked_list_a18f1a30371a80bc8626b0c7762517d0b}{size}}
 \end{DoxyCompactItemize}
 
 
@@ -84,20 +90,20 @@ Represents a client rental management class.
 
 Handles renting offices by clients and checking the rental status of offices 
 
-Definition at line \textbf{ 13} of file \textbf{ office\+Rental.\+h}.
+Definition at line \mbox{\hyperlink{client_rent_8h_source_l00015}{15}} of file \mbox{\hyperlink{client_rent_8h_source}{client\+Rent.\+h}}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classclient_rent_a5e2a9313c3e186e68de297559349d32f}\index{clientRent@{clientRent}!clientRent@{clientRent}}
 \index{clientRent@{clientRent}!clientRent@{clientRent}}
-\index{clientRent@{clientRent}!clientRent@{clientRent}}
-\doxysubsubsection{clientRent()}
-{\footnotesize\ttfamily \label{classclient_rent_ac0eafe7c7b148c07f07f63dcc20d239d} 
-client\+Rent\+::client\+Rent (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{clientRent()}{clientRent()}}
+{\footnotesize\ttfamily \label{classclient_rent_a5e2a9313c3e186e68de297559349d32f} 
+client\+Rent\+::client\+Rent (\begin{DoxyParamCaption}\item[{int}]{client\+ID}{}\end{DoxyParamCaption})}
 
 
 
-Constructor for the \doxyref{client\+Rent}{p.}{classclient_rent} class. 
+Constructor for the \doxylink{classclient_rent}{client\+Rent} class. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -106,13 +112,15 @@ Constructor for the \doxyref{client\+Rent}{p.}{classclient_rent} class.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 12} of file \textbf{ officerental.\+cpp}.
+Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
 
-\index{clientRent@{clientRent}!````~clientRent@{$\sim$clientRent}}
-\index{````~clientRent@{$\sim$clientRent}!clientRent@{clientRent}}
-\doxysubsubsection{$\sim$clientRent()}
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{classclient_rent_abce770e2f95bfad319fb5fb6fb16181f}\index{clientRent@{clientRent}!````~clientRent@{\texorpdfstring{$\sim$}{\string~}clientRent}}
+\index{````~clientRent@{\texorpdfstring{$\sim$}{\string~}clientRent}!clientRent@{clientRent}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}clientRent()}{\string~clientRent()}}
 {\footnotesize\ttfamily \label{classclient_rent_abce770e2f95bfad319fb5fb6fb16181f} 
-client\+Rent\+::$\sim$client\+Rent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+client\+Rent\+::\texorpdfstring{$\sim$}{\string~}client\+Rent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -120,14 +128,14 @@ Destroy the client Rent object.
 
 
 
-Definition at line \textbf{ 58} of file \textbf{ officerental.\+cpp}.
+Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\index{clientRent@{clientRent}!rentOffice@{rentOffice}}
+\Hypertarget{classclient_rent_a048ba46194aba6813cd16d8ae1d4fc4d}\index{clientRent@{clientRent}!rentOffice@{rentOffice}}
 \index{rentOffice@{rentOffice}!clientRent@{clientRent}}
-\doxysubsubsection{rentOffice()}
+\doxysubsubsection{\texorpdfstring{rentOffice()}{rentOffice()}}
 {\footnotesize\ttfamily \label{classclient_rent_a048ba46194aba6813cd16d8ae1d4fc4d} 
 bool client\+Rent\+::rent\+Office (\begin{DoxyParamCaption}\item[{int}]{office\+Id}{}\end{DoxyParamCaption})}
 
@@ -147,13 +155,15 @@ false Otherwise
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 28} of file \textbf{ officerental.\+cpp}.
+Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
 
-\index{clientRent@{clientRent}!ShowAvailableOffices@{ShowAvailableOffices}}
-\index{ShowAvailableOffices@{ShowAvailableOffices}!clientRent@{clientRent}}
-\doxysubsubsection{ShowAvailableOffices()}
-{\footnotesize\ttfamily \label{classclient_rent_a44b23901c0a6aa44273ca0ff5de1dbcd} 
-void client\+Rent\+::\+Show\+Available\+Offices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{classclient_rent_a18095e06209ac8de0b7fdbded86fa57f}\index{clientRent@{clientRent}!showRentedOffices@{showRentedOffices}}
+\index{showRentedOffices@{showRentedOffices}!clientRent@{clientRent}}
+\doxysubsubsection{\texorpdfstring{showRentedOffices()}{showRentedOffices()}}
+{\footnotesize\ttfamily \label{classclient_rent_a18095e06209ac8de0b7fdbded86fa57f} 
+void client\+Rent\+::show\+Rented\+Offices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -161,11 +171,13 @@ Shows available offices that can be rented.
 
 
 
-Definition at line \textbf{ 44} of file \textbf{ officerental.\+cpp}.
+Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
 
+Here is the call graph for this function\+:
+% FIG 4
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-ADT/\textbf{ office\+Rental.\+h}\item 
-ADT/\textbf{ officerental.\+cpp}\end{DoxyCompactItemize}
+ADT/\mbox{\hyperlink{client_rent_8h}{client\+Rent.\+h}}\item 
+ADT/\mbox{\hyperlink{client_rent_8cpp}{client\+Rent.\+cpp}}\end{DoxyCompactItemize}

@@ -1,306 +1,306 @@
 \begin{theindex}
 
-  \item {$\sim$LinkedList}
-    \subitem {LinkedList$<$ T $>$}, 17
-  \item {$\sim$Queue}
-    \subitem {Queue$<$ T $>$}, 25
-  \item {$\sim$Stack}
-    \subitem {Stack$<$ T $>$}, 27
-  \item {$\sim$client}
-    \subitem {client}, 8
-  \item {$\sim$clientRent}
-    \subitem {clientRent}, 14
-  \item {$\sim$fileHandling}
-    \subitem {fileHandling}, 15
-  \item {$\sim$office}
-    \subitem {office}, 21
+  \item {\texorpdfstring{$\sim$}{\string~}LinkedList}
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{18}
+  \item {\texorpdfstring{$\sim$}{\string~}Queue}
+    \subitem {Queue$<$ T $>$}, \hyperpage{26}
+  \item {\texorpdfstring{$\sim$}{\string~}Stack}
+    \subitem {Stack$<$ T $>$}, \hyperpage{28}
+  \item {\texorpdfstring{$\sim$}{\string~}client}
+    \subitem {client}, \hyperpage{8}
+  \item {\texorpdfstring{$\sim$}{\string~}clientRent}
+    \subitem {clientRent}, \hyperpage{13}
+  \item {\texorpdfstring{$\sim$}{\string~}fileHandling}
+    \subitem {fileHandling}, \hyperpage{16}
+  \item {\texorpdfstring{$\sim$}{\string~}office}
+    \subitem {office}, \hyperpage{22}
 
   \indexspace
 
   \item {add}
-    \subitem {LinkedList$<$ T $>$}, 17
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{18}
   \item {addClient}
-    \subitem {client}, 8
+    \subitem {client}, \hyperpage{8}
   \item {addOffice}
-    \subitem {office}, 22
+    \subitem {office}, \hyperpage{23}
   \item {addRentedSpace}
-    \subitem {client}, 9
-  \item {ADT/client.cpp}, 31
-  \item {ADT/client.h}, 33
-  \item {ADT/office.cpp}, 33, 34
-  \item {ADT/office.h}, 35
-  \item {ADT/officerental.cpp}, 36
-  \item {ADT/officeRental.h}, 37
-  \item {ADT/structData.h}, 38
+    \subitem {client}, \hyperpage{8}
+  \item {ADT/client.cpp}, \hyperpage{31}
+  \item {ADT/client.h}, \hyperpage{33}
+  \item {ADT/clientRent.cpp}, \hyperpage{34}
+  \item {ADT/clientRent.h}, \hyperpage{35}
+  \item {ADT/office.cpp}, \hyperpage{36}
+  \item {ADT/office.h}, \hyperpage{37}
+  \item {ADT/structData.h}, \hyperpage{38}
 
   \indexspace
 
   \item {back}
-    \subitem {Queue$<$ T $>$}, 26
+    \subitem {Queue$<$ T $>$}, \hyperpage{27}
 
   \indexspace
 
   \item {changeClient}
-    \subitem {client}, 9
-  \item {client}, 7
-    \subitem {$\sim$client}, 8
-    \subitem {addClient}, 8
-    \subitem {addRentedSpace}, 9
-    \subitem {changeClient}, 9
-    \subitem {client}, 8
-    \subitem {clientId}, 10
-    \subitem {file}, 10
-    \subitem {getClient}, 9
-    \subitem {printClients}, 9
-    \subitem {removeClient}, 10
+    \subitem {client}, \hyperpage{9}
+  \item {clean}
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{18}
+  \item {client}, \hyperpage{7}
+    \subitem {\texorpdfstring{$\sim$}{\string~}client}, \hyperpage{8}
+    \subitem {addClient}, \hyperpage{8}
+    \subitem {addRentedSpace}, \hyperpage{8}
+    \subitem {changeClient}, \hyperpage{9}
+    \subitem {client}, \hyperpage{8}
+    \subitem {clientId}, \hyperpage{10}
+    \subitem {file}, \hyperpage{10}
+    \subitem {getClient}, \hyperpage{9}
+    \subitem {printClients}, \hyperpage{9}
+    \subitem {removeClient}, \hyperpage{9}
   \item {client.cpp}
-    \subitem {CLIENT\_CPP}, 31
+    \subitem {CLIENT\_CPP}, \hyperpage{31}
   \item {CLIENT\_CPP}
-    \subitem {client.cpp}, 31
+    \subitem {client.cpp}, \hyperpage{31}
   \item {clientAddress}
-    \subitem {clientData}, 11
-  \item {clientData}, 10
-    \subitem {clientAddress}, 11
-    \subitem {clientName}, 11
-    \subitem {id}, 11
-    \subitem {isAdmin}, 11
-    \subitem {rentedSpaces}, 11
+    \subitem {clientData}, \hyperpage{11}
+  \item {clientData}, \hyperpage{10}
+    \subitem {clientAddress}, \hyperpage{11}
+    \subitem {clientName}, \hyperpage{11}
+    \subitem {id}, \hyperpage{11}
+    \subitem {isAdmin}, \hyperpage{11}
+    \subitem {rentedSpaces}, \hyperpage{11}
   \item {clientId}
-    \subitem {client}, 10
+    \subitem {client}, \hyperpage{10}
+    \subitem {clientRentData}, \hyperpage{14}
   \item {clientName}
-    \subitem {clientData}, 11
-  \item {clientRent}, 12
-    \subitem {$\sim$clientRent}, 14
-    \subitem {clientRent}, 13
-    \subitem {rentOffice}, 14
-    \subitem {ShowAvailableOffices}, 14
+    \subitem {clientData}, \hyperpage{11}
+  \item {clientRent}, \hyperpage{12}
+    \subitem {\texorpdfstring{$\sim$}{\string~}clientRent}, 
+		\hyperpage{13}
+    \subitem {clientRent}, \hyperpage{13}
+    \subitem {rentOffice}, \hyperpage{13}
+    \subitem {showRentedOffices}, \hyperpage{14}
+  \item {clientRent.cpp}
+    \subitem {OFFICERENTAL\_CPP}, \hyperpage{34}
+  \item {clientRentData}, \hyperpage{14}
+    \subitem {clientId}, \hyperpage{14}
+    \subitem {officeId}, \hyperpage{14}
 
   \indexspace
 
   \item {data}
-    \subitem {LinkedList$<$ T $>$::Node}, 19
+    \subitem {LinkedList$<$ T $>$::Node}, \hyperpage{21}
   \item {dequeue}
-    \subitem {Queue$<$ T $>$}, 26
+    \subitem {Queue$<$ T $>$}, \hyperpage{27}
   \item {displayMenu}
-    \subitem {utils.h}, 43
+    \subitem {utils.h}, \hyperpage{43}
 
   \indexspace
 
   \item {endRental}
-    \subitem {office}, 22
+    \subitem {office}, \hyperpage{23}
   \item {enqueue}
-    \subitem {Queue$<$ T $>$}, 26
+    \subitem {Queue$<$ T $>$}, \hyperpage{27}
 
   \indexspace
 
   \item {file}
-    \subitem {client}, 10
-  \item {fileHandling}, 15
-    \subitem {$\sim$fileHandling}, 15
-    \subitem {fileHandling}, 15
-    \subitem {readFromFile}, 16
-    \subitem {writeToFile}, 16
-  \item {FileHandling.cpp}
-    \subitem {FILEHANDLING\_CPP}, 39
-  \item {FILEHANDLING\_CPP}
-    \subitem {FileHandling.cpp}, 39
+    \subitem {client}, \hyperpage{10}
+  \item {fileHandling}, \hyperpage{15}
+    \subitem {\texorpdfstring{$\sim$}{\string~}fileHandling}, 
+		\hyperpage{16}
+    \subitem {fileHandling}, \hyperpage{15}
+    \subitem {readFromFile}, \hyperpage{16}
+    \subitem {size}, \hyperpage{17}
+    \subitem {writeToFile}, \hyperpage{16}
   \item {front}
-    \subitem {Queue$<$ T $>$}, 26
+    \subitem {Queue$<$ T $>$}, \hyperpage{27}
 
   \indexspace
 
   \item {getClient}
-    \subitem {client}, 9
+    \subitem {client}, \hyperpage{9}
   \item {getDouble}
-    \subitem {utils.h}, 43
+    \subitem {utils.h}, \hyperpage{43}
+  \item {getHead}
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{19}
   \item {getOffice}
-    \subitem {office}, 22
-  \item {getRentedOffices}
-    \subitem {office}, 22
+    \subitem {office}, \hyperpage{23}
   \item {getSize}
-    \subitem {LinkedList$<$ T $>$}, 18
-    \subitem {Queue$<$ T $>$}, 26
-    \subitem {Stack$<$ T $>$}, 28
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{19}
+    \subitem {Queue$<$ T $>$}, \hyperpage{27}
+    \subitem {Stack$<$ T $>$}, \hyperpage{29}
 
   \indexspace
 
   \item {handlePrint.h}
-    \subitem {print}, 41
+    \subitem {print}, \hyperpage{41}
   \item {head}
-    \subitem {LinkedList$<$ T $>$}, 18
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{20}
 
   \indexspace
 
   \item {id}
-    \subitem {clientData}, 11
-    \subitem {officeInformation}, 24
-  \item {includes/FileHandling.cpp}, 38, 39
-  \item {includes/FileHandling.h}, 39, 40
-  \item {includes/handlePrint.h}, 40, 41
-  \item {includes/LinkedList.h}, 42
-  \item {includes/utils.h}, 43, 44
+    \subitem {clientData}, \hyperpage{11}
+    \subitem {officeInformation}, \hyperpage{25}
+  \item {includes/FileHandling.cpp}, \hyperpage{39}
+  \item {includes/FileHandling.h}, \hyperpage{39}
+  \item {includes/handlePrint.h}, \hyperpage{40, 41}
+  \item {includes/LinkedList.h}, \hyperpage{42}
+  \item {includes/utils.h}, \hyperpage{43}, \hyperpage{45}
   \item {isAdmin}
-    \subitem {clientData}, 11
+    \subitem {clientData}, \hyperpage{11}
   \item {isEmpty}
-    \subitem {Queue$<$ T $>$}, 26
+    \subitem {Queue$<$ T $>$}, \hyperpage{27}
   \item {isRented}
-    \subitem {officeInformation}, 24
+    \subitem {officeInformation}, \hyperpage{25}
 
   \indexspace
 
   \item {LinkedList}
-    \subitem {LinkedList$<$ T $>$}, 17
-  \item {LinkedList$<$ T $>$}, 16
-    \subitem {$\sim$LinkedList}, 17
-    \subitem {add}, 17
-    \subitem {getSize}, 18
-    \subitem {head}, 18
-    \subitem {LinkedList}, 17
-    \subitem {print}, 18
-    \subitem {remove}, 18
-    \subitem {size}, 18
-    \subitem {tail}, 19
-  \item {LinkedList$<$ T $>$::Node}, 19
-    \subitem {data}, 19
-    \subitem {next}, 19
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{18}
+  \item {LinkedList$<$ T $>$}, \hyperpage{17}
+    \subitem {\texorpdfstring{$\sim$}{\string~}LinkedList}, 
+		\hyperpage{18}
+    \subitem {add}, \hyperpage{18}
+    \subitem {clean}, \hyperpage{18}
+    \subitem {getHead}, \hyperpage{19}
+    \subitem {getSize}, \hyperpage{19}
+    \subitem {head}, \hyperpage{20}
+    \subitem {LinkedList}, \hyperpage{18}
+    \subitem {print}, \hyperpage{19}
+    \subitem {remove}, \hyperpage{19}
+    \subitem {size}, \hyperpage{20}
+    \subitem {tail}, \hyperpage{20}
+  \item {LinkedList$<$ T $>$::Node}, \hyperpage{20}
+    \subitem {data}, \hyperpage{21}
+    \subitem {next}, \hyperpage{21}
 
   \indexspace
 
   \item {main}
-    \subitem {main.cpp}, 46
-  \item {main.cpp}, 45
-    \subitem {main}, 46
+    \subitem {main.cpp}, \hyperpage{46}
+  \item {main.cpp}, \hyperpage{45}
+    \subitem {main}, \hyperpage{46}
 
   \indexspace
 
   \item {next}
-    \subitem {LinkedList$<$ T $>$::Node}, 19
+    \subitem {LinkedList$<$ T $>$::Node}, \hyperpage{21}
 
   \indexspace
 
-  \item {office}, 20
-    \subitem {$\sim$office}, 21
-    \subitem {addOffice}, 22
-    \subitem {endRental}, 22
-    \subitem {getOffice}, 22
-    \subitem {getRentedOffices}, 22
-    \subitem {office}, 21
-    \subitem {printOffices}, 23
-    \subitem {rentOffice}, 23
+  \item {office}, \hyperpage{21}
+    \subitem {\texorpdfstring{$\sim$}{\string~}office}, \hyperpage{22}
+    \subitem {addOffice}, \hyperpage{23}
+    \subitem {endRental}, \hyperpage{23}
+    \subitem {getOffice}, \hyperpage{23}
+    \subitem {office}, \hyperpage{22}
+    \subitem {printOffices}, \hyperpage{24}
+    \subitem {rentOffice}, \hyperpage{24}
   \item {office.cpp}
-    \subitem {OFFICE\_CPP}, 34
+    \subitem {OFFICE\_CPP}, \hyperpage{36}
   \item {OFFICE\_CPP}
-    \subitem {office.cpp}, 34
+    \subitem {office.cpp}, \hyperpage{36}
   \item {officeAddress}
-    \subitem {officeInformation}, 24
-  \item {officeInformation}, 23
-    \subitem {id}, 24
-    \subitem {isRented}, 24
-    \subitem {officeAddress}, 24
-    \subitem {officeName}, 24
-    \subitem {officePrice}, 24
-    \subitem {officeSize}, 24
+    \subitem {officeInformation}, \hyperpage{25}
+  \item {officeId}
+    \subitem {clientRentData}, \hyperpage{14}
+  \item {officeInformation}, \hyperpage{24}
+    \subitem {id}, \hyperpage{25}
+    \subitem {isRented}, \hyperpage{25}
+    \subitem {officeAddress}, \hyperpage{25}
+    \subitem {officeName}, \hyperpage{25}
+    \subitem {officePrice}, \hyperpage{25}
+    \subitem {officeSize}, \hyperpage{25}
   \item {officeName}
-    \subitem {officeInformation}, 24
+    \subitem {officeInformation}, \hyperpage{25}
   \item {officePrice}
-    \subitem {officeInformation}, 24
-  \item {officerental.cpp}
-    \subitem {OFFICERENTAL\_CPP}, 36
+    \subitem {officeInformation}, \hyperpage{25}
   \item {OFFICERENTAL\_CPP}
-    \subitem {officerental.cpp}, 36
+    \subitem {clientRent.cpp}, \hyperpage{34}
   \item {officeSize}
-    \subitem {officeInformation}, 24
+    \subitem {officeInformation}, \hyperpage{25}
 
   \indexspace
 
-  \item {password}
-    \subitem {User}, 29
   \item {pop}
-    \subitem {Stack$<$ T $>$}, 28
+    \subitem {Stack$<$ T $>$}, \hyperpage{29}
   \item {print}
-    \subitem {handlePrint.h}, 41
-    \subitem {LinkedList$<$ T $>$}, 18
-    \subitem {Queue$<$ T $>$}, 26
-    \subitem {Stack$<$ T $>$}, 28
+    \subitem {handlePrint.h}, \hyperpage{41}
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{19}
+    \subitem {Queue$<$ T $>$}, \hyperpage{27}
+    \subitem {Stack$<$ T $>$}, \hyperpage{29}
   \item {printClients}
-    \subitem {client}, 9
+    \subitem {client}, \hyperpage{9}
   \item {printOffices}
-    \subitem {office}, 23
+    \subitem {office}, \hyperpage{24}
   \item {push}
-    \subitem {Stack$<$ T $>$}, 28
+    \subitem {Stack$<$ T $>$}, \hyperpage{29}
 
   \indexspace
 
   \item {Queue}
-    \subitem {Queue$<$ T $>$}, 25
-  \item {Queue$<$ T $>$}, 25
-    \subitem {$\sim$Queue}, 25
-    \subitem {back}, 26
-    \subitem {dequeue}, 26
-    \subitem {enqueue}, 26
-    \subitem {front}, 26
-    \subitem {getSize}, 26
-    \subitem {isEmpty}, 26
-    \subitem {print}, 26
-    \subitem {Queue}, 25
+    \subitem {Queue$<$ T $>$}, \hyperpage{26}
+  \item {Queue$<$ T $>$}, \hyperpage{26}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Queue}, \hyperpage{26}
+    \subitem {back}, \hyperpage{27}
+    \subitem {dequeue}, \hyperpage{27}
+    \subitem {enqueue}, \hyperpage{27}
+    \subitem {front}, \hyperpage{27}
+    \subitem {getSize}, \hyperpage{27}
+    \subitem {isEmpty}, \hyperpage{27}
+    \subitem {print}, \hyperpage{27}
+    \subitem {Queue}, \hyperpage{26}
 
   \indexspace
 
   \item {readFromFile}
-    \subitem {fileHandling}, 16
+    \subitem {fileHandling}, \hyperpage{16}
   \item {remove}
-    \subitem {LinkedList$<$ T $>$}, 18
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{19}
   \item {removeClient}
-    \subitem {client}, 10
+    \subitem {client}, \hyperpage{9}
   \item {rentedSpaces}
-    \subitem {clientData}, 11
+    \subitem {clientData}, \hyperpage{11}
   \item {rentOffice}
-    \subitem {clientRent}, 14
-    \subitem {office}, 23
-  \item {role}
-    \subitem {User}, 29
+    \subitem {clientRent}, \hyperpage{13}
+    \subitem {office}, \hyperpage{24}
 
   \indexspace
 
-  \item {ShowAvailableOffices}
-    \subitem {clientRent}, 14
+  \item {showRentedOffices}
+    \subitem {clientRent}, \hyperpage{14}
   \item {size}
-    \subitem {LinkedList$<$ T $>$}, 18
+    \subitem {fileHandling}, \hyperpage{17}
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{20}
   \item {splitData}
-    \subitem {utils.h}, 44
+    \subitem {utils.h}, \hyperpage{44}
   \item {Stack}
-    \subitem {Stack$<$ T $>$}, 27
-  \item {Stack$<$ T $>$}, 27
-    \subitem {$\sim$Stack}, 27
-    \subitem {getSize}, 28
-    \subitem {pop}, 28
-    \subitem {print}, 28
-    \subitem {push}, 28
-    \subitem {Stack}, 27
+    \subitem {Stack$<$ T $>$}, \hyperpage{28}
+  \item {Stack$<$ T $>$}, \hyperpage{28}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Stack}, \hyperpage{28}
+    \subitem {getSize}, \hyperpage{29}
+    \subitem {pop}, \hyperpage{29}
+    \subitem {print}, \hyperpage{29}
+    \subitem {push}, \hyperpage{29}
+    \subitem {Stack}, \hyperpage{28}
 
   \indexspace
 
   \item {tail}
-    \subitem {LinkedList$<$ T $>$}, 19
-  \item {TEMP/Queue.h}, 48
-  \item {TEMP/Stack.h}, 49
+    \subitem {LinkedList$<$ T $>$}, \hyperpage{20}
+  \item {TEMP/Queue.h}, \hyperpage{48, 49}
+  \item {TEMP/Stack.h}, \hyperpage{50}
 
   \indexspace
 
-  \item {User}, 28
-    \subitem {password}, 29
-    \subitem {role}, 29
-    \subitem {username}, 29
-  \item {username}
-    \subitem {User}, 29
   \item {utils.h}
-    \subitem {displayMenu}, 43
-    \subitem {getDouble}, 43
-    \subitem {splitData}, 44
+    \subitem {displayMenu}, \hyperpage{43}
+    \subitem {getDouble}, \hyperpage{43}
+    \subitem {splitData}, \hyperpage{44}
 
   \indexspace
 
   \item {writeToFile}
-    \subitem {fileHandling}, 16
+    \subitem {fileHandling}, \hyperpage{16}
 
 \end{theindex}

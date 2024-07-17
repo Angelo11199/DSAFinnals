@@ -11,7 +11,7 @@
  * name, address, rental price, size, and rental status
  */
 struct officeInformation {
-    std::string id;
+    int id;
     std::string officeName;
     std::string officeAddress;
     int officePrice;
@@ -26,7 +26,7 @@ struct officeInformation {
  * name, address, administrator status, and list of rented office spaces
  */
 struct clientData {
-    std::string id;
+    int id;
     std::string clientName;
     std::string clientAddress;
     bool isAdmin;
@@ -34,8 +34,8 @@ struct clientData {
 };
 
 struct clientRentData {
-    std::string clientId;
-    std::string officeId;
+    int clientId;
+    int officeId;
 };
 
 #endif

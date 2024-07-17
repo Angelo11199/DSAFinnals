@@ -7,7 +7,7 @@ var classclient =
     [ "changeClient", "classclient.html#adb9e839f07bd89b82a16b2aefac14837", null ],
     [ "getClient", "classclient.html#aa7eb5b91b3398910fe41ae20bac16714", null ],
     [ "printClients", "classclient.html#a1cfaa24b1f47f7c2035549f874b69ea1", null ],
-    [ "removeClient", "classclient.html#a8a6629a2513487793f12ccc02ea935c4", null ],
+    [ "removeClient", "classclient.html#a3d443d75aae88598edc548e41181a4e6", null ],
     [ "clientId", "classclient.html#a75855c00fdfc491d5ec5ecf1508db6eb", null ],
     [ "file", "classclient.html#a3edf9bfb9e9121c65951702cc5f7d3b0", null ]
 ];

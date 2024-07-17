@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rentedspaces_0',['rentedSpaces',['../structclient_data.html#a960edd7aca53bfb60668bbe5024f8cf4',1,'clientData']]],
-  ['role_1',['role',['../struct_user.html#a2ec7c3e3fddee7bd3d9ef64f7df3c808',1,'User']]]
+  ['size_0',['size',['../classfile_handling.html#a375566f79650b29da038838fc74b9a3f',1,'fileHandling::size'],['../class_linked_list.html#a18f1a30371a80bc8626b0c7762517d0b',1,'LinkedList::size']]]
 ];

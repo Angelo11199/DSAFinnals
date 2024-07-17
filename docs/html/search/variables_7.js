@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['password_0',['password',['../struct_user.html#ac2f2e75b15e8eb6cbb030fc85a6cd59f',1,'User']]]
+  ['rentedspaces_0',['rentedSpaces',['../structclient_data.html#a960edd7aca53bfb60668bbe5024f8cf4',1,'clientData']]]
 ];

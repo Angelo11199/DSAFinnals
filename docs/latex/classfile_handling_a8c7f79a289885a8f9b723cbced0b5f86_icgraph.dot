@@ -1,0 +1,22 @@
+digraph "fileHandling::writeToFile"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="fileHandling::writeToFile",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Writes data to the file."];
+  Node1 -> Node2 [id="edge8_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="client::addClient",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classclient.html#a733535fb656d02f5ab034f8b649cf3f0",tooltip="Adds a new client to the management system."];
+  Node2 -> Node3 [id="edge9_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node1 -> Node4 [id="edge10_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="office::addOffice",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classoffice.html#aff0f126b758cb0ea6fb6c6659e74c0e3",tooltip="Adds a new office to the management system."];
+  Node4 -> Node3 [id="edge11_Node000004_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge12_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="office::endRental",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classoffice.html#aeaf5d37ae0c53f2b1b81bf83af292933",tooltip="Ends the rental of an office, making it available again."];
+  Node1 -> Node6 [id="edge13_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="clientRent::rentOffice",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classclient_rent.html#a048ba46194aba6813cd16d8ae1d4fc4d",tooltip="Rents an office for the client."];
+  Node1 -> Node7 [id="edge14_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="office::rentOffice",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classoffice.html#add96666ca2b1aa88a8f694afdfd7b7d1",tooltip="Rents an office to a specified client."];
+}

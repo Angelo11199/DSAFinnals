@@ -1,0 +1,30 @@
+\doxysection{client\+Rent.\+h}
+\hypertarget{client_rent_8h_source}{}\label{client_rent_8h_source}\index{ADT/clientRent.h@{ADT/clientRent.h}}
+\mbox{\hyperlink{client_rent_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00001}00001\ \textcolor{comment}{//*\ child\ class\ of\ client.\ Responsible\ for\ renting\ an\ office,\ checking\ if\ an\ office\ is\ rented\ or\ not\ as\ well.}}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00002}00002\ \textcolor{preprocessor}{\#ifndef\ OFFICERENTAL\_H}}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00003}00003\ \textcolor{preprocessor}{\#define\ OFFICERENTAL\_H}}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_linked_list_8h}{../includes/LinkedList.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{./client.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{office_8h}{./office.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00015}\mbox{\hyperlink{classclient_rent}{00015}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classclient_rent}{clientRent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classclient}{client}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_linked_list}{LinkedList}}<clientRentData>\ \{}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00016}00016\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{int}\ clientId;}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{classfile_handling}{fileHandling}}\ file\ =\ \mbox{\hyperlink{classfile_handling}{fileHandling}}(\textcolor{stringliteral}{"{}rentedOffices.csv"{}});}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00020}00020\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{classclient_rent_a5e2a9313c3e186e68de297559349d32f}{clientRent}}(\textcolor{keywordtype}{int}\ clientID);}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classclient_rent_a048ba46194aba6813cd16d8ae1d4fc4d}{rentOffice}}(\textcolor{keywordtype}{int}\ officeId);}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classclient_rent_a18095e06209ac8de0b7fdbded86fa57f}{showRentedOffices}}();}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{classclient_rent_abce770e2f95bfad319fb5fb6fb16181f}{\string~clientRent}}();}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00048}00048\ \};}
+\DoxyCodeLine{\Hypertarget{client_rent_8h_source_l00049}00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

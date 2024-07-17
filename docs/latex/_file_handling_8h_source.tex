@@ -1,75 +1,78 @@
 \doxysection{File\+Handling.\+h}
-\label{_file_handling_8h_source}\index{includes/FileHandling.h@{includes/FileHandling.h}}
-\textbf{ Go to the documentation of this file.}
+\hypertarget{_file_handling_8h_source}{}\label{_file_handling_8h_source}\index{includes/FileHandling.h@{includes/FileHandling.h}}
+\mbox{\hyperlink{_file_handling_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FILEHANDLING\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FILEHANDLING\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }fileHandling\ \{}
-\DoxyCodeLine{00014\ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00015\ \ \ \ \ std::string\ filename;}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ writeToFileHelper(std::ofstream\&\ file,\ \textcolor{keyword}{const}\ T\&\ last)\ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ file\ <<\ last\ <<\ std::endl;}
-\DoxyCodeLine{00019\ \ \ \ \ \}}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ writeToFileHelper(std::ofstream\&\ file,\ \textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ Args\&...\ args)\ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ file\ <<\ first;}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (\textcolor{keyword}{sizeof}...(args)\ >\ 0)\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ file\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ writeToFileHelper(file,\ args...);}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ file\ <<\ std::endl;}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00030\ \ \ \ \ \}}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00038\ \ \ \ \ fileHandling(std::string\ filename);}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00044\ \ \ \ \ \string~fileHandling();}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ writeToFile(\textcolor{keyword}{const}\ T\&\ last)\ \{}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::ofstream\ file;}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ file.open(filename,\ std::ios::app);}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ file\ <<\ last\ <<\ std::endl;\ \ \textcolor{comment}{//\ Writes\ the\ last\ (or\ only)\ item\ followed\ by\ a\ newline}}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ file.close();}
-\DoxyCodeLine{00058\ \ \ \ \ \}}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ writeToFile(\textcolor{keyword}{const}\ Args\&...\ args)\ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::ofstream\ file(filename,\ std::ios::app);\ \ \textcolor{comment}{//\ Open\ file\ once}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!file.is\_open())\ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ opening\ file"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ writeToFileHelper(file,\ args...);\ \ \textcolor{comment}{//\ Start\ the\ recursive\ writing\ with\ the\ file\ stream}}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ file.close();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Close\ file\ after\ all\ writing\ is\ done}}
-\DoxyCodeLine{00069\ \ \ \ \ \}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ std::vector<std::string>\ readFromFile()\ \{}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ std::vector<std::string>\ data;}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::ifstream\ file;}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ file.open(filename);}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!file.is\_open())\ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ opening\ file"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::string\ line;}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(file,\ line))\ \{}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ data.push\_back(line);}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ file.close();}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
-\DoxyCodeLine{00085\ \ \ \ \ \};}
-\DoxyCodeLine{00086\ \};}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ FILEHANDLING\_H}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ FILEHANDLING\_H}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_linked_list_8h}{./LinkedList.h}}"{}}\ \ \textcolor{comment}{//\ Include\ the\ header\ file\ for\ the\ LinkedList\ class}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00015}\mbox{\hyperlink{classfile_handling}{00015}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classfile_handling}{fileHandling}}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00016}00016\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00017}00017\ \ \ \ \ std::string\ filename;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{void}\ writeToFileHelper(std::ofstream\&\ file,\ \textcolor{keyword}{const}\ T\&\ last)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ file\ <<\ last\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{void}\ writeToFileHelper(std::ofstream\&\ file,\ \textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ Args\&...\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ file\ <<\ first;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (\textcolor{keyword}{sizeof}...(args)\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ file\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ writeToFileHelper(file,\ args...);}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ file\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00042}00042\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{classfile_handling_ac4ea9607ef136f721ebc8bb289fedf30}{fileHandling}}(std::string\ filename);}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00049}\mbox{\hyperlink{classfile_handling_a375566f79650b29da038838fc74b9a3f}{00049}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classfile_handling_a375566f79650b29da038838fc74b9a3f}{size}};}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{classfile_handling_abb7d1207f8f5fbb5c20d7f4db99ec837}{\string~fileHandling}}();}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00062}00062\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00063}\mbox{\hyperlink{classfile_handling_a8c7f79a289885a8f9b723cbced0b5f86}{00063}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classfile_handling_a8c7f79a289885a8f9b723cbced0b5f86}{writeToFile}}(\textcolor{keyword}{const}\ T\&\ last)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ std::ofstream\ file;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ file.open(filename,\ std::ios::app);}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ file\ <<\ last\ <<\ std::endl;\ \ \textcolor{comment}{//\ Writes\ the\ last\ (or\ only)\ item\ followed\ by\ a\ newline}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ file.close();}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00077}\mbox{\hyperlink{classfile_handling_a7219b8ea967d3a4991500d6b8aef1b53}{00077}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classfile_handling_a7219b8ea967d3a4991500d6b8aef1b53}{writeToFile}}(\textcolor{keyword}{const}\ Args\&...\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ std::ofstream\ file(filename,\ std::ios::app);\ \ \textcolor{comment}{//\ Open\ file\ once}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!file.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ opening\ file:\ "{}}\ <<\ filename\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ writeToFileHelper(file,\ args...);\ \ \textcolor{comment}{//\ Start\ the\ recursive\ writing\ with\ the\ file\ stream}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ file.close();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Close\ file\ after\ all\ writing\ is\ done}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00093}\mbox{\hyperlink{classfile_handling_a66adba6f54765d5cce9350306cb6d11f}{00093}}\ \ \ \ \ \mbox{\hyperlink{class_linked_list}{LinkedList<std::string>}}\ \mbox{\hyperlink{classfile_handling_a66adba6f54765d5cce9350306cb6d11f}{readFromFile}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_linked_list}{LinkedList<std::string>}}\ data;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00095}00095\ \ \ \ \ \ \ \ \ std::ifstream\ file;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00096}00096\ \ \ \ \ \ \ \ \ file.open(filename);}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!file.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ opening\ file"{}}\ <<\ filename\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00101}00101\ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(file,\ line))\ \{}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_linked_list_a0dac190d0708d024d60dbd8131adcde3}{add}}(line);\ \ \textcolor{comment}{//\ Assuming\ LinkedList\ has\ a\ push\_back\ method\ similar\ to\ std::vector}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00105}00105\ \ \ \ \ \ \ \ \ file.close();}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00108}00108\ \};}
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_file_handling_8h_source_l00110}00110\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -1,23 +1,29 @@
 \doxysection{includes/utils.h File Reference}
-\label{utils_8h}\index{includes/utils.h@{includes/utils.h}}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{includes/utils.h@{includes/utils.h}}
+{\ttfamily \#include $<$array$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$sstream$>$}\newline
-{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}./\+Linked\+List.\+h"{}}\newline
+Include dependency graph for utils.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ std\+::string $>$ \textbf{ split\+Data} (const std\+::string \&data, char delimiter)
+{\footnotesize template$<$size\+\_\+t N$>$ }\\void \mbox{\hyperlink{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}{split\+Data}} (const std\+::string \&input, char delimiter, std\+::array$<$ std\+::string, N $>$ \&output)
 \begin{DoxyCompactList}\small\item\em Splits a string into parts based on a delimiter. \end{DoxyCompactList}\item 
-double \textbf{ get\+Double} (std\+::string prompt="{}"{})
+double \mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{get\+Double}} (std\+::string prompt="{}"{})
 \begin{DoxyCompactList}\small\item\em Prompts the user to enter a double value. \end{DoxyCompactList}\item 
-int \textbf{ display\+Menu} ()
+int \mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{display\+Menu}} ()
 \begin{DoxyCompactList}\small\item\em Displays a menu for an office rental system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\index{utils.h@{utils.h}!displayMenu@{displayMenu}}
+\Hypertarget{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}\index{utils.h@{utils.h}!displayMenu@{displayMenu}}
 \index{displayMenu@{displayMenu}!utils.h@{utils.h}}
-\doxysubsubsection{displayMenu()}
+\doxysubsubsection{\texorpdfstring{displayMenu()}{displayMenu()}}
 {\footnotesize\ttfamily \label{utils_8h_aad9ed7a055a99883645739e4bfca0e5e} 
 int display\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -30,11 +36,13 @@ int The user\textquotesingle{}s selected option from the menu
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 57} of file \textbf{ utils.\+h}.
+Definition at line \mbox{\hyperlink{utils_8h_source_l00057}{57}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
 
-\index{utils.h@{utils.h}!getDouble@{getDouble}}
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}\index{utils.h@{utils.h}!getDouble@{getDouble}}
 \index{getDouble@{getDouble}!utils.h@{utils.h}}
-\doxysubsubsection{getDouble()}
+\doxysubsubsection{\texorpdfstring{getDouble()}{getDouble()}}
 {\footnotesize\ttfamily \label{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6} 
 double get\+Double (\begin{DoxyParamCaption}\item[{std\+::string}]{prompt}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -52,13 +60,16 @@ double The double value entered by the user
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 35} of file \textbf{ utils.\+h}.
+Definition at line \mbox{\hyperlink{utils_8h_source_l00035}{35}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
 
-\index{utils.h@{utils.h}!splitData@{splitData}}
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}\index{utils.h@{utils.h}!splitData@{splitData}}
 \index{splitData@{splitData}!utils.h@{utils.h}}
-\doxysubsubsection{splitData()}
-{\footnotesize\ttfamily \label{utils_8h_a8d57f89e6c7627a0ae40c4363c1601c0} 
-std\+::vector$<$ std\+::string $>$ split\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data}{, }\item[{char}]{delimiter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{splitData()}{splitData()}}
+{\footnotesize\ttfamily \label{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f} 
+template$<$size\+\_\+t N$>$ \\
+void split\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input}{, }\item[{char}]{delimiter}{, }\item[{std\+::array$<$ std\+::string, N $>$ \&}]{output}{}\end{DoxyParamCaption})}
 
 
 
@@ -76,5 +87,7 @@ std\+::vector$<$std\+::string$>$ Vector of strings containing the split parts
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 16} of file \textbf{ utils.\+h}.
+Definition at line \mbox{\hyperlink{utils_8h_source_l00019}{19}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
 
+Here is the caller graph for this function\+:
+% FIG 4

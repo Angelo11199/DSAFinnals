@@ -99,6 +99,7 @@ $(function(){initNavTree('classfile_handling.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classfile_handling-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">fileHandling Class Reference</div></div>
 </div><!--header-->
@@ -123,14 +124,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8c7f79a289885a8f9b723cbced0b5f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7219b8ea967d3a4991500d6b8aef1b53" id="r_a7219b8ea967d3a4991500d6b8aef1b53"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a7219b8ea967d3a4991500d6b8aef1b53"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7219b8ea967d3a4991500d6b8aef1b53">writeToFile</a> (const Args &amp;... args)</td></tr>
+<tr class="memdesc:a7219b8ea967d3a4991500d6b8aef1b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes multiple arguments to the file.  <br /></td></tr>
 <tr class="separator:a7219b8ea967d3a4991500d6b8aef1b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab9d1d27c1b06ddc672876188f3f408e" id="r_aab9d1d27c1b06ddc672876188f3f408e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab9d1d27c1b06ddc672876188f3f408e">readFromFile</a> ()</td></tr>
-<tr class="separator:aab9d1d27c1b06ddc672876188f3f408e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66adba6f54765d5cce9350306cb6d11f" id="r_a66adba6f54765d5cce9350306cb6d11f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_linked_list.html">LinkedList</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66adba6f54765d5cce9350306cb6d11f">readFromFile</a> ()</td></tr>
+<tr class="memdesc:a66adba6f54765d5cce9350306cb6d11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the file into a linked list.  <br /></td></tr>
+<tr class="separator:a66adba6f54765d5cce9350306cb6d11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a375566f79650b29da038838fc74b9a3f" id="r_a375566f79650b29da038838fc74b9a3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375566f79650b29da038838fc74b9a3f">size</a></td></tr>
+<tr class="separator:a375566f79650b29da038838fc74b9a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for handling file operations such as reading from and writing to files. </p>
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00013">13</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00015">15</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac4ea9607ef136f721ebc8bb289fedf30" name="ac4ea9607ef136f721ebc8bb289fedf30"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4ea9607ef136f721ebc8bb289fedf30">&#9670;&#160;</a></span>fileHandling()</h2>
@@ -181,8 +189,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aab9d1d27c1b06ddc672876188f3f408e" name="aab9d1d27c1b06ddc672876188f3f408e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab9d1d27c1b06ddc672876188f3f408e">&#9670;&#160;</a></span>readFromFile()</h2>
+<a id="a66adba6f54765d5cce9350306cb6d11f" name="a66adba6f54765d5cce9350306cb6d11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66adba6f54765d5cce9350306cb6d11f">&#9670;&#160;</a></span>readFromFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +199,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::string &gt; fileHandling::readFromFile </td>
+          <td class="memname"><a class="el" href="class_linked_list.html">LinkedList</a>&lt; std::string &gt; fileHandling::readFromFile </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -204,7 +212,20 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00071">71</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p>Reads data from the file into a linked list. </p>
+<dl class="section return"><dt>Returns</dt><dd>LinkedList&lt;std::string&gt; A linked list containing the data read from the file </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00093">93</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfile_handling_a66adba6f54765d5cce9350306cb6d11f_cgraph.png" border="0" usemap="#aclassfile_handling_a66adba6f54765d5cce9350306cb6d11f_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfile_handling_a66adba6f54765d5cce9350306cb6d11f_icgraph.png" border="0" usemap="#aclassfile_handling_a66adba6f54765d5cce9350306cb6d11f_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -233,7 +254,21 @@ template&lt;typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00061">61</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p>Writes multiple arguments to the file. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>Types of the arguments to write </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Arguments to write to the file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00077">77</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
 
 </div>
 </div>
@@ -276,7 +311,29 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00053">53</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00063">63</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfile_handling_a8c7f79a289885a8f9b723cbced0b5f86_icgraph.png" border="0" usemap="#aclassfile_handling_a8c7f79a289885a8f9b723cbced0b5f86_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a375566f79650b29da038838fc74b9a3f" name="a375566f79650b29da038838fc74b9a3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375566f79650b29da038838fc74b9a3f">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fileHandling::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00049">49</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
 
 </div>
 </div>

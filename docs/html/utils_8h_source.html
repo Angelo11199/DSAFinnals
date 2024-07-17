@@ -103,25 +103,25 @@ $(function(){initNavTree('utils_8h_source.html',''); initResizable(true); });
 <a href="utils_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UTILS_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UTILS_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Definition of splitData function</span></div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="utils_8h.html#a8d57f89e6c7627a0ae40c4363c1601c0">   16</a></span><span class="keyword">inline</span> std::vector&lt;std::string&gt; <a class="code hl_function" href="utils_8h.html#a8d57f89e6c7627a0ae40c4363c1601c0">splitData</a>(<span class="keyword">const</span> std::string&amp; data, <span class="keywordtype">char</span> delimiter) {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    std::vector&lt;std::string&gt; result;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::stringstream dataStream(data);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::string piece;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">while</span> (std::getline(dataStream, piece, delimiter)) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        result.push_back(piece);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_linked_list_8h.html">./LinkedList.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Definition of splitData function</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">splitData</a>(<span class="keyword">const</span> std::string&amp; input, <span class="keywordtype">char</span> delimiter, std::array&lt;std::string, N&gt;&amp; output) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::istringstream stream(input);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::string token;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">size_t</span> index = 0;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">while</span> (std::getline(stream, token, delimiter) &amp;&amp; index &lt; N) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        output[index++] = token;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
 </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// gets a number from the user</span></div>
 <div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">   35</a></span><span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">getDouble</a>(std::string prompt = <span class="stringliteral">&quot;&quot;</span>) {</div>
@@ -157,9 +157,22 @@ $(function(){initNavTree('utils_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif  </span><span class="comment">// UTILS_H</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// inline std::string generateRandomNumber() {</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//     srand(time(0));  // Seed the random number generator</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">//     std::string random_number_str;</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//     int digits = 10;  // Number of digits</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">//     for (int i = 0; i &lt; digits; ++i) {</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//         int random_number = rand() % 10;                     // Generate a random number between 0 and 9</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//         random_number_str += std::to_string(random_number);  // Append the digit to the string</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">//     }</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">//     return random_number_str;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// }</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif  </span><span class="comment">// UTILS_H</span></div>
+<div class="ttc" id="a_linked_list_8h_html"><div class="ttname"><a href="_linked_list_8h.html">LinkedList.h</a></div></div>
+<div class="ttc" id="autils_8h_html_a0bbdc0fddc1e9cafefc319fbf2a7fe6f"><div class="ttname"><a href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">splitData</a></div><div class="ttdeci">void splitData(const std::string &amp;input, char delimiter, std::array&lt; std::string, N &gt; &amp;output)</div><div class="ttdoc">Splits a string into parts based on a delimiter.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">utils.h:19</a></div></div>
 <div class="ttc" id="autils_8h_html_a2c20bc98253e8f32fb63e75a010df7c6"><div class="ttname"><a href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">getDouble</a></div><div class="ttdeci">double getDouble(std::string prompt=&quot;&quot;)</div><div class="ttdoc">Prompts the user to enter a double value.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">utils.h:35</a></div></div>
-<div class="ttc" id="autils_8h_html_a8d57f89e6c7627a0ae40c4363c1601c0"><div class="ttname"><a href="utils_8h.html#a8d57f89e6c7627a0ae40c4363c1601c0">splitData</a></div><div class="ttdeci">std::vector&lt; std::string &gt; splitData(const std::string &amp;data, char delimiter)</div><div class="ttdoc">Splits a string into parts based on a delimiter.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">utils.h:16</a></div></div>
 <div class="ttc" id="autils_8h_html_aad9ed7a055a99883645739e4bfca0e5e"><div class="ttname"><a href="utils_8h.html#aad9ed7a055a99883645739e4bfca0e5e">displayMenu</a></div><div class="ttdeci">int displayMenu()</div><div class="ttdoc">Displays a menu for an office rental system.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">utils.h:57</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,5 +1,5 @@
 \doxysection{client Class Reference}
-\label{classclient}\index{client@{client}}
+\hypertarget{classclient}{}\label{classclient}\index{client@{client}}
 
 
 represents a client management class  
@@ -9,37 +9,39 @@ represents a client management class
 
 {\ttfamily \#include $<$client.\+h$>$}
 
-Inheritance diagram for client\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=3.000000cm]{classclient}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for client\+:
+% FIG 0
+
+
+Collaboration diagram for client\+:
+% FIG 1
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ client} (int \textbf{ client\+Id})
+\mbox{\hyperlink{classclient_a73c905f01932e6f5411930241b96c09f}{client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
 \begin{DoxyCompactList}\small\item\em Constructor for the client class. \end{DoxyCompactList}\item 
-\textbf{ $\sim$client} ()
+\mbox{\hyperlink{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9}{\texorpdfstring{$\sim$}{\string~}client}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the client object. \end{DoxyCompactList}\item 
-void \textbf{ add\+Client} (\textbf{ client\+Data} data, bool current=false)
+void \mbox{\hyperlink{classclient_a733535fb656d02f5ab034f8b649cf3f0}{add\+Client}} (\mbox{\hyperlink{structclient_data}{client\+Data}} data, bool current=false)
 \begin{DoxyCompactList}\small\item\em Adds a new client to the management system. \end{DoxyCompactList}\item 
-void \textbf{ add\+Rented\+Space} (\textbf{ office\+Information} data)
+void \mbox{\hyperlink{classclient_aa2e50f0061a672960762e9d17ea4fbc8}{add\+Rented\+Space}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data)
 \begin{DoxyCompactList}\small\item\em Adds information about an office rented by a client. \end{DoxyCompactList}\item 
-\textbf{ client\+Data} \textbf{ get\+Client} (int \textbf{ client\+Id})
+\mbox{\hyperlink{structclient_data}{client\+Data}} \mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{get\+Client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
 \begin{DoxyCompactList}\small\item\em Retrieves information about a specific client. \end{DoxyCompactList}\item 
-void \textbf{ change\+Client} (int \textbf{ client\+Id})
+void \mbox{\hyperlink{classclient_adb9e839f07bd89b82a16b2aefac14837}{change\+Client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
 \begin{DoxyCompactList}\small\item\em Changes the information of a specific client. \end{DoxyCompactList}\item 
-void \textbf{ remove\+Client} (int data)
+void \mbox{\hyperlink{classclient_a3d443d75aae88598edc548e41181a4e6}{remove\+Client}} (int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}})
 \begin{DoxyCompactList}\small\item\em Removes a client from the management system. \end{DoxyCompactList}\item 
-void \textbf{ print\+Clients} ()
+void \mbox{\hyperlink{classclient_a1cfaa24b1f47f7c2035549f874b69ea1}{print\+Clients}} ()
 \begin{DoxyCompactList}\small\item\em Prints information about all clients in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int \textbf{ client\+Id} = 0
+int \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{client\+Id}} = 0
 \item 
-\textbf{ file\+Handling} \textbf{ file} = \textbf{ file\+Handling}("{}clients.\+csv"{})
+\mbox{\hyperlink{classfile_handling}{file\+Handling}} \mbox{\hyperlink{classclient_a3edf9bfb9e9121c65951702cc5f7d3b0}{file}} = \mbox{\hyperlink{classfile_handling}{file\+Handling}}("{}clients.\+csv"{})
 \end{DoxyCompactItemize}
 
 
@@ -48,14 +50,14 @@ represents a client management class
 
 manages client data and operations using a linked list structure 
 
-Definition at line \textbf{ 15} of file \textbf{ client.\+h}.
+Definition at line \mbox{\hyperlink{client_8h_source_l00015}{15}} of file \mbox{\hyperlink{client_8h_source}{client.\+h}}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classclient_a73c905f01932e6f5411930241b96c09f}\index{client@{client}!client@{client}}
 \index{client@{client}!client@{client}}
-\index{client@{client}!client@{client}}
-\doxysubsubsection{client()}
+\doxysubsubsection{\texorpdfstring{client()}{client()}}
 {\footnotesize\ttfamily \label{classclient_a73c905f01932e6f5411930241b96c09f} 
 client\+::client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
 
@@ -70,13 +72,15 @@ Constructor for the client class.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 12} of file \textbf{ client.\+cpp}.
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
 
-\index{client@{client}!````~client@{$\sim$client}}
-\index{````~client@{$\sim$client}!client@{client}}
-\doxysubsubsection{$\sim$client()}
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9}\index{client@{client}!````~client@{\texorpdfstring{$\sim$}{\string~}client}}
+\index{````~client@{\texorpdfstring{$\sim$}{\string~}client}!client@{client}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}client()}{\string~client()}}
 {\footnotesize\ttfamily \label{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9} 
-client\+::$\sim$client (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+client\+::\texorpdfstring{$\sim$}{\string~}client (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -84,16 +88,16 @@ Destroy the client object.
 
 
 
-Definition at line \textbf{ 94} of file \textbf{ client.\+cpp}.
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\index{client@{client}!addClient@{addClient}}
+\Hypertarget{classclient_a733535fb656d02f5ab034f8b649cf3f0}\index{client@{client}!addClient@{addClient}}
 \index{addClient@{addClient}!client@{client}}
-\doxysubsubsection{addClient()}
+\doxysubsubsection{\texorpdfstring{addClient()}{addClient()}}
 {\footnotesize\ttfamily \label{classclient_a733535fb656d02f5ab034f8b649cf3f0} 
-void client\+::add\+Client (\begin{DoxyParamCaption}\item[{\textbf{ client\+Data}}]{data}{, }\item[{bool}]{current}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+void client\+::add\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structclient_data}{client\+Data}}}]{data}{, }\item[{bool}]{current}{ = {\ttfamily false}}\end{DoxyParamCaption})}
 
 
 
@@ -108,13 +112,17 @@ Adds a new client to the management system.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 32} of file \textbf{ client.\+cpp}.
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
 
-\index{client@{client}!addRentedSpace@{addRentedSpace}}
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{classclient_aa2e50f0061a672960762e9d17ea4fbc8}\index{client@{client}!addRentedSpace@{addRentedSpace}}
 \index{addRentedSpace@{addRentedSpace}!client@{client}}
-\doxysubsubsection{addRentedSpace()}
+\doxysubsubsection{\texorpdfstring{addRentedSpace()}{addRentedSpace()}}
 {\footnotesize\ttfamily \label{classclient_aa2e50f0061a672960762e9d17ea4fbc8} 
-void client\+::add\+Rented\+Space (\begin{DoxyParamCaption}\item[{\textbf{ office\+Information}}]{data}{}\end{DoxyParamCaption})}
+void client\+::add\+Rented\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoffice_information}{office\+Information}}}]{data}{}\end{DoxyParamCaption})}
 
 
 
@@ -127,11 +135,13 @@ Adds information about an office rented by a client.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 83} of file \textbf{ client.\+cpp}.
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
 
-\index{client@{client}!changeClient@{changeClient}}
+Here is the call graph for this function\+:
+% FIG 5
+\Hypertarget{classclient_adb9e839f07bd89b82a16b2aefac14837}\index{client@{client}!changeClient@{changeClient}}
 \index{changeClient@{changeClient}!client@{client}}
-\doxysubsubsection{changeClient()}
+\doxysubsubsection{\texorpdfstring{changeClient()}{changeClient()}}
 {\footnotesize\ttfamily \label{classclient_adb9e839f07bd89b82a16b2aefac14837} 
 void client\+::change\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
 
@@ -146,13 +156,15 @@ Changes the information of a specific client.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 84} of file \textbf{ client.\+cpp}.
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
 
-\index{client@{client}!getClient@{getClient}}
+Here is the call graph for this function\+:
+% FIG 6
+\Hypertarget{classclient_aa7eb5b91b3398910fe41ae20bac16714}\index{client@{client}!getClient@{getClient}}
 \index{getClient@{getClient}!client@{client}}
-\doxysubsubsection{getClient()}
+\doxysubsubsection{\texorpdfstring{getClient()}{getClient()}}
 {\footnotesize\ttfamily \label{classclient_aa7eb5b91b3398910fe41ae20bac16714} 
-\textbf{ client\+Data} client\+::get\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{structclient_data}{client\+Data}} client\+::get\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
 
 
 
@@ -164,15 +176,17 @@ Retrieves information about a specific client.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\doxyref{client\+Data}{p.}{structclient_data} Information about the requested client 
+\doxylink{structclient_data}{client\+Data} Information about the requested client 
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 40} of file \textbf{ client.\+cpp}.
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
 
-\index{client@{client}!printClients@{printClients}}
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{classclient_a1cfaa24b1f47f7c2035549f874b69ea1}\index{client@{client}!printClients@{printClients}}
 \index{printClients@{printClients}!client@{client}}
-\doxysubsubsection{printClients()}
+\doxysubsubsection{\texorpdfstring{printClients()}{printClients()}}
 {\footnotesize\ttfamily \label{classclient_a1cfaa24b1f47f7c2035549f874b69ea1} 
 void client\+::print\+Clients (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -182,12 +196,14 @@ Prints information about all clients in the system.
 
 
 
-Definition at line \textbf{ 73} of file \textbf{ client.\+cpp}.
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
 
-\index{client@{client}!removeClient@{removeClient}}
+Here is the call graph for this function\+:
+% FIG 8
+\Hypertarget{classclient_a3d443d75aae88598edc548e41181a4e6}\index{client@{client}!removeClient@{removeClient}}
 \index{removeClient@{removeClient}!client@{client}}
-\doxysubsubsection{removeClient()}
-{\footnotesize\ttfamily \label{classclient_a8a6629a2513487793f12ccc02ea935c4} 
+\doxysubsubsection{\texorpdfstring{removeClient()}{removeClient()}}
+{\footnotesize\ttfamily \label{classclient_a3d443d75aae88598edc548e41181a4e6} 
 void client\+::remove\+Client (\begin{DoxyParamCaption}\item[{int}]{client\+Id}{}\end{DoxyParamCaption})}
 
 
@@ -205,34 +221,36 @@ remove a client from the client list
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 53} of file \textbf{ client.\+cpp}.
+Definition at line \mbox{\hyperlink{client_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{client_8cpp_source}{client.\+cpp}}.
 
+Here is the call graph for this function\+:
+% FIG 9
 
 
 \doxysubsection{Member Data Documentation}
-\index{client@{client}!clientId@{clientId}}
+\Hypertarget{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}\index{client@{client}!clientId@{clientId}}
 \index{clientId@{clientId}!client@{client}}
-\doxysubsubsection{clientId}
+\doxysubsubsection{\texorpdfstring{clientId}{clientId}}
 {\footnotesize\ttfamily \label{classclient_a75855c00fdfc491d5ec5ecf1508db6eb} 
 int client\+::client\+Id = 0\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line \textbf{ 17} of file \textbf{ client.\+h}.
+Definition at line \mbox{\hyperlink{client_8h_source_l00017}{17}} of file \mbox{\hyperlink{client_8h_source}{client.\+h}}.
 
-\index{client@{client}!file@{file}}
+\Hypertarget{classclient_a3edf9bfb9e9121c65951702cc5f7d3b0}\index{client@{client}!file@{file}}
 \index{file@{file}!client@{client}}
-\doxysubsubsection{file}
+\doxysubsubsection{\texorpdfstring{file}{file}}
 {\footnotesize\ttfamily \label{classclient_a3edf9bfb9e9121c65951702cc5f7d3b0} 
-\textbf{ file\+Handling} client\+::file = \textbf{ file\+Handling}("{}clients.\+csv"{})\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\hyperlink{classfile_handling}{file\+Handling}} client\+::file = \mbox{\hyperlink{classfile_handling}{file\+Handling}}("{}clients.\+csv"{})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line \textbf{ 18} of file \textbf{ client.\+h}.
+Definition at line \mbox{\hyperlink{client_8h_source_l00018}{18}} of file \mbox{\hyperlink{client_8h_source}{client.\+h}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-ADT/\textbf{ client.\+h}\item 
-ADT/\textbf{ client.\+cpp}\end{DoxyCompactItemize}
+ADT/\mbox{\hyperlink{client_8h}{client.\+h}}\item 
+ADT/\mbox{\hyperlink{client_8cpp}{client.\+cpp}}\end{DoxyCompactItemize}

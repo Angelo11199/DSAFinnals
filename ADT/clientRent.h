@@ -1,6 +1,8 @@
 //* child class of client. Responsible for renting an office, checking if an office is rented or not as well.
 #ifndef OFFICERENTAL_H
 #define OFFICERENTAL_H
+#include <string>
+
 #include "../includes/LinkedList.h"
 #include "./client.h"
 #include "./office.h"
@@ -12,7 +14,7 @@
  */
 class clientRent : public client, public LinkedList<clientRentData> {
    private:
-    std::string clientId;
+    int clientId;
     fileHandling file = fileHandling("rentedOffices.csv");
 
    public:
@@ -21,7 +23,7 @@ class clientRent : public client, public LinkedList<clientRentData> {
      *
      * @param clientId ID of the client using the rental management
      */
-    clientRent(std::string clientId);
+    clientRent(int clientID);
 
     /**
      * @brief Rents an office for the client
@@ -30,7 +32,7 @@ class clientRent : public client, public LinkedList<clientRentData> {
      * @return true If the office was successfully rented
      * @return false Otherwise
      */
-    bool rentOffice(std::string officeId);
+    bool rentOffice(int officeId);
 
     /**
      * @brief Shows available offices that can be rented

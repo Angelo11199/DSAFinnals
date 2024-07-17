@@ -1,58 +1,70 @@
 \doxysection{utils.\+h}
-\label{utils_8h_source}\index{includes/utils.h@{includes/utils.h}}
-\textbf{ Go to the documentation of this file.}
+\hypertarget{utils_8h_source}{}\label{utils_8h_source}\index{includes/utils.h@{includes/utils.h}}
+\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00015\ \textcolor{comment}{//\ Definition\ of\ splitData\ function}}
-\DoxyCodeLine{00016\ \textcolor{keyword}{inline}\ std::vector<std::string>\ splitData(\textcolor{keyword}{const}\ std::string\&\ data,\ \textcolor{keywordtype}{char}\ delimiter)\ \{}
-\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::string>\ result;}
-\DoxyCodeLine{00018\ \ \ \ \ std::stringstream\ dataStream(data);}
-\DoxyCodeLine{00019\ \ \ \ \ std::string\ piece;}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(dataStream,\ piece,\ delimiter))\ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ result.push\_back(piece);}
-\DoxyCodeLine{00023\ \ \ \ \ \}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{00026\ \}}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00034\ \textcolor{comment}{//\ gets\ a\ number\ from\ the\ user}}
-\DoxyCodeLine{00035\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ getDouble(std::string\ prompt\ =\ \textcolor{stringliteral}{"{}"{}})\ \{}
-\DoxyCodeLine{00036\ \ \ \ \ std::string\ num;}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{char}*\ p;}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::cout\ <<\ prompt;}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::cin\ >>\ num;}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ convertedNum\ =\ strtod(num.c\_str(),\ \&p);}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*p)\ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ input"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ convertedNum;}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00048\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true});}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00050\ \}}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00057\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ displayMenu()\ \{}
-\DoxyCodeLine{00058\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Office\ Space\ Rental\ System\(\backslash\)n"{}};}
-\DoxyCodeLine{00059\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ Add\ New\ Office\(\backslash\)n"{}};}
-\DoxyCodeLine{00060\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ Rent\ an\ Office\(\backslash\)n"{}};}
-\DoxyCodeLine{00061\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ Return\ an\ Office\(\backslash\)n"{}};}
-\DoxyCodeLine{00062\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[4]\ Show\ Office\ Details\(\backslash\)n"{}};}
-\DoxyCodeLine{00063\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[5]\ Display\ All\ Offices\(\backslash\)n"{}};}
-\DoxyCodeLine{00064\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[6]\ Add\ New\ Client\(\backslash\)n"{}};}
-\DoxyCodeLine{00065\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[7]\ Show\ Client\ Details\(\backslash\)n"{}};}
-\DoxyCodeLine{00066\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[8]\ Exit\(\backslash\)n"{}};}
-\DoxyCodeLine{00067\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Choose\ an\ option:\ "{}};}
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00069\ \}}
-\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ UTILS\_H}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_linked_list_8h}{./LinkedList.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00017}00017\ \textcolor{comment}{//\ Definition\ of\ splitData\ function}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00018}00018\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{size\_t}\ N>}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00019}\mbox{\hyperlink{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}{splitData}}(\textcolor{keyword}{const}\ std::string\&\ input,\ \textcolor{keywordtype}{char}\ delimiter,\ std::array<std::string,\ N>\&\ output)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00020}00020\ \ \ \ \ std::istringstream\ stream(input);}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00021}00021\ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(stream,\ token,\ delimiter)\ \&\&\ index\ <\ N)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ output[index++]\ =\ token;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00034}00034\ \textcolor{comment}{//\ gets\ a\ number\ from\ the\ user}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00035}\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{00035}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(std::string\ prompt\ =\ \textcolor{stringliteral}{"{}"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00036}00036\ \ \ \ \ std::string\ num;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{char}*\ p;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ std::cout\ <<\ prompt;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ std::cin\ >>\ num;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ convertedNum\ =\ strtod(num.c\_str(),\ \&p);}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*p)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ input"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ convertedNum;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00048}00048\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00057}\mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{00057}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{displayMenu}}()\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00058}00058\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Office\ Space\ Rental\ System\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00059}00059\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ Add\ New\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00060}00060\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ Rent\ an\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00061}00061\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ Return\ an\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00062}00062\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[4]\ Show\ Office\ Details\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00063}00063\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[5]\ Display\ All\ Offices\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00064}00064\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[6]\ Add\ New\ Client\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00065}00065\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[7]\ Show\ Client\ Details\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00066}00066\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[8]\ Exit\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00067}00067\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Choose\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00077}00077\ \textcolor{comment}{//\ inline\ std::string\ generateRandomNumber()\ \{}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00078}00078\ \textcolor{comment}{//\ \ \ \ \ srand(time(0));\ \ //\ Seed\ the\ random\ number\ generator}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00079}00079\ \textcolor{comment}{//\ \ \ \ \ std::string\ random\_number\_str;}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00080}00080\ \textcolor{comment}{//\ \ \ \ \ int\ digits\ =\ 10;\ \ //\ Number\ of\ digits}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00081}00081\ \textcolor{comment}{//\ \ \ \ \ for\ (int\ i\ =\ 0;\ i\ <\ digits;\ ++i)\ \{}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00082}00082\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ int\ random\_number\ =\ rand()\ \%\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Generate\ a\ random\ number\ between\ 0\ and\ 9}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00083}00083\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ random\_number\_str\ +=\ std::to\_string(random\_number);\ \ //\ Append\ the\ digit\ to\ the\ string}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00084}00084\ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00085}00085\ \textcolor{comment}{//\ \ \ \ \ return\ random\_number\_str;}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00086}00086\ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00088}00088\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ UTILS\_H}}
 
 \end{DoxyCode}

@@ -1,7 +1,7 @@
 //* shows a list of ALL offices.
 #ifndef OFFICERENTAL_CPP
 #define OFFICERENTAL_CPP
-#include "./officeRental.h"
+#include "./clientRent.h"
 
 #include <iostream>
 
@@ -9,8 +9,9 @@
 #include "../includes/utils.h"
 #include "./client.h"
 #include "./office.h"
-clientRent::clientRent(std::string clientId) : client(clientId) {
-    this->clientId = clientId;
+
+clientRent::clientRent(int clientID) : client(clientID) {
+    clientId = clientID;
     LinkedList<std::string> data = file.readFromFile();
     auto current = data.getHead();
     const size_t size = 2;
@@ -18,18 +19,23 @@ clientRent::clientRent(std::string clientId) : client(clientId) {
         std::array<std::string, size> output;
         splitData(current->data, ',', output);
         clientRentData office;
-        office.clientId = output[0];
-        office.officeId = output[1];
-        if (clientId == output[0]) {
+        // check if output is not empty
+        if (output[0].empty() || output[1].empty()) {
+            current = current->next;
+            continue;
+        }
+        office.clientId = std::stoi(output[0]);
+        office.officeId = std::stoi(output[1]);
+        if (clientId == office.clientId) {
             LinkedList<clientRentData>::add(office);
         }
         current = current->next;
     }
 };
-bool clientRent::rentOffice(std::string officeId) {
+bool clientRent::rentOffice(int officeId) {
     LinkedList<clientRentData>::Node* current = LinkedList<clientRentData>::head;
     while (current != nullptr) {
-        if (current->data.officeId != officeId) {
+        if (current->data.clientId != officeId) {
             current = current->next;
             continue;
         }

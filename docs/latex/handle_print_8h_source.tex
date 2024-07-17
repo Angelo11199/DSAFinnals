@@ -1,24 +1,24 @@
 \doxysection{handle\+Print.\+h}
-\label{handle_print_8h_source}\index{includes/handlePrint.h@{includes/handlePrint.h}}
-\textbf{ Go to the documentation of this file.}
+\hypertarget{handle_print_8h_source}{}\label{handle_print_8h_source}\index{includes/handlePrint.h@{includes/handlePrint.h}}
+\mbox{\hyperlink{handle_print_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00007\ \textcolor{comment}{//\ Base\ case\ for\ the\ recursion}}
-\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ print()\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ std::cout\ <<\ std::endl;\ \ \textcolor{comment}{//\ End\ the\ line\ after\ all\ elements\ are\ printed}}
-\DoxyCodeLine{00010\ \}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00019\ \textcolor{comment}{//\ Variadic\ template\ function\ to\ handle\ at\ least\ one\ parameter}}
-\DoxyCodeLine{00020\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ print(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ Args\&...\ args)\ \{}
-\DoxyCodeLine{00022\ \ \ \ \ std::cout\ <<\ first;}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (\textcolor{keyword}{sizeof}...(args)\ >\ 0)\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ print(args...);\ \ \textcolor{comment}{//\ Recursive\ call\ with\ the\ rest\ of\ the\ parameters}}
-\DoxyCodeLine{00026\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;\ \ \textcolor{comment}{//\ End\ the\ line\ after\ the\ last\ element}}
-\DoxyCodeLine{00028\ \ \ \ \ \}}
-\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00007}00007\ \textcolor{comment}{//\ Base\ case\ for\ the\ recursion}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00008}\mbox{\hyperlink{handle_print_8h_a388f572c62279f839ee138a9afbdeeb5}{00008}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{handle_print_8h_a388f572c62279f839ee138a9afbdeeb5}{print}}()\ \{}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00009}00009\ \ \ \ \ std::cout\ <<\ std::endl;\ \ \textcolor{comment}{//\ End\ the\ line\ after\ all\ elements\ are\ printed}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00019}00019\ \textcolor{comment}{//\ Variadic\ template\ function\ to\ handle\ at\ least\ one\ parameter}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00020}00020\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00021}\mbox{\hyperlink{handle_print_8h_a01cb2e0ac4e1bf2072b875aadf5054c1}{00021}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{handle_print_8h_a388f572c62279f839ee138a9afbdeeb5}{print}}(\textcolor{keyword}{const}\ T\&\ first,\ \textcolor{keyword}{const}\ Args\&...\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00022}00022\ \ \ \ \ std::cout\ <<\ first;}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (\textcolor{keyword}{sizeof}...(args)\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00024}00024\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{handle_print_8h_a388f572c62279f839ee138a9afbdeeb5}{print}}(args...);\ \ \textcolor{comment}{//\ Recursive\ call\ with\ the\ rest\ of\ the\ parameters}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00026}00026\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;\ \ \textcolor{comment}{//\ End\ the\ line\ after\ the\ last\ element}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_print_8h_source_l00029}00029\ \}}
 
 \end{DoxyCode}

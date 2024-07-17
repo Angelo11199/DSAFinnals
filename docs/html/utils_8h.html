@@ -102,17 +102,30 @@ $(function(){initNavTree('utils_8h.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">utils.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="_linked_list_8h_source.html">./LinkedList.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for utils.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h__incl.png" border="0" usemap="#aincludes_2utils_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h__dep__incl.png" border="0" usemap="#aincludes_2utils_8hdep" alt=""/></div>
+</div>
 </div>
 <p><a href="utils_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8d57f89e6c7627a0ae40c4363c1601c0" id="r_a8d57f89e6c7627a0ae40c4363c1601c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d57f89e6c7627a0ae40c4363c1601c0">splitData</a> (const std::string &amp;data, char delimiter)</td></tr>
-<tr class="memdesc:a8d57f89e6c7627a0ae40c4363c1601c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into parts based on a delimiter.  <br /></td></tr>
-<tr class="separator:a8d57f89e6c7627a0ae40c4363c1601c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bbdc0fddc1e9cafefc319fbf2a7fe6f" id="r_a0bbdc0fddc1e9cafefc319fbf2a7fe6f"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:a0bbdc0fddc1e9cafefc319fbf2a7fe6f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">splitData</a> (const std::string &amp;input, char delimiter, std::array&lt; std::string, N &gt; &amp;output)</td></tr>
+<tr class="memdesc:a0bbdc0fddc1e9cafefc319fbf2a7fe6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into parts based on a delimiter.  <br /></td></tr>
+<tr class="separator:a0bbdc0fddc1e9cafefc319fbf2a7fe6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c20bc98253e8f32fb63e75a010df7c6" id="r_a2c20bc98253e8f32fb63e75a010df7c6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c20bc98253e8f32fb63e75a010df7c6">getDouble</a> (std::string prompt=&quot;&quot;)</td></tr>
 <tr class="memdesc:a2c20bc98253e8f32fb63e75a010df7c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prompts the user to enter a double value.  <br /></td></tr>
 <tr class="separator:a2c20bc98253e8f32fb63e75a010df7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +161,11 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>int The user's selected option from the menu </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="utils_8h_source.html#l00057">57</a> of file <a class="el" href="utils_8h_source.html">utils.h</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_aad9ed7a055a99883645739e4bfca0e5e_icgraph.png" border="0" usemap="#autils_8h_aad9ed7a055a99883645739e4bfca0e5e_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -184,34 +202,38 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double The double value entered by the user </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="utils_8h_source.html#l00035">35</a> of file <a class="el" href="utils_8h_source.html">utils.h</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a2c20bc98253e8f32fb63e75a010df7c6_icgraph.png" border="0" usemap="#autils_8h_a2c20bc98253e8f32fb63e75a010df7c6_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<a id="a8d57f89e6c7627a0ae40c4363c1601c0" name="a8d57f89e6c7627a0ae40c4363c1601c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d57f89e6c7627a0ae40c4363c1601c0">&#9670;&#160;</a></span>splitData()</h2>
+<a id="a0bbdc0fddc1e9cafefc319fbf2a7fe6f" name="a0bbdc0fddc1e9cafefc319fbf2a7fe6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">&#9670;&#160;</a></span>splitData()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::string &gt; splitData </td>
+          <td class="memname">void splitData </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>delimiter</em></span>&#160;)</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>delimiter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; std::string, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>output</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Splits a string into parts based on a delimiter. </p>
@@ -224,7 +246,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::string&gt; Vector of strings containing the split parts </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utils_8h_source.html#l00016">16</a> of file <a class="el" href="utils_8h_source.html">utils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utils_8h_source.html#l00019">19</a> of file <a class="el" href="utils_8h_source.html">utils.h</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f_icgraph.png" border="0" usemap="#autils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>

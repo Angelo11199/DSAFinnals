@@ -77,7 +77,8 @@ class fileHandling {
     void writeToFile(const Args&... args) {
         std::ofstream file(filename, std::ios::app);  // Open file once
         if (!file.is_open()) {
-            std::cerr << "Error opening file" << std::endl;
+            std::cerr << "Error opening file: " << filename << std::endl;
+
             return;
         }
         writeToFileHelper(file, args...);  // Start the recursive writing with the file stream
@@ -94,7 +95,7 @@ class fileHandling {
         std::ifstream file;
         file.open(filename);
         if (!file.is_open()) {
-            std::cerr << "Error opening file" << std::endl;
+            std::cerr << "Error opening file" << filename << std::endl;
             return data;
         }
         std::string line;

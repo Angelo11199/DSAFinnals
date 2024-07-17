@@ -28,7 +28,7 @@ class office : public LinkedList<officeInformation> {
      *
      * @param clientID ID of the client using the office management system.
      */
-    office(std::string clientID);
+    office(int clientID);
 
     /**
      * @brief Adds a new office to the management system
@@ -64,7 +64,7 @@ class office : public LinkedList<officeInformation> {
      * @param officeId ID of the office to retrieve information for
      * @return officeInformation Information about the requested office
      */
-    officeInformation getOffice(std::string officeId);
+    officeInformation getOffice(int officeId);
     /**
      * @brief Destroy the office object
      *

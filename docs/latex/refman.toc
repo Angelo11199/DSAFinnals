@@ -1,167 +1,167 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
-\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{}%
-\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{}%
-\contentsline {chapter}{\numberline {2}Class Index}{3}{}%
-\contentsline {section}{\numberline {2.1}Class List}{3}{}%
-\contentsline {chapter}{\numberline {3}File Index}{5}{}%
-\contentsline {section}{\numberline {3.1}File List}{5}{}%
-\contentsline {chapter}{\numberline {4}Class Documentation}{7}{}%
-\contentsline {section}{\numberline {4.1}client Class Reference}{7}{}%
-\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{8}{}%
-\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{8}{}%
-\contentsline {subsubsection}{\numberline {4.1.2.1}client()}{8}{}%
-\contentsline {subsubsection}{\numberline {4.1.2.2}$\sim $client()}{8}{}%
-\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{8}{}%
-\contentsline {subsubsection}{\numberline {4.1.3.1}addClient()}{8}{}%
-\contentsline {subsubsection}{\numberline {4.1.3.2}addRentedSpace()}{9}{}%
-\contentsline {subsubsection}{\numberline {4.1.3.3}changeClient()}{9}{}%
-\contentsline {subsubsection}{\numberline {4.1.3.4}getClient()}{9}{}%
-\contentsline {subsubsection}{\numberline {4.1.3.5}printClients()}{10}{}%
-\contentsline {subsubsection}{\numberline {4.1.3.6}removeClient()}{10}{}%
-\contentsline {subsection}{\numberline {4.1.4}Member Data Documentation}{10}{}%
-\contentsline {subsubsection}{\numberline {4.1.4.1}clientId}{10}{}%
-\contentsline {subsubsection}{\numberline {4.1.4.2}file}{10}{}%
-\contentsline {section}{\numberline {4.2}client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Struct Reference}{10}{}%
-\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{11}{}%
-\contentsline {subsection}{\numberline {4.2.2}Member Data Documentation}{11}{}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}clientAddress}{11}{}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}clientName}{11}{}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}id}{11}{}%
-\contentsline {subsubsection}{\numberline {4.2.2.4}isAdmin}{11}{}%
-\contentsline {subsubsection}{\numberline {4.2.2.5}rentedSpaces}{12}{}%
-\contentsline {section}{\numberline {4.3}client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rent Class Reference}{12}{}%
-\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{13}{}%
-\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{13}{}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}clientRent()}{13}{}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}$\sim $clientRent()}{14}{}%
-\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{14}{}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}rentOffice()}{14}{}%
-\contentsline {subsubsection}{\numberline {4.3.3.2}ShowAvailableOffices()}{14}{}%
-\contentsline {section}{\numberline {4.4}file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling Class Reference}{15}{}%
-\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{15}{}%
-\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{15}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}fileHandling()}{15}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}$\sim $fileHandling()}{15}{}%
-\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{16}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.1}readFromFile()}{16}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.2}writeToFile()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.3}writeToFile()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{16}{}%
-\contentsline {section}{\numberline {4.5}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List$<$ T $>$ Class Template Reference}{16}{}%
-\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{17}{}%
-\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{17}{}%
-\contentsline {subsubsection}{\numberline {4.5.2.1}LinkedList()}{17}{}%
-\contentsline {subsubsection}{\numberline {4.5.2.2}$\sim $LinkedList()}{17}{}%
-\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{17}{}%
-\contentsline {subsubsection}{\numberline {4.5.3.1}add()}{17}{}%
-\contentsline {subsubsection}{\numberline {4.5.3.2}getSize()}{18}{}%
-\contentsline {subsubsection}{\numberline {4.5.3.3}print()}{18}{}%
-\contentsline {subsubsection}{\numberline {4.5.3.4}remove()}{18}{}%
-\contentsline {subsection}{\numberline {4.5.4}Member Data Documentation}{18}{}%
-\contentsline {subsubsection}{\numberline {4.5.4.1}head}{18}{}%
-\contentsline {subsubsection}{\numberline {4.5.4.2}size}{19}{}%
-\contentsline {subsubsection}{\numberline {4.5.4.3}tail}{19}{}%
-\contentsline {section}{\numberline {4.6}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List$<$ T $>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Node Struct Reference}{19}{}%
-\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{19}{}%
-\contentsline {subsection}{\numberline {4.6.2}Member Data Documentation}{19}{}%
-\contentsline {subsubsection}{\numberline {4.6.2.1}data}{19}{}%
-\contentsline {subsubsection}{\numberline {4.6.2.2}next}{20}{}%
-\contentsline {section}{\numberline {4.7}office Class Reference}{20}{}%
-\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{21}{}%
-\contentsline {subsection}{\numberline {4.7.2}Constructor \& Destructor Documentation}{21}{}%
-\contentsline {subsubsection}{\numberline {4.7.2.1}office()}{21}{}%
-\contentsline {subsubsection}{\numberline {4.7.2.2}$\sim $office()}{22}{}%
-\contentsline {subsection}{\numberline {4.7.3}Member Function Documentation}{22}{}%
-\contentsline {subsubsection}{\numberline {4.7.3.1}addOffice()}{22}{}%
-\contentsline {subsubsection}{\numberline {4.7.3.2}endRental()}{22}{}%
-\contentsline {subsubsection}{\numberline {4.7.3.3}getOffice()}{22}{}%
-\contentsline {subsubsection}{\numberline {4.7.3.4}getRentedOffices()}{23}{}%
-\contentsline {subsubsection}{\numberline {4.7.3.5}printOffices()}{23}{}%
-\contentsline {subsubsection}{\numberline {4.7.3.6}rentOffice()}{23}{}%
-\contentsline {section}{\numberline {4.8}office\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Information Struct Reference}{23}{}%
-\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{24}{}%
-\contentsline {subsection}{\numberline {4.8.2}Member Data Documentation}{24}{}%
-\contentsline {subsubsection}{\numberline {4.8.2.1}id}{24}{}%
-\contentsline {subsubsection}{\numberline {4.8.2.2}isRented}{24}{}%
-\contentsline {subsubsection}{\numberline {4.8.2.3}officeAddress}{24}{}%
-\contentsline {subsubsection}{\numberline {4.8.2.4}officeName}{24}{}%
-\contentsline {subsubsection}{\numberline {4.8.2.5}officePrice}{24}{}%
-\contentsline {subsubsection}{\numberline {4.8.2.6}officeSize}{25}{}%
-\contentsline {section}{\numberline {4.9}Queue$<$ T $>$ Class Template Reference}{25}{}%
-\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{25}{}%
-\contentsline {subsection}{\numberline {4.9.2}Constructor \& Destructor Documentation}{25}{}%
-\contentsline {subsubsection}{\numberline {4.9.2.1}Queue()}{25}{}%
-\contentsline {subsubsection}{\numberline {4.9.2.2}$\sim $Queue()}{25}{}%
-\contentsline {subsection}{\numberline {4.9.3}Member Function Documentation}{26}{}%
-\contentsline {subsubsection}{\numberline {4.9.3.1}back()}{26}{}%
-\contentsline {subsubsection}{\numberline {4.9.3.2}dequeue()}{26}{}%
-\contentsline {subsubsection}{\numberline {4.9.3.3}enqueue()}{26}{}%
-\contentsline {subsubsection}{\numberline {4.9.3.4}front()}{26}{}%
-\contentsline {subsubsection}{\numberline {4.9.3.5}getSize()}{26}{}%
-\contentsline {subsubsection}{\numberline {4.9.3.6}isEmpty()}{26}{}%
-\contentsline {subsubsection}{\numberline {4.9.3.7}print()}{27}{}%
-\contentsline {section}{\numberline {4.10}Stack$<$ T $>$ Class Template Reference}{27}{}%
-\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{27}{}%
-\contentsline {subsection}{\numberline {4.10.2}Constructor \& Destructor Documentation}{27}{}%
-\contentsline {subsubsection}{\numberline {4.10.2.1}Stack()}{27}{}%
-\contentsline {subsubsection}{\numberline {4.10.2.2}$\sim $Stack()}{27}{}%
-\contentsline {subsection}{\numberline {4.10.3}Member Function Documentation}{28}{}%
-\contentsline {subsubsection}{\numberline {4.10.3.1}getSize()}{28}{}%
-\contentsline {subsubsection}{\numberline {4.10.3.2}pop()}{28}{}%
-\contentsline {subsubsection}{\numberline {4.10.3.3}print()}{28}{}%
-\contentsline {subsubsection}{\numberline {4.10.3.4}push()}{28}{}%
-\contentsline {section}{\numberline {4.11}User Struct Reference}{28}{}%
-\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{29}{}%
-\contentsline {subsection}{\numberline {4.11.2}Member Data Documentation}{29}{}%
-\contentsline {subsubsection}{\numberline {4.11.2.1}password}{29}{}%
-\contentsline {subsubsection}{\numberline {4.11.2.2}role}{29}{}%
-\contentsline {subsubsection}{\numberline {4.11.2.3}username}{29}{}%
-\contentsline {chapter}{\numberline {5}File Documentation}{31}{}%
-\contentsline {section}{\numberline {5.1}ADT/client.cpp File Reference}{31}{}%
-\contentsline {subsection}{\numberline {5.1.1}Macro Definition Documentation}{31}{}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}CLIENT\_CPP}{31}{}%
-\contentsline {section}{\numberline {5.2}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{31}{}%
-\contentsline {section}{\numberline {5.3}ADT/client.h File Reference}{33}{}%
-\contentsline {section}{\numberline {5.4}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{}%
-\contentsline {section}{\numberline {5.5}ADT/office.cpp File Reference}{33}{}%
-\contentsline {subsection}{\numberline {5.5.1}Macro Definition Documentation}{34}{}%
-\contentsline {subsubsection}{\numberline {5.5.1.1}OFFICE\_CPP}{34}{}%
-\contentsline {section}{\numberline {5.6}office.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{34}{}%
-\contentsline {section}{\numberline {5.7}ADT/office.h File Reference}{35}{}%
-\contentsline {section}{\numberline {5.8}office.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{35}{}%
-\contentsline {section}{\numberline {5.9}ADT/officerental.cpp File Reference}{36}{}%
-\contentsline {subsection}{\numberline {5.9.1}Macro Definition Documentation}{36}{}%
-\contentsline {subsubsection}{\numberline {5.9.1.1}OFFICERENTAL\_CPP}{36}{}%
-\contentsline {section}{\numberline {5.10}officerental.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{36}{}%
-\contentsline {section}{\numberline {5.11}ADT/office\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rental.h File Reference}{37}{}%
-\contentsline {section}{\numberline {5.12}office\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rental.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{37}{}%
-\contentsline {section}{\numberline {5.13}ADT/struct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.h File Reference}{38}{}%
-\contentsline {section}{\numberline {5.14}struct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{}%
-\contentsline {section}{\numberline {5.15}includes/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling.cpp File Reference}{38}{}%
-\contentsline {subsection}{\numberline {5.15.1}Macro Definition Documentation}{39}{}%
-\contentsline {subsubsection}{\numberline {5.15.1.1}FILEHANDLING\_CPP}{39}{}%
-\contentsline {section}{\numberline {5.16}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{39}{}%
-\contentsline {section}{\numberline {5.17}includes/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling.h File Reference}{39}{}%
-\contentsline {section}{\numberline {5.18}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{40}{}%
-\contentsline {section}{\numberline {5.19}includes/handle\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Print.h File Reference}{40}{}%
-\contentsline {subsection}{\numberline {5.19.1}Function Documentation}{41}{}%
-\contentsline {subsubsection}{\numberline {5.19.1.1}print()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{41}{}%
-\contentsline {subsubsection}{\numberline {5.19.1.2}print()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{41}{}%
-\contentsline {section}{\numberline {5.20}handle\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Print.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{41}{}%
-\contentsline {section}{\numberline {5.21}includes/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List.h File Reference}{42}{}%
-\contentsline {section}{\numberline {5.22}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{}%
-\contentsline {section}{\numberline {5.23}includes/utils.h File Reference}{43}{}%
-\contentsline {subsection}{\numberline {5.23.1}Function Documentation}{43}{}%
-\contentsline {subsubsection}{\numberline {5.23.1.1}displayMenu()}{43}{}%
-\contentsline {subsubsection}{\numberline {5.23.1.2}getDouble()}{43}{}%
-\contentsline {subsubsection}{\numberline {5.23.1.3}splitData()}{44}{}%
-\contentsline {section}{\numberline {5.24}utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{44}{}%
-\contentsline {section}{\numberline {5.25}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{45}{}%
-\contentsline {subsection}{\numberline {5.25.1}Detailed Description}{45}{}%
-\contentsline {subsection}{\numberline {5.25.2}Function Documentation}{46}{}%
-\contentsline {subsubsection}{\numberline {5.25.2.1}main()}{46}{}%
-\contentsline {section}{\numberline {5.26}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{46}{}%
-\contentsline {section}{\numberline {5.27}TEMP/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Queue.h File Reference}{48}{}%
-\contentsline {section}{\numberline {5.28}Queue.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{48}{}%
-\contentsline {section}{\numberline {5.29}TEMP/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stack.h File Reference}{49}{}%
-\contentsline {section}{\numberline {5.30}Stack.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{49}{}%
-\contentsline {chapter}{Index}{51}{}%
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}client Class Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{8}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{8}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}client()}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}$\sim $client()}{8}{subsubsection.4.1.2.2}%
+\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{8}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}addClient()}{8}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}addRentedSpace()}{8}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}changeClient()}{9}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}getClient()}{9}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}printClients()}{9}{subsubsection.4.1.3.5}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}removeClient()}{9}{subsubsection.4.1.3.6}%
+\contentsline {subsection}{\numberline {4.1.4}Member Data Documentation}{10}{subsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.4.1}clientId}{10}{subsubsection.4.1.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.4.2}file}{10}{subsubsection.4.1.4.2}%
+\contentsline {section}{\numberline {4.2}client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Struct Reference}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{11}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Member Data Documentation}{11}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}clientAddress}{11}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}clientName}{11}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}id}{11}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}isAdmin}{11}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}rentedSpaces}{11}{subsubsection.4.2.2.5}%
+\contentsline {section}{\numberline {4.3}client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rent Class Reference}{12}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{13}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{13}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}clientRent()}{13}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}$\sim $clientRent()}{13}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{13}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}rentOffice()}{13}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}showRentedOffices()}{14}{subsubsection.4.3.3.2}%
+\contentsline {section}{\numberline {4.4}client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rent\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Struct Reference}{14}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{14}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Member Data Documentation}{14}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}clientId}{14}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}officeId}{15}{subsubsection.4.4.2.2}%
+\contentsline {section}{\numberline {4.5}file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling Class Reference}{15}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{15}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{15}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}fileHandling()}{15}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}$\sim $fileHandling()}{16}{subsubsection.4.5.2.2}%
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{16}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}readFromFile()}{16}{subsubsection.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}writeToFile()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{subsubsection.4.5.3.2}%
+\contentsline {subsubsection}{\numberline {4.5.3.3}writeToFile()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{16}{subsubsection.4.5.3.3}%
+\contentsline {subsection}{\numberline {4.5.4}Member Data Documentation}{17}{subsection.4.5.4}%
+\contentsline {subsubsection}{\numberline {4.5.4.1}size}{17}{subsubsection.4.5.4.1}%
+\contentsline {section}{\numberline {4.6}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List$<$ T $>$ Class Template Reference}{17}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{18}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Constructor \& Destructor Documentation}{18}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}LinkedList()}{18}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}$\sim $LinkedList()}{18}{subsubsection.4.6.2.2}%
+\contentsline {subsection}{\numberline {4.6.3}Member Function Documentation}{18}{subsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.1}add()}{18}{subsubsection.4.6.3.1}%
+\contentsline {subsubsection}{\numberline {4.6.3.2}clean()}{19}{subsubsection.4.6.3.2}%
+\contentsline {subsubsection}{\numberline {4.6.3.3}getHead()}{19}{subsubsection.4.6.3.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.4}getSize()}{19}{subsubsection.4.6.3.4}%
+\contentsline {subsubsection}{\numberline {4.6.3.5}print()}{19}{subsubsection.4.6.3.5}%
+\contentsline {subsubsection}{\numberline {4.6.3.6}remove()}{19}{subsubsection.4.6.3.6}%
+\contentsline {subsection}{\numberline {4.6.4}Member Data Documentation}{20}{subsection.4.6.4}%
+\contentsline {subsubsection}{\numberline {4.6.4.1}head}{20}{subsubsection.4.6.4.1}%
+\contentsline {subsubsection}{\numberline {4.6.4.2}size}{20}{subsubsection.4.6.4.2}%
+\contentsline {subsubsection}{\numberline {4.6.4.3}tail}{20}{subsubsection.4.6.4.3}%
+\contentsline {section}{\numberline {4.7}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List$<$ T $>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Node Struct Reference}{20}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{21}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Member Data Documentation}{21}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}data}{21}{subsubsection.4.7.2.1}%
+\contentsline {subsubsection}{\numberline {4.7.2.2}next}{21}{subsubsection.4.7.2.2}%
+\contentsline {section}{\numberline {4.8}office Class Reference}{21}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{22}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Constructor \& Destructor Documentation}{22}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}office()}{22}{subsubsection.4.8.2.1}%
+\contentsline {subsubsection}{\numberline {4.8.2.2}$\sim $office()}{23}{subsubsection.4.8.2.2}%
+\contentsline {subsection}{\numberline {4.8.3}Member Function Documentation}{23}{subsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.1}addOffice()}{23}{subsubsection.4.8.3.1}%
+\contentsline {subsubsection}{\numberline {4.8.3.2}endRental()}{23}{subsubsection.4.8.3.2}%
+\contentsline {subsubsection}{\numberline {4.8.3.3}getOffice()}{23}{subsubsection.4.8.3.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.4}printOffices()}{24}{subsubsection.4.8.3.4}%
+\contentsline {subsubsection}{\numberline {4.8.3.5}rentOffice()}{24}{subsubsection.4.8.3.5}%
+\contentsline {section}{\numberline {4.9}office\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Information Struct Reference}{24}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{25}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Member Data Documentation}{25}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}id}{25}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}isRented}{25}{subsubsection.4.9.2.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.3}officeAddress}{25}{subsubsection.4.9.2.3}%
+\contentsline {subsubsection}{\numberline {4.9.2.4}officeName}{25}{subsubsection.4.9.2.4}%
+\contentsline {subsubsection}{\numberline {4.9.2.5}officePrice}{25}{subsubsection.4.9.2.5}%
+\contentsline {subsubsection}{\numberline {4.9.2.6}officeSize}{26}{subsubsection.4.9.2.6}%
+\contentsline {section}{\numberline {4.10}Queue$<$ T $>$ Class Template Reference}{26}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{26}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Constructor \& Destructor Documentation}{26}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}Queue()}{26}{subsubsection.4.10.2.1}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}$\sim $Queue()}{26}{subsubsection.4.10.2.2}%
+\contentsline {subsection}{\numberline {4.10.3}Member Function Documentation}{27}{subsection.4.10.3}%
+\contentsline {subsubsection}{\numberline {4.10.3.1}back()}{27}{subsubsection.4.10.3.1}%
+\contentsline {subsubsection}{\numberline {4.10.3.2}dequeue()}{27}{subsubsection.4.10.3.2}%
+\contentsline {subsubsection}{\numberline {4.10.3.3}enqueue()}{27}{subsubsection.4.10.3.3}%
+\contentsline {subsubsection}{\numberline {4.10.3.4}front()}{27}{subsubsection.4.10.3.4}%
+\contentsline {subsubsection}{\numberline {4.10.3.5}getSize()}{27}{subsubsection.4.10.3.5}%
+\contentsline {subsubsection}{\numberline {4.10.3.6}isEmpty()}{27}{subsubsection.4.10.3.6}%
+\contentsline {subsubsection}{\numberline {4.10.3.7}print()}{28}{subsubsection.4.10.3.7}%
+\contentsline {section}{\numberline {4.11}Stack$<$ T $>$ Class Template Reference}{28}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{28}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Constructor \& Destructor Documentation}{28}{subsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}Stack()}{28}{subsubsection.4.11.2.1}%
+\contentsline {subsubsection}{\numberline {4.11.2.2}$\sim $Stack()}{28}{subsubsection.4.11.2.2}%
+\contentsline {subsection}{\numberline {4.11.3}Member Function Documentation}{29}{subsection.4.11.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.1}getSize()}{29}{subsubsection.4.11.3.1}%
+\contentsline {subsubsection}{\numberline {4.11.3.2}pop()}{29}{subsubsection.4.11.3.2}%
+\contentsline {subsubsection}{\numberline {4.11.3.3}print()}{29}{subsubsection.4.11.3.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.4}push()}{29}{subsubsection.4.11.3.4}%
+\contentsline {chapter}{\numberline {5}File Documentation}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}ADT/client.cpp File Reference}{31}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Macro Definition Documentation}{31}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}CLIENT\_CPP}{31}{subsubsection.5.1.1.1}%
+\contentsline {section}{\numberline {5.2}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{31}{section.5.2}%
+\contentsline {section}{\numberline {5.3}ADT/client.h File Reference}{33}{section.5.3}%
+\contentsline {section}{\numberline {5.4}client.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.5.4}%
+\contentsline {section}{\numberline {5.5}ADT/client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rent.cpp File Reference}{34}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Macro Definition Documentation}{34}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}OFFICERENTAL\_CPP}{34}{subsubsection.5.5.1.1}%
+\contentsline {section}{\numberline {5.6}client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rent.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{34}{section.5.6}%
+\contentsline {section}{\numberline {5.7}ADT/client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rent.h File Reference}{35}{section.5.7}%
+\contentsline {section}{\numberline {5.8}client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rent.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{35}{section.5.8}%
+\contentsline {section}{\numberline {5.9}ADT/office.cpp File Reference}{36}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Macro Definition Documentation}{36}{subsection.5.9.1}%
+\contentsline {subsubsection}{\numberline {5.9.1.1}OFFICE\_CPP}{36}{subsubsection.5.9.1.1}%
+\contentsline {section}{\numberline {5.10}office.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{36}{section.5.10}%
+\contentsline {section}{\numberline {5.11}ADT/office.h File Reference}{37}{section.5.11}%
+\contentsline {section}{\numberline {5.12}office.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{37}{section.5.12}%
+\contentsline {section}{\numberline {5.13}ADT/struct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.h File Reference}{38}{section.5.13}%
+\contentsline {section}{\numberline {5.14}struct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{section.5.14}%
+\contentsline {section}{\numberline {5.15}includes/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling.cpp File Reference}{39}{section.5.15}%
+\contentsline {section}{\numberline {5.16}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{39}{section.5.16}%
+\contentsline {section}{\numberline {5.17}includes/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling.h File Reference}{39}{section.5.17}%
+\contentsline {section}{\numberline {5.18}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handling.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{39}{section.5.18}%
+\contentsline {section}{\numberline {5.19}includes/handle\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Print.h File Reference}{40}{section.5.19}%
+\contentsline {subsection}{\numberline {5.19.1}Function Documentation}{41}{subsection.5.19.1}%
+\contentsline {subsubsection}{\numberline {5.19.1.1}print()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{41}{subsubsection.5.19.1.1}%
+\contentsline {subsubsection}{\numberline {5.19.1.2}print()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{41}{subsubsection.5.19.1.2}%
+\contentsline {section}{\numberline {5.20}handle\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Print.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{41}{section.5.20}%
+\contentsline {section}{\numberline {5.21}includes/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List.h File Reference}{42}{section.5.21}%
+\contentsline {section}{\numberline {5.22}Linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.5.22}%
+\contentsline {section}{\numberline {5.23}includes/utils.h File Reference}{43}{section.5.23}%
+\contentsline {subsection}{\numberline {5.23.1}Function Documentation}{43}{subsection.5.23.1}%
+\contentsline {subsubsection}{\numberline {5.23.1.1}displayMenu()}{43}{subsubsection.5.23.1.1}%
+\contentsline {subsubsection}{\numberline {5.23.1.2}getDouble()}{44}{subsubsection.5.23.1.2}%
+\contentsline {subsubsection}{\numberline {5.23.1.3}splitData()}{44}{subsubsection.5.23.1.3}%
+\contentsline {section}{\numberline {5.24}utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{45}{section.5.24}%
+\contentsline {section}{\numberline {5.25}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{45}{section.5.25}%
+\contentsline {subsection}{\numberline {5.25.1}Detailed Description}{46}{subsection.5.25.1}%
+\contentsline {subsection}{\numberline {5.25.2}Function Documentation}{46}{subsection.5.25.2}%
+\contentsline {subsubsection}{\numberline {5.25.2.1}main()}{46}{subsubsection.5.25.2.1}%
+\contentsline {section}{\numberline {5.26}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{47}{section.5.26}%
+\contentsline {section}{\numberline {5.27}TEMP/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Queue.h File Reference}{48}{section.5.27}%
+\contentsline {section}{\numberline {5.28}Queue.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{49}{section.5.28}%
+\contentsline {section}{\numberline {5.29}TEMP/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stack.h File Reference}{50}{section.5.29}%
+\contentsline {section}{\numberline {5.30}Stack.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{50}{section.5.30}%
+\contentsline {chapter}{Index}{51}{section*.42}%

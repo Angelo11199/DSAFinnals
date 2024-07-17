@@ -114,11 +114,12 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>changeClient()&#160;:&#160;<a class="el" href="classclient.html#adb9e839f07bd89b82a16b2aefac14837">client</a></li>
+<li>clean()&#160;:&#160;<a class="el" href="class_linked_list.html#a6648a0323bed961bc3e4a4088c8fad22">LinkedList&lt; T &gt;</a></li>
 <li>client()&#160;:&#160;<a class="el" href="classclient.html#a73c905f01932e6f5411930241b96c09f">client</a></li>
 <li>clientAddress&#160;:&#160;<a class="el" href="structclient_data.html#af291f8f1bdafcf0d81caa96ed7bb5a1e">clientData</a></li>
-<li>clientId&#160;:&#160;<a class="el" href="classclient.html#a75855c00fdfc491d5ec5ecf1508db6eb">client</a></li>
+<li>clientId&#160;:&#160;<a class="el" href="classclient.html#a75855c00fdfc491d5ec5ecf1508db6eb">client</a>, <a class="el" href="structclient_rent_data.html#a5500cfd86518d2b4e31254bbf4f776f5">clientRentData</a></li>
 <li>clientName&#160;:&#160;<a class="el" href="structclient_data.html#a12c7e81fbb3a0e65e6fa9b53b9415317">clientData</a></li>
-<li>clientRent()&#160;:&#160;<a class="el" href="classclient_rent.html#ac0eafe7c7b148c07f07f63dcc20d239d">clientRent</a></li>
+<li>clientRent()&#160;:&#160;<a class="el" href="classclient_rent.html#a5e2a9313c3e186e68de297559349d32f">clientRent</a></li>
 </ul>
 
 
@@ -143,8 +144,8 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
 <li>getClient()&#160;:&#160;<a class="el" href="classclient.html#aa7eb5b91b3398910fe41ae20bac16714">client</a></li>
+<li>getHead()&#160;:&#160;<a class="el" href="class_linked_list.html#a377652e6c6b03abd7af62d3a22a7078f">LinkedList&lt; T &gt;</a></li>
 <li>getOffice()&#160;:&#160;<a class="el" href="classoffice.html#ad4859f268ba0e77b6e0b7e77f6c287f2">office</a></li>
-<li>getRentedOffices()&#160;:&#160;<a class="el" href="classoffice.html#a606ab7929ba91f4c5d2aaf1d77bd5c53">office</a></li>
 <li>getSize()&#160;:&#160;<a class="el" href="class_linked_list.html#ab56d59b74c8d24cd223a4a49a2b5cfb1">LinkedList&lt; T &gt;</a>, <a class="el" href="class_queue.html#aefc2563a28b93c8216ced448158ffebf">Queue&lt; T &gt;</a>, <a class="el" href="class_stack.html#afe9003e80a092a61c5650ed99153fab7">Stack&lt; T &gt;</a></li>
 </ul>
 
@@ -175,6 +176,7 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
 <li>office()&#160;:&#160;<a class="el" href="classoffice.html#af15fc6e5c89037b1752f82f7477361bf">office</a></li>
 <li>officeAddress&#160;:&#160;<a class="el" href="structoffice_information.html#a3d12d9835d989b693ee00442400f5170">officeInformation</a></li>
+<li>officeId&#160;:&#160;<a class="el" href="structclient_rent_data.html#ac6fb15d915c758f33653fefb6f049148">clientRentData</a></li>
 <li>officeName&#160;:&#160;<a class="el" href="structoffice_information.html#a1777759322428f573a31f81100c637f5">officeInformation</a></li>
 <li>officePrice&#160;:&#160;<a class="el" href="structoffice_information.html#af96310199f49ab6c7c2a122606c5b1d8">officeInformation</a></li>
 <li>officeSize&#160;:&#160;<a class="el" href="structoffice_information.html#a2eda87bd6168bb26af8e8cc67e3703a6">officeInformation</a></li>
@@ -182,7 +184,6 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>password&#160;:&#160;<a class="el" href="struct_user.html#ac2f2e75b15e8eb6cbb030fc85a6cd59f">User</a></li>
 <li>pop()&#160;:&#160;<a class="el" href="class_stack.html#a2723aec5c7e2611b97fcffeb7709de33">Stack&lt; T &gt;</a></li>
 <li>print()&#160;:&#160;<a class="el" href="class_linked_list.html#a9675767b81fb9f1d8799444e4ee7f43b">LinkedList&lt; T &gt;</a>, <a class="el" href="class_queue.html#a4d1b288024e0881880b2e915bc5498bf">Queue&lt; T &gt;</a>, <a class="el" href="class_stack.html#a96ddf41993ca2c9d48df6f5e1fb50d85">Stack&lt; T &gt;</a></li>
 <li>printClients()&#160;:&#160;<a class="el" href="classclient.html#a1cfaa24b1f47f7c2035549f874b69ea1">client</a></li>
@@ -197,29 +198,23 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>readFromFile()&#160;:&#160;<a class="el" href="classfile_handling.html#aab9d1d27c1b06ddc672876188f3f408e">fileHandling</a></li>
+<li>readFromFile()&#160;:&#160;<a class="el" href="classfile_handling.html#a66adba6f54765d5cce9350306cb6d11f">fileHandling</a></li>
 <li>remove()&#160;:&#160;<a class="el" href="class_linked_list.html#ab9aa6e03f271785f6b488d8c4cc3f3c7">LinkedList&lt; T &gt;</a></li>
-<li>removeClient()&#160;:&#160;<a class="el" href="classclient.html#a8a6629a2513487793f12ccc02ea935c4">client</a></li>
+<li>removeClient()&#160;:&#160;<a class="el" href="classclient.html#a3d443d75aae88598edc548e41181a4e6">client</a></li>
 <li>rentedSpaces&#160;:&#160;<a class="el" href="structclient_data.html#a960edd7aca53bfb60668bbe5024f8cf4">clientData</a></li>
 <li>rentOffice()&#160;:&#160;<a class="el" href="classclient_rent.html#a048ba46194aba6813cd16d8ae1d4fc4d">clientRent</a>, <a class="el" href="classoffice.html#add96666ca2b1aa88a8f694afdfd7b7d1">office</a></li>
-<li>role&#160;:&#160;<a class="el" href="struct_user.html#a2ec7c3e3fddee7bd3d9ef64f7df3c808">User</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
-<li>ShowAvailableOffices()&#160;:&#160;<a class="el" href="classclient_rent.html#a44b23901c0a6aa44273ca0ff5de1dbcd">clientRent</a></li>
-<li>size&#160;:&#160;<a class="el" href="class_linked_list.html#a18f1a30371a80bc8626b0c7762517d0b">LinkedList&lt; T &gt;</a></li>
+<li>showRentedOffices()&#160;:&#160;<a class="el" href="classclient_rent.html#a18095e06209ac8de0b7fdbded86fa57f">clientRent</a></li>
+<li>size&#160;:&#160;<a class="el" href="classfile_handling.html#a375566f79650b29da038838fc74b9a3f">fileHandling</a>, <a class="el" href="class_linked_list.html#a18f1a30371a80bc8626b0c7762517d0b">LinkedList&lt; T &gt;</a></li>
 <li>Stack()&#160;:&#160;<a class="el" href="class_stack.html#aefee698059467258bbd79045aca62a63">Stack&lt; T &gt;</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>tail&#160;:&#160;<a class="el" href="class_linked_list.html#a28c70a98efc1d17eead515e45177db77">LinkedList&lt; T &gt;</a></li>
-</ul>
-
-
-<h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
-<li>username&#160;:&#160;<a class="el" href="struct_user.html#aacbb807e514280f69e00bec7d71f3aee">User</a></li>
 </ul>
 
 

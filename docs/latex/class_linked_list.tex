@@ -1,37 +1,45 @@
-\doxysection{Linked\+List$<$ T $>$ Class Template Reference}
-\label{class_linked_list}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysection{Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_linked_list}{}\label{class_linked_list}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 
 
 {\ttfamily \#include $<$Linked\+List.\+h$>$}
 
+
+
+Collaboration diagram for Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+% FIG 0
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \textbf{ Node}
+struct \mbox{\hyperlink{struct_linked_list_1_1_node}{Node}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Linked\+List} ()
+\mbox{\hyperlink{class_linked_list_a3c20fcfec867e867f541061a09fc640c}{Linked\+List}} ()
 \begin{DoxyCompactList}\small\item\em Constructor to initialize the linked list. \end{DoxyCompactList}\item 
-\textbf{ $\sim$\+Linked\+List} ()
+\mbox{\hyperlink{struct_linked_list_1_1_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_a377652e6c6b03abd7af62d3a22a7078f}{get\+Head}} ()
+\item 
+\mbox{\hyperlink{class_linked_list_a7c37609df3b83bc4eb0281b852f93fd7}{\texorpdfstring{$\sim$}{\string~}\+Linked\+List}} ()
 \begin{DoxyCompactList}\small\item\em Destructor to clean up memory allocated for the linked list. \end{DoxyCompactList}\item 
-void \textbf{ add} (T data\+Struct)
+void \mbox{\hyperlink{class_linked_list_a0dac190d0708d024d60dbd8131adcde3}{add}} (T data\+Struct)
 \begin{DoxyCompactList}\small\item\em Adds a new node with given data to the end of the linked list. \end{DoxyCompactList}\item 
-void \textbf{ remove} (T data)
+void \mbox{\hyperlink{class_linked_list_ab9aa6e03f271785f6b488d8c4cc3f3c7}{remove}} (T data)
 \begin{DoxyCompactList}\small\item\em Removes the node with given data from the linked list. \end{DoxyCompactList}\item 
-void \textbf{ print} ()
+void \mbox{\hyperlink{class_linked_list_a9675767b81fb9f1d8799444e4ee7f43b}{print}} ()
 \begin{DoxyCompactList}\small\item\em Prints all elements in the linked list. \end{DoxyCompactList}\item 
-int \textbf{ get\+Size} ()
-\begin{DoxyCompactList}\small\item\em Returns the current size of the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current size of the linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_list_a6648a0323bed961bc3e4a4088c8fad22}{clean}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all nodes in the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Node} $\ast$ \textbf{ head}
+\mbox{\hyperlink{struct_linked_list_1_1_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}{head}}
 \item 
-\textbf{ Node} $\ast$ \textbf{ tail}
+\mbox{\hyperlink{struct_linked_list_1_1_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list_a28c70a98efc1d17eead515e45177db77}{tail}}
 \item 
-int \textbf{ size}
+int \mbox{\hyperlink{class_linked_list_a18f1a30371a80bc8626b0c7762517d0b}{size}}
 \end{DoxyCompactItemize}
 
 
@@ -40,17 +48,17 @@ int \textbf{ size}
 class Linked\+List$<$ T $>$}
 
 
-Definition at line \textbf{ 5} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00005}{5}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\Hypertarget{class_linked_list_a3c20fcfec867e867f541061a09fc640c}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
 \index{LinkedList@{LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{LinkedList()}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}}
 {\footnotesize\ttfamily \label{class_linked_list_a3c20fcfec867e867f541061a09fc640c} 
 template$<$typename T $>$ \\
-\textbf{ Linked\+List}$<$ T $>$\textbf{ \+::\+Linked\+List} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\mbox{\hyperlink{class_linked_list}{\+::\+Linked\+List}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -58,14 +66,14 @@ Constructor to initialize the linked list.
 
 
 
-Definition at line \textbf{ 20} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00020}{20}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!````~LinkedList@{$\sim$LinkedList}}
-\index{````~LinkedList@{$\sim$LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{$\sim$LinkedList()}
+\Hypertarget{class_linked_list_a7c37609df3b83bc4eb0281b852f93fd7}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!````~LinkedList@{\texorpdfstring{$\sim$}{\string~}LinkedList}}
+\index{````~LinkedList@{\texorpdfstring{$\sim$}{\string~}LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LinkedList()}{\string~LinkedList()}}
 {\footnotesize\ttfamily \label{class_linked_list_a7c37609df3b83bc4eb0281b852f93fd7} 
 template$<$typename T $>$ \\
-\textbf{ Linked\+List}$<$ T $>$\+::$\sim$\textbf{ Linked\+List} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_linked_list}{Linked\+List}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -73,17 +81,17 @@ Destructor to clean up memory allocated for the linked list.
 
 
 
-Definition at line \textbf{ 30} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00033}{33}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!add@{add}}
+\Hypertarget{class_linked_list_a0dac190d0708d024d60dbd8131adcde3}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!add@{add}}
 \index{add@{add}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{add()}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
 {\footnotesize\ttfamily \label{class_linked_list_a0dac190d0708d024d60dbd8131adcde3} 
 template$<$typename T $>$ \\
-void \textbf{ Linked\+List}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{T}]{data\+Struct}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{T}]{data\+Struct}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -96,14 +104,44 @@ Adds a new node with given data to the end of the linked list.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 48} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00049}{49}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getSize@{getSize}}
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_linked_list_a6648a0323bed961bc3e4a4088c8fad22}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!clean@{clean}}
+\index{clean@{clean}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily \label{class_linked_list_a6648a0323bed961bc3e4a4088c8fad22} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::clean (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cleans up all nodes in the linked list. 
+
+Deletes all nodes to free memory and resets the head to nullptr 
+
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00114}{114}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
+
+\Hypertarget{class_linked_list_a377652e6c6b03abd7af62d3a22a7078f}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getHead@{getHead}}
+\index{getHead@{getHead}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily \label{class_linked_list_a377652e6c6b03abd7af62d3a22a7078f} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_linked_list_1_1_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::get\+Head (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00025}{25}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getSize@{getSize}}
 \index{getSize@{getSize}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{getSize()}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
 {\footnotesize\ttfamily \label{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1} 
 template$<$typename T $>$ \\
-int \textbf{ Linked\+List}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+int \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -114,14 +152,16 @@ int Size of the linked list
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 103} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00104}{104}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!print@{print}}
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_linked_list_a9675767b81fb9f1d8799444e4ee7f43b}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!print@{print}}
 \index{print@{print}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{print()}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
 {\footnotesize\ttfamily \label{class_linked_list_a9675767b81fb9f1d8799444e4ee7f43b} 
 template$<$typename T $>$ \\
-void \textbf{ Linked\+List}$<$ T $>$\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -129,14 +169,14 @@ Prints all elements in the linked list.
 
 
 
-Definition at line \textbf{ 90} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00091}{91}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!remove@{remove}}
+\Hypertarget{class_linked_list_ab9aa6e03f271785f6b488d8c4cc3f3c7}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!remove@{remove}}
 \index{remove@{remove}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{remove()}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
 {\footnotesize\ttfamily \label{class_linked_list_ab9aa6e03f271785f6b488d8c4cc3f3c7} 
 template$<$typename T $>$ \\
-void \textbf{ Linked\+List}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{T}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{T}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -149,46 +189,46 @@ Removes the node with given data from the linked list.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 67} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00068}{68}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
 
 
 \doxysubsection{Member Data Documentation}
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!head@{head}}
+\Hypertarget{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!head@{head}}
 \index{head@{head}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{head}
+\doxysubsubsection{\texorpdfstring{head}{head}}
 {\footnotesize\ttfamily \label{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba} 
 template$<$typename T $>$ \\
-\textbf{ Node}$\ast$ \textbf{ Linked\+List}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\hyperlink{struct_linked_list_1_1_node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line \textbf{ 11} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00011}{11}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!size@{size}}
+\Hypertarget{class_linked_list_a18f1a30371a80bc8626b0c7762517d0b}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!size@{size}}
 \index{size@{size}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{size}
+\doxysubsubsection{\texorpdfstring{size}{size}}
 {\footnotesize\ttfamily \label{class_linked_list_a18f1a30371a80bc8626b0c7762517d0b} 
 template$<$typename T $>$ \\
-int \textbf{ Linked\+List}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [protected]}}
+int \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line \textbf{ 13} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00013}{13}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
-\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!tail@{tail}}
+\Hypertarget{class_linked_list_a28c70a98efc1d17eead515e45177db77}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!tail@{tail}}
 \index{tail@{tail}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{tail}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
 {\footnotesize\ttfamily \label{class_linked_list_a28c70a98efc1d17eead515e45177db77} 
 template$<$typename T $>$ \\
-\textbf{ Node}$\ast$ \textbf{ Linked\+List}$<$ T $>$\+::tail\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\hyperlink{struct_linked_list_1_1_node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::tail\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Definition at line \textbf{ 12} of file \textbf{ Linked\+List.\+h}.
+Definition at line \mbox{\hyperlink{_linked_list_8h_source_l00012}{12}} of file \mbox{\hyperlink{_linked_list_8h_source}{Linked\+List.\+h}}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-includes/\textbf{ Linked\+List.\+h}\end{DoxyCompactItemize}
+includes/\mbox{\hyperlink{_linked_list_8h}{Linked\+List.\+h}}\end{DoxyCompactItemize}

@@ -9,7 +9,7 @@
 #include "../includes/LinkedList.h"
 #include "../includes/fileHandling.h"
 #include "../includes/utils.h"
-office::office(std::string clientID) : LinkedList() {
+office::office(int clientID) : LinkedList() {
     LinkedList<std::string> data = file.readFromFile();
     const std::size_t size = 6;
     std::array<std::string, size> output;
@@ -43,7 +43,7 @@ void office::endRental(officeInformation data) {
         file.writeToFile(data.id, data.officeName, data.officeAddress, data.officePrice, data.officeSize, data.isRented);
     }
 }
-officeInformation office::getOffice(std::string officeId) {
+officeInformation office::getOffice(int officeId) {
     LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {
         if (current->data.id == officeId) {

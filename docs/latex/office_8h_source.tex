@@ -1,37 +1,35 @@
 \doxysection{office.\+h}
-\label{office_8h_source}\index{ADT/office.h@{ADT/office.h}}
-\textbf{ Go to the documentation of this file.}
+\hypertarget{office_8h_source}{}\label{office_8h_source}\index{ADT/office.h@{ADT/office.h}}
+\mbox{\hyperlink{office_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OFFICE\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OFFICE\_H}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../includes/LinkedList.h"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../includes/fileHandling.h"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}./structData.h"{}}}
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }office\ :\ \textcolor{keyword}{public}\ LinkedList<officeInformation>\ \{}
-\DoxyCodeLine{00013\ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ officeInformation\ data;}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Node*\ next;}
-\DoxyCodeLine{00021\ \ \ \ \ \};}
-\DoxyCodeLine{00022\ \ \ \ \ fileHandling\ file\ =\ fileHandling(\textcolor{stringliteral}{"{}offices.csv"{}});}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00030\ \ \ \ \ office(\textcolor{keywordtype}{int}\ clientID);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ addOffice(officeInformation\ data);}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ rentOffice(officeInformation\ data,\ \textcolor{keywordtype}{int}\ clientID);}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ endRental(officeInformation\ data);}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ printOffices();}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00066\ \ \ \ \ officeInformation\ getOffice(\textcolor{keywordtype}{int}\ officeId);}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00073\ \ \ \ \ LinkedList<officeInformation>\ getRentedOffices();}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00079\ \ \ \ \ \string~office();}
-\DoxyCodeLine{00080\ \};}
-\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ OFFICE\_H}}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ OFFICE\_H}}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_linked_list_8h}{../includes/LinkedList.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_file_handling_8h}{../includes/fileHandling.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{struct_data_8h}{./structData.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00012}\mbox{\hyperlink{classoffice}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoffice}{office}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_linked_list}{LinkedList}}<officeInformation>\ \{}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00013}00013\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ data;}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ Node*\ next;}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00021}00021\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{classfile_handling}{fileHandling}}\ file\ =\ \mbox{\hyperlink{classfile_handling}{fileHandling}}(\textcolor{stringliteral}{"{}offices.csv"{}});}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{classoffice}{office}}();\ \ \textcolor{comment}{//\ Private\ constructor}}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00025}00025\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{classoffice}{office}}(\textcolor{keywordtype}{int}\ clientID);}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoffice_aff0f126b758cb0ea6fb6c6659e74c0e3}{addOffice}}(\mbox{\hyperlink{structoffice_information}{officeInformation}}\ data);}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoffice_add96666ca2b1aa88a8f694afdfd7b7d1}{rentOffice}}(\mbox{\hyperlink{structoffice_information}{officeInformation}}\ data,\ \textcolor{keywordtype}{int}\ clientID);}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoffice_aeaf5d37ae0c53f2b1b81bf83af292933}{endRental}}(\mbox{\hyperlink{structoffice_information}{officeInformation}}\ data);}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoffice_a9a3a6c95088ad84512d197d1e23e07dc}{printOffices}}();}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ \mbox{\hyperlink{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2}{getOffice}}(\textcolor{keywordtype}{int}\ officeId);}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00072}00072\ \ \ \ \ \mbox{\hyperlink{classoffice_aaba7efd932fe96f6f1f38f51e963a93c}{\string~office}}();}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00073}00073\ \};}
+\DoxyCodeLine{\Hypertarget{office_8h_source_l00074}00074\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

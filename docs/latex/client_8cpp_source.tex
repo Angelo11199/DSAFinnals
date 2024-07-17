@@ -1,100 +1,112 @@
 \doxysection{client.\+cpp}
-\label{client_8cpp_source}\index{ADT/client.cpp@{ADT/client.cpp}}
-\textbf{ Go to the documentation of this file.}
+\hypertarget{client_8cpp_source}{}\label{client_8cpp_source}\index{ADT/client.cpp@{ADT/client.cpp}}
+\mbox{\hyperlink{client_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CLIENT\_CPP}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CLIENT\_CPP}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}./client.h"{}}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../includes/FileHandling.h"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../includes/LinkedList.h"{}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../includes/utils.h"{}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}./office.h"{}}}
-\DoxyCodeLine{00012\ client::client(\textcolor{keywordtype}{int}\ clientID)\ :\ LinkedList()\ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{if}\ (clientID\ ==\ -\/1)\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00014\ \ \ \ \ clientId\ =\ clientID;}
-\DoxyCodeLine{00015\ \ \ \ \ std::vector<std::string>\ data\ =\ file.readFromFile();}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ line\ :\ data)\ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::vector<std::string>\ clientData\ =\ splitData(line,\ \textcolor{charliteral}{','});}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clientID\ ==\ std::stoi(clientData[0]))\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.id\ =\ std::stoi(clientData[0]);}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.clientName\ =\ clientData[1];}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.clientAddress\ =\ clientData[2];}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.isAdmin\ =\ std::stoi(clientData[3])\ ==\ 1;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.rentedSpaces\ =\ rented\ =\ office(clientID).getRentedOffices();}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ clientList.add(\{std::stoi(clientData[0]),\ clientData[1],\ clientData[2],\ std::stoi(clientData[3])\ ==\ 1\});}
-\DoxyCodeLine{00026\ \ \ \ \ \};}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (loggedClient.clientName\ ==\ \textcolor{stringliteral}{"{}"{}})\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ not\ found"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00029\ \ \ \ \ \}}
-\DoxyCodeLine{00030\ \};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ client::addClient(clientData\ data,\ \textcolor{keywordtype}{bool}\ current)\ \{}
-\DoxyCodeLine{00033\ \ \ \ \ std::cout\ <<\ data.isAdmin\ <<\ std::endl;}
-\DoxyCodeLine{00034\ \ \ \ \ add(data);}
-\DoxyCodeLine{00035\ \ \ \ \ file.writeToFile(data.id,\ data.clientName,\ data.clientAddress,\ data.isAdmin);}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}\ (current)\ \{}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ clientId\ =\ data.id;}
-\DoxyCodeLine{00038\ \ \ \ \ \};}
-\DoxyCodeLine{00039\ \}}
-\DoxyCodeLine{00040\ clientData\ client::getClient(\textcolor{keywordtype}{int}\ clientId)\ \{}
-\DoxyCodeLine{00041\ \ \ \ \ Node*\ current\ =\ head;}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>data.id\ ==\ clientId)\ \textcolor{keywordflow}{return}\ current-\/>data;}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
-\DoxyCodeLine{00045\ \ \ \ \ \}}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
-\DoxyCodeLine{00047\ \}}
-\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ client::removeClient(\textcolor{keywordtype}{int}\ clientId)\ \{}
-\DoxyCodeLine{00054\ \ \ \ \ Node*\ current\ =\ head;}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>data.id\ ==\ clientId)\ \{}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ clientList.remove(current-\/>data);}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
-\DoxyCodeLine{00061\ \ \ \ \ \}}
-\DoxyCodeLine{00062\ \}}
-\DoxyCodeLine{00063\ \textcolor{comment}{//\ void\ LinkedList<officeInformation>::print()\ \{}}
-\DoxyCodeLine{00064\ \textcolor{comment}{//\ \ \ \ \ Node*\ current\ =\ head;}}
-\DoxyCodeLine{00065\ \textcolor{comment}{//\ \ \ \ \ while\ (current\ !=\ nullptr)\ \{}}
-\DoxyCodeLine{00066\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Office\ ID:\ "{}\ <<\ current-\/>data.officeID\ <<\ std::endl;}}
-\DoxyCodeLine{00067\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Office\ Size:\ "{}\ <<\ current-\/>data.officeSize\ <<\ std::endl;}}
-\DoxyCodeLine{00068\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Office\ Price:\ "{}\ <<\ current-\/>data.officePrice\ <<\ std::endl;}}
-\DoxyCodeLine{00069\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Is\ Office\ Rented?\ "{}\ <<\ current-\/>data.isRented\ <<\ std::endl;}}
-\DoxyCodeLine{00070\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}}
-\DoxyCodeLine{00071\ \textcolor{comment}{//\ \ \ \ \ \}}}
-\DoxyCodeLine{00072\ \textcolor{comment}{//\ \}}}
-\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ client::printClients()\ \{}
-\DoxyCodeLine{00074\ \ \ \ \ Node*\ current\ =\ head;}
-\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ ID:\ "{}}\ <<\ current-\/>data.id\ <<\ std::endl;}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ Name:\ "{}}\ <<\ current-\/>data.clientName\ <<\ std::endl;}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ Phone:\ "{}}\ <<\ current-\/>data.clientAddress\ <<\ std::endl;}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ Rented\ Space:\ "{}}\ <<\ rented.getSize()\ <<\ std::endl;}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
-\DoxyCodeLine{00081\ \ \ \ \ \}}
-\DoxyCodeLine{00082\ \}}
-\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ client::addRentedSpace(officeInformation\ data)\ \{\ rented.add(data);\ \};}
-\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}\ client::changeClient(\textcolor{keywordtype}{int}\ clientId)\ \{}
-\DoxyCodeLine{00085\ \ \ \ \ Node*\ current\ =\ head;}
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>data.id\ ==\ clientId)\ \{}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>data\ =\ getClient(clientId);}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
-\DoxyCodeLine{00092\ \ \ \ \ \}}
-\DoxyCodeLine{00093\ \}}
-\DoxyCodeLine{00094\ client::\string~client()\ \{}
-\DoxyCodeLine{00095\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ Deleted"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ !=\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{delete}\ head;}
-\DoxyCodeLine{00098\ \}}
-\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ CLIENT\_CPP}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00002}\mbox{\hyperlink{client_8cpp_af75cebf0b1113c42699484938a3ae5f9}{00002}}\ \textcolor{preprocessor}{\#define\ CLIENT\_CPP}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{./client.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_file_handling_8h}{../includes/FileHandling.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_linked_list_8h}{../includes/LinkedList.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utils_8h}{../includes/utils.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{office_8h}{./office.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00013}\mbox{\hyperlink{classclient_a73c905f01932e6f5411930241b96c09f}{00013}}\ \mbox{\hyperlink{classclient_a73c905f01932e6f5411930241b96c09f}{client::client}}(\textcolor{keywordtype}{int}\ clientID)\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (clientID\ ==\ -\/1)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{clientId}}\ =\ clientID;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_linked_list}{LinkedList<std::string>}}\ data\ =\ \mbox{\hyperlink{classclient_a3edf9bfb9e9121c65951702cc5f7d3b0}{file}}.\mbox{\hyperlink{classfile_handling_a66adba6f54765d5cce9350306cb6d11f}{readFromFile}}();}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{auto}\ current\ =\ data.\mbox{\hyperlink{class_linked_list_a377652e6c6b03abd7af62d3a22a7078f}{getHead}}();}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{const}\ std::size\_t\ \mbox{\hyperlink{class_linked_list_a18f1a30371a80bc8626b0c7762517d0b}{size}}\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ isUser\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ std::array<std::string,\ size>\ output;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}{splitData}}(current-\/>data,\ \textcolor{charliteral}{','},\ output);}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clientID\ ==\ std::stoi(output[0]))\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}}\ =\ std::stoi(output[0]);}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.\mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{clientName}}\ =\ output[1];}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.\mbox{\hyperlink{structclient_data_af291f8f1bdafcf0d81caa96ed7bb5a1e}{clientAddress}}\ =\ output[2];}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ loggedClient.\mbox{\hyperlink{structclient_data_aa7d4e5bdebb195966e8a52b9c9afe443}{isAdmin}}\ =\ output[3]\ ==\ \textcolor{stringliteral}{"{}1"{}};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_linked_list_a0dac190d0708d024d60dbd8131adcde3}{add}}(\{std::stoi(output[0]),\ output[1],\ output[2],\ output[3]\ ==\ \textcolor{stringliteral}{"{}1"{}}\});}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (loggedClient.\mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{clientName}}\ ==\ \textcolor{stringliteral}{"{}"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ not\ found"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00037}\mbox{\hyperlink{classclient_a733535fb656d02f5ab034f8b649cf3f0}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classclient_a733535fb656d02f5ab034f8b649cf3f0}{client::addClient}}(\mbox{\hyperlink{structclient_data}{clientData}}\ data,\ \textcolor{keywordtype}{bool}\ current)\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00038}00038\ \ \ \ \ std::cout\ <<\ data.\mbox{\hyperlink{structclient_data_aa7d4e5bdebb195966e8a52b9c9afe443}{isAdmin}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_linked_list_a0dac190d0708d024d60dbd8131adcde3}{add}}(data);}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{classclient_a3edf9bfb9e9121c65951702cc5f7d3b0}{file}}.\mbox{\hyperlink{classfile_handling_a8c7f79a289885a8f9b723cbced0b5f86}{writeToFile}}(data.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}},\ data.\mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{clientName}},\ data.\mbox{\hyperlink{structclient_data_af291f8f1bdafcf0d81caa96ed7bb5a1e}{clientAddress}},\ data.\mbox{\hyperlink{structclient_data_aa7d4e5bdebb195966e8a52b9c9afe443}{isAdmin}});}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (current)\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{clientId}}\ =\ data.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00043}00043\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00045}\mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{00045}}\ \mbox{\hyperlink{structclient_data}{clientData}}\ \mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{client::getClient}}(\textcolor{keywordtype}{int}\ clientId)\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00046}00046\ \ \ \ \ Node*\ current\ =\ this-\/>\mbox{\hyperlink{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}{head}};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>data.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}}\ ==\ \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{clientId}})\ \textcolor{keywordflow}{return}\ current-\/>data;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00058}\mbox{\hyperlink{classclient_a3d443d75aae88598edc548e41181a4e6}{00058}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classclient_a3d443d75aae88598edc548e41181a4e6}{client::removeClient}}(\textcolor{keywordtype}{int}\ clientId)\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00059}00059\ \ \ \ \ Node*\ current\ =\ \mbox{\hyperlink{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}{head}};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>data.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}}\ ==\ \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{clientId}})\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_linked_list_ab9aa6e03f271785f6b488d8c4cc3f3c7}{remove}}(current-\/>data);}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00068}00068\ \textcolor{comment}{//\ void\ LinkedList<officeInformation>::print()\ \{}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00069}00069\ \textcolor{comment}{//\ \ \ \ \ Node*\ current\ =\ head;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00070}00070\ \textcolor{comment}{//\ \ \ \ \ while\ (current\ !=\ nullptr)\ \{}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00071}00071\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Office\ ID:\ "{}\ <<\ current-\/>data.officeID\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00072}00072\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Office\ Size:\ "{}\ <<\ current-\/>data.officeSize\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00073}00073\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Office\ Price:\ "{}\ <<\ current-\/>data.officePrice\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00074}00074\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Is\ Office\ Rented?\ "{}\ <<\ current-\/>data.isRented\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00075}00075\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00076}00076\ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00077}00077\ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00078}\mbox{\hyperlink{classclient_a1cfaa24b1f47f7c2035549f874b69ea1}{00078}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classclient_a1cfaa24b1f47f7c2035549f874b69ea1}{client::printClients}}()\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00079}00079\ \ \ \ \ Node*\ current\ =\ \mbox{\hyperlink{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}{head}};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ ID:\ "{}}\ <<\ current-\/>data.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ Name:\ "{}}\ <<\ current-\/>data.\mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{clientName}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ Phone:\ "{}}\ <<\ current-\/>data.\mbox{\hyperlink{structclient_data_af291f8f1bdafcf0d81caa96ed7bb5a1e}{clientAddress}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ Rented\ Space:\ "{}}\ <<\ current-\/>data.\mbox{\hyperlink{structclient_data_a960edd7aca53bfb60668bbe5024f8cf4}{rentedSpaces}}.\mbox{\hyperlink{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1}{getSize}}()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00088}\mbox{\hyperlink{classclient_aa2e50f0061a672960762e9d17ea4fbc8}{00088}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classclient_aa2e50f0061a672960762e9d17ea4fbc8}{client::addRentedSpace}}(\mbox{\hyperlink{structoffice_information}{officeInformation}}\ data)\ \{\ \mbox{\hyperlink{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}{head}}-\/>data.\mbox{\hyperlink{structclient_data_a960edd7aca53bfb60668bbe5024f8cf4}{rentedSpaces}}.\mbox{\hyperlink{class_linked_list_a0dac190d0708d024d60dbd8131adcde3}{add}}(data);\ \};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00089}\mbox{\hyperlink{classclient_adb9e839f07bd89b82a16b2aefac14837}{00089}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classclient_adb9e839f07bd89b82a16b2aefac14837}{client::changeClient}}(\textcolor{keywordtype}{int}\ clientId)\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00090}00090\ \ \ \ \ Node*\ current\ =\ \mbox{\hyperlink{class_linked_list_a2d1f848e19caa3f180b7fa6938125bba}{head}};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>data.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}}\ ==\ \mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{clientId}})\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>data\ =\ \mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{getClient}}(\mbox{\hyperlink{classclient_a75855c00fdfc491d5ec5ecf1508db6eb}{clientId}});}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00098}00098\ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00099}\mbox{\hyperlink{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9}{00099}}\ \mbox{\hyperlink{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9}{client::\string~client}}()\ \{}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00100}00100\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Client\ Deleted"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{comment}{//\ if\ (head\ !=\ nullptr)\ \{}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00102}00102\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ Node*\ current\ =\ head;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ while\ (current\ !=\ nullptr)\ \{}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ Node*\ temp\ =\ current;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ current\ =\ current-\/>next;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00106}00106\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ delete\ temp;}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00109}00109\ \}}
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{client_8cpp_source_l00111}00111\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
