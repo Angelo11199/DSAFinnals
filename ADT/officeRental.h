@@ -10,9 +10,10 @@
  *
  * @details Handles renting offices by clients and checking the rental status of offices
  */
-class clientRent : public client, public LinkedList<officeInformation> {
+class clientRent : public client, public LinkedList<clientRentData> {
    private:
-    int clientId;
+    std::string clientId;
+    fileHandling file = fileHandling("rentedOffices.csv");
 
    public:
     /**
@@ -20,7 +21,7 @@ class clientRent : public client, public LinkedList<officeInformation> {
      *
      * @param clientId ID of the client using the rental management
      */
-    clientRent(int clientId);
+    clientRent(std::string clientId);
 
     /**
      * @brief Rents an office for the client
@@ -29,13 +30,13 @@ class clientRent : public client, public LinkedList<officeInformation> {
      * @return true If the office was successfully rented
      * @return false Otherwise
      */
-    bool rentOffice(int officeId);
+    bool rentOffice(std::string officeId);
 
     /**
      * @brief Shows available offices that can be rented
      *
      */
-    void ShowAvailableOffices();
+    void showRentedOffices();
 
     /**
      * @brief Destroy the client Rent object

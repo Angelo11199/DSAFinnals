@@ -20,7 +20,6 @@ class office : public LinkedList<officeInformation> {
         Node* next;
     };
     fileHandling file = fileHandling("offices.csv");
-    static office* instance;
     office();  // Private constructor
 
    public:
@@ -29,7 +28,7 @@ class office : public LinkedList<officeInformation> {
      *
      * @param clientID ID of the client using the office management system.
      */
-    office(int clientID);
+    office(std::string clientID);
 
     /**
      * @brief Adds a new office to the management system
@@ -65,14 +64,7 @@ class office : public LinkedList<officeInformation> {
      * @param officeId ID of the office to retrieve information for
      * @return officeInformation Information about the requested office
      */
-    officeInformation getOffice(int officeId);
-
-    /**
-     * @brief retrieves a list of offices currently rented out
-     *
-     * @return LinkedList<officeInformation> List of rented offices
-     */
-    LinkedList<officeInformation> getRentedOffices();
+    officeInformation getOffice(std::string officeId);
     /**
      * @brief Destroy the office object
      *

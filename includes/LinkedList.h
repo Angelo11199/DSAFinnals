@@ -104,6 +104,22 @@ class LinkedList {
     int getSize() {
         return size;
     }
+
+    /**
+     * @brief Cleans up all nodes in the linked list
+     *
+     * Deletes all nodes to free memory and resets the head to nullptr
+     *
+     */
+    void clean() {
+        Node* current = head;
+        while (current != nullptr) {
+            Node* next = current->next;  // Save next node
+            delete current;              // Delete the current node
+            current = next;              // Move to the next node
+        }
+        head = nullptr;
+    }
 };
 
 #endif

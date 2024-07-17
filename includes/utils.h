@@ -4,6 +4,7 @@
 #include <array>
 #include <iostream>
 #include <sstream>
+#include <string>
 
 #include "./LinkedList.h"
 /**
@@ -66,4 +67,22 @@ inline int displayMenu() {
     std::cout << "Choose an option: ";
     return 0;
 }
+
+/**
+ * @brief Generates and prints random numbers as strings
+ *
+ * @return int Always returns 0
+ */
+
+inline std::string generateRandomNumber() {
+    srand(time(0));  // Seed the random number generator
+    std::string random_number_str;
+    int digits = 10;  // Number of digits
+    for (int i = 0; i < digits; ++i) {
+        int random_number = rand() % 10;                     // Generate a random number between 0 and 9
+        random_number_str += std::to_string(random_number);  // Append the digit to the string
+    }
+    return random_number_str;
+}
+
 #endif  // UTILS_H

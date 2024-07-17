@@ -14,7 +14,7 @@
  */
 class client : LinkedList<clientData> {
    protected:
-    int clientId = 0;  // currentlly logged in client
+    std::string clientId = 0;  // currentlly logged in client
     fileHandling file = fileHandling("clients.csv");
 
    private:
@@ -27,7 +27,7 @@ class client : LinkedList<clientData> {
      *
      * @param clientId ID of the client being managed
      */
-    client(int clientId);
+    client(std::string clientId);
 
     /**
      * @brief Destroy the client object
@@ -56,21 +56,21 @@ class client : LinkedList<clientData> {
      * @param clientId ID of the client to retrieve information for
      * @return clientData Information about the requested client
      */
-    clientData getClient(int clientId);
+    clientData getClient(std::string clientId);
 
     /**
      * @brief Changes the information of a specific client
      *
      * @param clientId ID of the client to change information for
      */
-    void changeClient(int clientId);
+    void changeClient(std::string clientId);
 
     /**
      * @brief Removes a client from the management system
      *
      * @param data Information about the client to be removed
      */
-    void removeClient(int data);
+    void removeClient(std::string clientId);
 
     /**
      * @brief Prints information about all clients in the system

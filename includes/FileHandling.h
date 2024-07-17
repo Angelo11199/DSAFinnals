@@ -20,6 +20,14 @@ class fileHandling {
         file << last << std::endl;
     }
 
+    /**
+     * @brief Helper function to write the last argument to the file
+     *
+     * @tparam T Type of the last argument
+     *
+     * @param file Output file stream
+     * @param last Last argument to write to the file
+     */
     template <typename T, typename... Args>
     void writeToFileHelper(std::ofstream& file, const T& first, const Args&... args) {
         file << first;
@@ -59,6 +67,12 @@ class fileHandling {
         file.close();
     }
 
+    /**
+     * @brief Writes multiple arguments to the file
+     *
+     * @tparam Args Types of the arguments to write
+     * @param args Arguments to write to the file
+     */
     template <typename... Args>
     void writeToFile(const Args&... args) {
         std::ofstream file(filename, std::ios::app);  // Open file once
@@ -70,6 +84,11 @@ class fileHandling {
         file.close();                      // Close file after all writing is done
     }
 
+    /**
+     * @brief Reads data from the file into a linked list
+     *
+     * @return LinkedList<std::string> A linked list containing the data read from the file
+     */
     LinkedList<std::string> readFromFile() {
         LinkedList<std::string> data;
         std::ifstream file;

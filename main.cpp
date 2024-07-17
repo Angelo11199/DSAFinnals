@@ -15,58 +15,47 @@
 
 #include "./ADT/client.h"
 #include "./ADT/office.h"
+#include "./ADT/officeRental.h"
 #include "./ADT/structData.h"
 #include "./includes/fileHandling.h"
 #include "./includes/utils.h"
-
 using namespace std;
 
 int main() {
-    client clientList(-1);
-    int clientId;
+    clientRent clientList("-1");
+    string clientId;
     char hasAccount;
     cout << "Welcome to Office Space Rental System\n";
     cout << "Do you have an account? (y/n): ";
     cin.get(hasAccount);
     hasAccount = static_cast<char>(toupper(hasAccount));
-    if (hasAccount == 'Y') {
-        clientId = (int)getDouble("Enter your Client ID: ");
-        clientList = client(clientId);
-    } else {
-        clientData currentClient;
-        currentClient.id = clientId = (int)getDouble("Enter new Client ID: ");
-        currentClient.isAdmin = false;
-        cout << currentClient.id << endl;
-        cout << "Enter new Client Name: ";
-        getline(cin, currentClient.clientName);
-        cout << "Enter new Client Address: ";
-        getline(cin, currentClient.clientAddress);
-        clientList.addClient(currentClient, true);
-        cout << "New client added and logged in successfully!\n";
-        clientId = currentClient.id;
+    switch (hasAccount) {
+        case 'Y': {
+            cout << "Enter Client ID: ";
+            getline(cin, clientId);
+            cin.ignore();
+            clientList = clientRent(clientId);
+            break;
+        }
+        case 'N': {
+            clientData currentClient;
+            cout << "Enter new Client ID: ";
+            getline(cin, currentClient.id);
+            cin.ignore();
+            clientId = currentClient.id;
+            currentClient.isAdmin = false;
+            cout << currentClient.id << endl;
+            cout << "Enter new Client Name: ";
+            getline(cin, currentClient.clientName);
+            cout << "Enter new Client Address: ";
+            getline(cin, currentClient.clientAddress);
+            clientList.addClient(currentClient, true);
+            cout << "New client added and logged in successfully!\n";
+            clientId = currentClient.id;
+            break;
+        }
     }
-    // switch (hasAccount) {
-    //     case 'Y': {
-    //         clientId = (int)getDouble("Enter your Client ID: ");
-    //         clientList = client(clientId);
-    //         break;
-    //     }
-    //     case 'N': {
-    //         clientData currentClient;
-    //         currentClient.id = clientId = (int)getDouble("Enter new Client ID: ");
-    //         currentClient.isAdmin = false;
-    //         cout << currentClient.id << endl;
-    //         cout << "Enter new Client Name: ";
-    //         getline(cin, currentClient.clientName);
-    //         cout << "Enter new Client Address: ";
-    //         getline(cin, currentClient.clientAddress);
-    //         clientList.addClient(currentClient, true);
-    //         cout << "New client added and logged in successfully!\n";
-    //         clientId = currentClient.id;
-    //         break;
-    //     }
-    // }
-    // office officeList(clientId);
+    office officeList(clientId);
     bool isRunning = true;
     int choice;
     while (isRunning) {
@@ -89,26 +78,25 @@ int main() {
                 cout << "Enter Office Size: ";
                 cin >> newOffice.officeSize;
                 newOffice.isRented = false;
-                // officeList.addOffice(newOffice);
+                officeList.addOffice(newOffice);
                 cout << "New Office added successfully!\n";
                 break;
             }
-            //* not yet tested
-            case 2: {
-                int officeId;
-                cout << "Enter Office ID to rent: ";
-                cin >> officeId;
-
-                // officeInformation office = officeList.getOffice(officeId);
-                // if (office.id != 0 && !office.isRented) {
-                //     office.isRented = true;
-                //     // officeList.rentOffice(office, clientId);
-                //     cout << "Office rented sucessfully!\n";
-                // } else {
-                //     cout << "Office is not available for rent.\n";
-                // }
-                break;
-            }
+            // //* not yet tested
+            // case 2: {
+            //     int officeId;
+            //     cout << "Enter Office ID to rent: ";
+            //     cin >> officeId;
+            //     officeInformation office = officeList.getOffice(officeId);
+            //     if (office.id != 0 && !office.isRented) {
+            //         office.isRented = true;
+            //         // officeList.rentOffice(office, clientId);
+            //         cout << "Office rented sucessfully!\n";
+            //     } else {
+            //         cout << "Office is not available for rent.\n";
+            //     }
+            //     break;
+            // }
             //* not yet tested
             case 3: {
                 int officeId;
@@ -147,7 +135,7 @@ int main() {
             //* not yet tested. incomplete
             case 5: {
                 cout << "Displaying all offices: \n";
-                // officeList.print();
+                officeList.print();
                 break;
             }
             //* working and tested.
@@ -155,7 +143,7 @@ int main() {
                 cout << "Enter Client ID to show details: ";
                 cin >> clientId;
                 clientData client = clientList.getClient(clientId);
-                if (client.id != 0) {
+                if (client.id != "") {
                     cout << "Client ID: " << client.id << endl;
                     cout << "Client Name: " << client.clientName << endl;
                     cout << "Client Address: " << client.clientAddress << endl;

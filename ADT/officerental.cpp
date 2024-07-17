@@ -1,4 +1,4 @@
-//* shows a list of AVAILABLE (NOT RENTED) offices.
+//* shows a list of ALL offices.
 #ifndef OFFICERENTAL_CPP
 #define OFFICERENTAL_CPP
 #include "./officeRental.h"
@@ -9,55 +9,51 @@
 #include "../includes/utils.h"
 #include "./client.h"
 #include "./office.h"
-clientRent::clientRent(int clientId) : client(clientId), LinkedList<officeInformation>() {
+clientRent::clientRent(std::string clientId) : client(clientId) {
     this->clientId = clientId;
-    fileHandling file = fileHandling("offices.csv");
     LinkedList<std::string> data = file.readFromFile();
-    // for (std::string line : data) {
-    //     std::string* officeData = splitData(line, ',', 6);
-    //     officeInformation office;
-    //     office.id = std::stoi(officeData[0]);
-    //     office.officeName = officeData[1];
-    //     office.officeAddress = officeData[2];
-    //     office.officePrice = std::stoi(officeData[3]);
-    //     office.officeSize = officeData[4];
-    //     office.isRented = officeData[5] == "1";
-    //     this->LinkedList<officeInformation>::add(office);
-    // }
-};
-bool clientRent::rentOffice(int officeId) {
-    LinkedList<officeInformation>::Node* current = LinkedList<officeInformation>::head;
+    auto current = data.getHead();
+    const size_t size = 2;
     while (current != nullptr) {
-        if (current->data.id != officeId) {
+        std::array<std::string, size> output;
+        splitData(current->data, ',', output);
+        clientRentData office;
+        office.clientId = output[0];
+        office.officeId = output[1];
+        if (clientId == output[0]) {
+            LinkedList<clientRentData>::add(office);
+        }
+        current = current->next;
+    }
+};
+bool clientRent::rentOffice(std::string officeId) {
+    LinkedList<clientRentData>::Node* current = LinkedList<clientRentData>::head;
+    while (current != nullptr) {
+        if (current->data.officeId != officeId) {
             current = current->next;
             continue;
         }
-        if (current->data.isRented) {
-            return false;
-        }
-        current->data.isRented = true;
-        addRentedSpace(current->data);
-        return true;
     }
-    return false;
+    file.writeToFile(clientId, officeId);
 }
-void clientRent::ShowAvailableOffices() {
-    LinkedList<officeInformation>::Node* current = LinkedList<officeInformation>::head;
+void clientRent::showRentedOffices() {
+    auto currentOffice = office(clientId).getHead();
+    LinkedList<clientRentData>::Node* current = LinkedList<clientRentData>::getHead();
     while (current != nullptr) {
-        if (!current->data.isRented) {
-            std::string isRented = current->data.isRented ? "Yes" : "No";
-            std::cout << "Office ID: " << current->data.id << std::endl;
-            std::cout << "Office Name: " << current->data.officeName << std::endl;
-            std::cout << "Office Address: " << current->data.officeAddress << std::endl;
-            std::cout << "Office Size: " << current->data.officeSize << std::endl;
-            std::cout << "Unit Price: " << current->data.officePrice << std::endl;
+        while (currentOffice != nullptr) {
+            if (current->data.officeId == currentOffice->data.id) {
+                std::cout << "office Name: " << currentOffice->data.officeName << std::endl;
+                std::cout << "office Address: " << currentOffice->data.officeAddress << std::endl;
+                std::cout << "office Price: " << currentOffice->data.officePrice << std::endl;
+                std::cout << "office Size: " << currentOffice->data.officeSize << std::endl;
+            }
+            currentOffice = currentOffice->next;
         }
         current = current->next;
     }
 }
 clientRent::~clientRent() {
-    if (LinkedList<officeInformation>::head != nullptr)
-        delete LinkedList<officeInformation>::head;
-    return;
+    std::cout << "Client Rent Destructor Called" << std::endl;
 }
+
 #endif

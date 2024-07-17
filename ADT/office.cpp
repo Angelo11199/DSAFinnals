@@ -9,23 +9,24 @@
 #include "../includes/LinkedList.h"
 #include "../includes/fileHandling.h"
 #include "../includes/utils.h"
-
-office::office(int clientID) : LinkedList() {
+office::office(std::string clientID) : LinkedList() {
     LinkedList<std::string> data = file.readFromFile();
     const std::size_t size = 6;
     std::array<std::string, size> output;
-    // while (current != nullptr) {
-    //     (current->data, ',', output);
-    //     officeInformation office;
-    //     office.id = std::stoi(officeData[0]);
-    //     office.officeName = officeData[1];
-    //     office.officeAddress = officeData[2];
-    //     office.officePrice = std::stoi(officeData[3]);
-    //     office.officeSize = officeData[4];
-    //     office.isRented = officeData[5] == "1";
-    //     add(office);
-    //     current = current->next;
-    // }
+    auto current = data.getHead();
+    while (current != nullptr) {
+        std::array<std::string, size> output;
+        splitData(current->data, ',', output);
+        officeInformation office;
+        office.id = std::stoi(output[0]);
+        office.officeName = output[1];
+        office.officeAddress = output[2];
+        office.officePrice = std::stoi(output[3]);
+        office.officeSize = output[4];
+        office.isRented = output[5] == "1";
+        add(office);
+        current = current->next;
+    }
 };
 void office::addOffice(officeInformation data) {
     add(data);
@@ -42,7 +43,7 @@ void office::endRental(officeInformation data) {
         file.writeToFile(data.id, data.officeName, data.officeAddress, data.officePrice, data.officeSize, data.isRented);
     }
 }
-officeInformation office::getOffice(int officeId) {
+officeInformation office::getOffice(std::string officeId) {
     LinkedList<officeInformation>::Node* current = head;
     while (current != nullptr) {
         if (current->data.id == officeId) {
@@ -51,15 +52,6 @@ officeInformation office::getOffice(int officeId) {
         current = current->next;
     }
     return officeInformation();
-}
-LinkedList<officeInformation> office::getRentedOffices() {
-    LinkedList<officeInformation> rentedOffices;
-    LinkedList<officeInformation>::Node* current = head;
-    while (current != nullptr) {
-        rentedOffices.add(current->data);
-        current = current->next;
-    }
-    return rentedOffices;
 }
 void office::rentOffice(officeInformation data, int clientID) {
     LinkedList<officeInformation>::Node* current = head;
@@ -70,6 +62,18 @@ void office::rentOffice(officeInformation data, int clientID) {
         }
         current->data.isRented = true;
         file.writeToFile(data.id, clientID);
+    }
+}
+void office::printOffices() {
+    LinkedList<officeInformation>::Node* current = head;
+    while (current != nullptr) {
+        std::cout << "Office ID: " << current->data.id << std::endl;
+        std::cout << "Office Name: " << current->data.officeName << std::endl;
+        std::cout << "Office Address: " << current->data.officeAddress << std::endl;
+        std::cout << "Office Price: " << current->data.officePrice << std::endl;
+        std::cout << "Office Size: " << current->data.officeSize << std::endl;
+        std::cout << "Office is Rented: " << current->data.isRented << std::endl;
+        current = current->next;
     }
 }
 office::~office() {
