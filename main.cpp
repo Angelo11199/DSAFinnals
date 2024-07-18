@@ -31,7 +31,6 @@ int main() {
     switch (hasAccount) {
         case 'Y': {
             clientId = (int)getDouble("Enter your Client ID: ");
-            cin.ignore();
             clientList = clientRent(clientId);
             break;
         }
@@ -99,14 +98,14 @@ int main() {
                 cout << "Enter office ID to return: ";
                 cin >> officeId;
 
-                // officeInformation office = officeList.getOffice(officeId);
-                // if (office.id != 0 && office.isRented) {
-                //     office.isRented = false;
-                //     // officeList.endRental(office);
-                //     cout << "Office returned successfully!\n";
-                // } else {
-                //     cout << "Office not currently rented.\n";
-                // }
+                officeInformation office = officeList.getOffice(officeId);
+                if (office.id != 0 && office.isRented) {
+                    office.isRented = false;
+                    // officeList.endRental(office);
+                    cout << "Office returned successfully!\n";
+                } else {
+                    cout << "Office not currently rented.\n";
+                }
                 break;
             }
             //* not yet tested
@@ -115,17 +114,17 @@ int main() {
                 cout << "Enter Office ID to show details: ";
                 cin >> officeId;
 
-                // officeInformation officeData = officeList.getOffice(officeId);
-                // if (officeData.id != 0) {
-                //     cout << "Office ID: " << officeData.id << endl;
-                //     cout << "Office Name: " << officeData.officeName << endl;
-                //     cout << "Office Address: " << officeData.officeAddress << endl;
-                //     cout << "Office Price: " << officeData.officePrice << endl;
-                //     cout << "Office Size: " << officeData.officeSize << endl;
-                //     cout << "Is Office Rented? " << (officeData.isRented ? "Yes" : "No") << endl;
-                // } else {
-                //     cout << "Office is not found.\n";
-                // }
+                officeInformation officeData = officeList.getOffice(officeId);
+                if (officeData.id != 0) {
+                    cout << "Office ID: " << officeData.id << endl;
+                    cout << "Office Name: " << officeData.officeName << endl;
+                    cout << "Office Address: " << officeData.officeAddress << endl;
+                    cout << "Office Price: " << officeData.officePrice << endl;
+                    cout << "Office Size: " << officeData.officeSize << endl;
+                    cout << "Is Office Rented? " << (officeData.isRented ? "Yes" : "No") << endl;
+                } else {
+                    cout << "Office is not found.\n";
+                }
                 break;
             }
             //* not yet tested. incomplete
@@ -135,18 +134,80 @@ int main() {
                 break;
             }
             //* working and tested.
-            case 7: {
-                cout << "Enter Client ID to show details: ";
-                cin >> clientId;
-                clientData client = clientList.getClient(clientId);
-                if (client.id) {
-                    cout << "Client ID: " << client.id << endl;
-                    cout << "Client Name: " << client.clientName << endl;
-                    cout << "Client Address: " << client.clientAddress << endl;
+            case 6: {
+                int officeId;
+                cout << "Enter Office ID to show availability: ";
+                cin >> officeId;
+
+                officeInformation officeData = officeList.getOffice(officeId);
+                if (officeData.id != 0) {
+                    cout << "Office ID: " << officeData.id << endl;
+                    cout << "Office Name: " << officeData.officeName << endl;
+                    cout << "Office Address: " << officeData.officeAddress << endl;
+                    cout << "Office Price: " << officeData.officePrice << endl;
+                    cout << "Office Size: " << officeData.officeSize << endl;
+                    cout << "Availability: ";
+                    if(officeData.isRented = true)
+                        cout << "It is Available\n";
+                    else
+                        cout << "It is not Available\n";
                 } else {
-                    cout << "Client not found.\n";
+                    cout << "Office not found.\n";
                 }
                 break;
+            }
+            //* working and tested.
+            case 7: {
+                displayMenu2();
+                choice = (int)getDouble("Enter your choice: ");
+                switch(choice){
+                    case 1:{
+                        clientData currentClient;
+                        currentClient.id = clientId = (int)getDouble("Enter new Client ID: ");
+                        currentClient.isAdmin = false;
+                        cout << currentClient.id << endl;
+                        cout << "Enter new Client Name: ";
+                        getline(cin, currentClient.clientName);
+                        cout << "Enter new Client Address: ";
+                        getline(cin, currentClient.clientAddress);
+                        clientList.addClient(currentClient, true);
+                        cout << "New client added!\n";
+                        break;
+                    }
+                    case 2:{
+                        cout << "Enter Client ID to show details: ";
+                        cin >> clientId;
+                        clientData client = clientList.getClient(clientId);
+                        if (client.id != 0) {
+                            cout << "Client ID: " << client.id << endl;
+                            cout << "Client Name: " << client.clientName << endl;
+                            cout << "Client Address: " << client.clientAddress << endl;
+                        } else {
+                            cout << "Client not found. Going back.\n";
+                        }
+                        break;
+                    }
+                    case 3:{
+                        cout << "Enter Client ID to show rented offices: ";
+                        cin >> clientId;
+                        clientData client = clientList.getClient(clientId);
+                        if (client.id != 0) {
+                            cout << "Client ID: " << client.id << endl;
+                            cout << "Client Name: " << client.clientName << endl;
+                            cout << "Client Address: " << client.clientAddress << endl;
+                            clientList.showRentedOffices();
+                        } else {
+                            cout << "Client not found. Going back.\n";
+                        }
+                        break;
+                    }
+                    case 4:{
+                        cout << "Going back.\n";
+                        break;
+                    }
+                    default:
+                        cout << "Invalid choice. Going back.\n";
+                }
             }
             case 8: {
                 cout << "Exiting program...\n";

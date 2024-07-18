@@ -61,13 +61,22 @@ inline int displayMenu() {
     std::cout << "[3] Return an Office\n";
     std::cout << "[4] Show Office Details\n";
     std::cout << "[5] Display All Offices\n";
-    std::cout << "[6] Add New Client\n";
-    std::cout << "[7] Show Client Details\n";
+    std::cout << "[6] Check Video Availability\n";
+    std::cout << "[7] Client Maintenance\n";
     std::cout << "[8] Exit\n";
     std::cout << "Choose an option: ";
     return 0;
 }
 
+inline int displayMenu2() {
+    std::cout << "Client Maintenance\n";
+    std::cout << "[1] Add New Client\n";
+    std::cout << "[2] Show Client Details\n";
+    std::cout << "[3] List of Videos Rented by a Customer\n";
+    std::cout << "[4] Go back\n";
+    std::cout << "Choose an option: ";
+    return 0;
+}
 /**
  * @brief Generates and prints random numbers as strings
  *
