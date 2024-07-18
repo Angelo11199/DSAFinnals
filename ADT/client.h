@@ -41,7 +41,7 @@ class client : LinkedList<clientData> {
      * @param data Information about the client to be added
      * @param current Indicates if the client is the currently logged-in client
      */
-    void addClient(clientData data, bool current = false);
+    int addClient(clientData data, bool current = false);
 
     /**
      * @brief Adds information about an office rented by a client

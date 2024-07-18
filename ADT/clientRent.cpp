@@ -35,32 +35,52 @@ clientRent::clientRent(int clientID) : client(clientID) {
 bool clientRent::rentOffice(int officeId) {
     LinkedList<clientRentData>::Node* current = LinkedList<clientRentData>::head;
     while (current != nullptr) {
-        if (current->data.clientId != officeId) {
-            current = current->next;
-            continue;
+        if (current->data.officeId == officeId) {
+            std::cout << "Office already rented" << std::endl;
+            return false;
         }
+        current = current->next;
     }
+    LinkedList<clientRentData>::add({clientId, officeId});
     file.writeToFile(clientId, officeId);
     return true;
 }
-void clientRent::showRentedOffices() {
-    auto currentOffice = office(clientId).getHead();
+void clientRent::showRentedOffices(int currentClent) {
+    if (currentClent == 0) currentClent = clientId;
+    auto currentOffice = office(currentClent).getHead();
     LinkedList<clientRentData>::Node* current = LinkedList<clientRentData>::getHead();
     while (current != nullptr) {
         while (currentOffice != nullptr) {
-            if (current->data.officeId == currentOffice->data.id) {
-                std::cout << "office Name: " << currentOffice->data.officeName << std::endl;
-                std::cout << "office Address: " << currentOffice->data.officeAddress << std::endl;
-                std::cout << "office Price: " << currentOffice->data.officePrice << std::endl;
-                std::cout << "office Size: " << currentOffice->data.officeSize << std::endl;
+            if (currentOffice->data.id == current->data.officeId) {
+                std::cout << "Office ID: " << currentOffice->data.id << std::endl;
+                std::cout << "Office Name: " << currentOffice->data.officeName << std::endl;
+                std::cout << "Office Address: " << currentOffice->data.officeAddress << std::endl;
+                std::cout << "Office Price: " << currentOffice->data.officePrice << std::endl;
+                std::cout << "Office Size: " << currentOffice->data.officeSize << std::endl;
+                std::cout << "Office is Rented: " << currentOffice->data.isRented << std::endl;
+                std::cout << std::endl;
             }
             currentOffice = currentOffice->next;
         }
         current = current->next;
     }
 }
+void clientRent::endRental(int officeId) {
+    LinkedList<clientRentData>::Node* current = LinkedList<clientRentData>::head;
+    while (current != nullptr) {
+        if (current->data.officeId != officeId) {
+            current = current->next;
+            continue;
+        }
+        if (officeId == current->data.officeId) {
+            file.deleteRow(2, std::to_string(officeId));
+            current->data.officeId = -1;
+            break;
+        }
+    }
+}
 clientRent::~clientRent() {
-    std::cout << "Client Rent Destructor Called" << std::endl;
+    // std::cout << "Client Rent Destructor Called" << std::endl;
 }
 
 #endif

@@ -55,43 +55,42 @@ inline double getDouble(std::string prompt = "") {
  * @return int The user's selected option from the menu
  */
 inline int displayMenu() {
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
     std::cout << "Office Space Rental System\n";
     std::cout << "[1] Add New Office\n";
     std::cout << "[2] Rent an Office\n";
     std::cout << "[3] Return an Office\n";
     std::cout << "[4] Show Office Details\n";
     std::cout << "[5] Display All Offices\n";
-    std::cout << "[6] Check Video Availability\n";
-    std::cout << "[7] Client Maintenance\n";
-    std::cout << "[8] Exit\n";
-    std::cout << "Choose an option: ";
+    std::cout << "[6] Check Office Availability\n";
+    std::cout << "[7] Show Rented Office\n";
+    std::cout << "[8] Client Maintenance\n";
+    std::cout << "[9] Exit\n";
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
     return 0;
 }
 
 inline int displayMenu2() {
-    std::cout << "Client Maintenance\n";
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
+    std::cout << "\nClient Maintenance\n";
     std::cout << "[1] Add New Client\n";
     std::cout << "[2] Show Client Details\n";
     std::cout << "[3] List of Videos Rented by a Customer\n";
     std::cout << "[4] Go back\n";
-    std::cout << "Choose an option: ";
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
     return 0;
 }
-/**
- * @brief Generates and prints random numbers as strings
- *
- * @return int Always returns 0
- */
 
-// inline std::string generateRandomNumber() {
-//     srand(time(0));  // Seed the random number generator
-//     std::string random_number_str;
-//     int digits = 10;  // Number of digits
-//     for (int i = 0; i < digits; ++i) {
-//         int random_number = rand() % 10;                     // Generate a random number between 0 and 9
-//         random_number_str += std::to_string(random_number);  // Append the digit to the string
-//     }
-//     return random_number_str;
-// }
+inline int password() {
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
+    std::cout << "In order to proceed. ";
+    std::cout << "Enter password: \n";
+    int password;
+    std::cin >> password;
+    if (password == 0000)
+        return 1;
+    else
+        return -1;
+}
 
 #endif  // UTILS_H

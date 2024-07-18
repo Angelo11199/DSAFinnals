@@ -9,6 +9,7 @@
 #include "../includes/FileHandling.h"
 #include "../includes/LinkedList.h"
 #include "../includes/utils.h"
+#include "./clientRent.h"
 #include "./office.h"
 client::client(int clientID) {
     if (clientID == -1) return;
@@ -34,13 +35,15 @@ client::client(int clientID) {
     }
 }
 
-void client::addClient(clientData data, bool current) {
+int client::addClient(clientData data, bool current) {
+    data.id = size + 1;
     std::cout << data.isAdmin << std::endl;
     add(data);
     file.writeToFile(data.id, data.clientName, data.clientAddress, data.isAdmin);
     if (current) {
         clientId = data.id;
     };
+    return data.id;
 }
 clientData client::getClient(int clientId) {
     Node* current = this->head;
@@ -78,12 +81,14 @@ void client::removeClient(int clientId) {
 void client::printClients() {
     Node* current = head;
     while (current != nullptr) {
+        std::cout << "-------------------------------------------------------------------------" << std::endl;
         std::cout << "Client ID: " << current->data.id << std::endl;
         std::cout << "Client Name: " << current->data.clientName << std::endl;
         std::cout << "Client Phone: " << current->data.clientAddress << std::endl;
         std::cout << "Client Rented Space: " << current->data.rentedSpaces.getSize() << std::endl;
         current = current->next;
     }
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
 }
 void client::addRentedSpace(officeInformation data) { head->data.rentedSpaces.add(data); };
 void client::changeClient(int clientId) {
@@ -97,7 +102,7 @@ void client::changeClient(int clientId) {
     }
 }
 client::~client() {
-    std::cout << "Client Deleted" << std::endl;
+    // std::cout << "Client Deleted" << std::endl;
     // if (head != nullptr) {
     //     Node* current = head;
     //     while (current != nullptr) {

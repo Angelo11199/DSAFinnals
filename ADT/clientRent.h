@@ -16,6 +16,7 @@ class clientRent : public client, public LinkedList<clientRentData> {
    private:
     int clientId;
     fileHandling file = fileHandling("rentedOffices.csv");
+    fileHandling officeFile = fileHandling("offices.csv");
 
    public:
     /**
@@ -38,8 +39,8 @@ class clientRent : public client, public LinkedList<clientRentData> {
      * @brief Shows available offices that can be rented
      *
      */
-    void showRentedOffices();
-
+    void showRentedOffices(int currentClent = 0);
+    void endRental(int officeId);
     /**
      * @brief Destroy the client Rent object
      *
