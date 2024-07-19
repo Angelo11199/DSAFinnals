@@ -32,6 +32,12 @@ struct clientData {
     bool isAdmin;
 };
 
+/**
+ * @brief Struct defining information about a client's rented office spaces
+ *
+ * contains details about the client's rented offices,
+ * linking client ID to office ID
+ */
 struct clientRentData {
     int clientId;
     int officeId;

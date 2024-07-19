@@ -44,8 +44,8 @@ int main() {
                 cout << "Enter new Client Address: ";
                 getline(cin, currentClient.clientAddress);
                 clientId = clientList.addClient(currentClient, true);
+                clientList = clientRent(clientId);
                 cout << "New client added and logged in successfully!\n";
-
                 break;
             }
         }
@@ -256,11 +256,12 @@ int main() {
                 isRunning = false;
                 break;
             }
-            default:
+            default: {
                 cout << "-------------------------------------------------------------------------" << endl;
                 cout << "Invalid choice. Please try again.\n";
+                break;
+            }
         }
     }
-
     return 0;
 }
