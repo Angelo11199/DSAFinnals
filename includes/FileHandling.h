@@ -169,12 +169,11 @@ class fileHandling {
         }
         std::string line;
         while (std::getline(file, line)) {
-            // skip if line is empty
             if (line.empty()) {
                 continue;
             }
 
-            data.add(line);  // Assuming LinkedList has a push_back method similar to std::vector
+            data.add(line);
         }
         file.close();
         return data;

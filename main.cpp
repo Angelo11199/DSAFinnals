@@ -38,6 +38,7 @@ int main() {
             case 'N': {
                 clientData currentClient;
                 currentClient.isAdmin = false;
+                cin.ignore();
                 cout << "Enter new Client Name: ";
                 getline(cin, currentClient.clientName);
                 cout << "Enter new Client Address: ";
@@ -63,7 +64,6 @@ int main() {
                     cout << "Password Incorrect! \n";
                     break;
                 }
-                cout << "Password Correct! You may proceed! \n";
                 cout << endl
                      << "-------------------------------------------------------------------------" << endl;
                 officeInformation newOffice;
@@ -87,8 +87,6 @@ int main() {
                 cout << "Enter Office ID to rent: ";
                 cin >> officeId;
                 officeInformation office = officeList.getOffice(officeId);
-                // cout << office.id << endl;
-                // cout << "IsRented??" << office.isRented << endl;
                 if (office.id == 0) {
                     cout << "Office not found.\n";
                     break;
@@ -188,7 +186,6 @@ int main() {
                     cout << "Password Incorrect! \n\n";
                     break;
                 }
-                cout << "Password Correct! You may proceed! \n\n";
                 displayMenu2();
                 int choice2 = 0;
                 choice2 = (int)getDouble("Enter your choice: ");
@@ -208,11 +205,12 @@ int main() {
                         break;
                     }
                     case 2: {
+                        int clientIdSearch;
                         cout << "-------------------------------------------------------------------------" << endl;
                         cout << "Enter Client ID to show details: ";
-                        cin >> clientId;
+                        cin >> clientIdSearch;
                         cout << "-------------------------------------------------------------------------" << endl;
-                        clientData client = clientList.getClient(clientId);
+                        clientData client = clientList.getClient(clientIdSearch);
                         if (client.id != -1) {
                             cout << "Client ID: " << client.id << endl;
                             cout << "Client Name: " << client.clientName << endl;
@@ -223,17 +221,21 @@ int main() {
                         break;
                     }
                     case 3: {
-                        cout << "-------------------------------------------------------------------------" << endl;
+                        int clientIdSearch;
+                        cout
+                            << "-------------------------------------------------------------------------" << endl;
                         cout << "Enter Client ID to show rented offices: ";
-                        cin >> clientId;
+                        cin >> clientIdSearch;
                         cout << "-------------------------------------------------------------------------" << endl;
-                        clientData client = clientList.getClient(clientId);
+                        clientData client = clientList.getClient(clientIdSearch);
+                        clientList = clientRent(clientIdSearch);
                         if (client.id != 0) {
                             cout << "Client ID: " << client.id << endl;
                             cout << "Client Name: " << client.clientName << endl;
                             cout << "Client Address: " << client.clientAddress << endl;
                             cout << "Rented Offices: \n";
                             clientList.showRentedOffices(clientId);
+                            clientList = clientRent(clientId);
                         } else {
                             cout << "Client not found. Going back.\n";
                         }
@@ -254,7 +256,7 @@ int main() {
                 cout << "-------------------------------------------------------------------------" << endl;
                 cout << "Exiting program...\n";
                 isRunning = false;
-                return 0;
+                break;
             }
             default:
                 cout << "-------------------------------------------------------------------------" << endl;

@@ -51,6 +51,9 @@ void clientRent::showRentedOffices(int currentClent) {
     LinkedList<clientRentData>::Node* current = LinkedList<clientRentData>::getHead();
     while (current != nullptr) {
         while (currentOffice != nullptr) {
+            if (current->data.officeId == -1) {
+                break;
+            }
             if (currentOffice->data.id == current->data.officeId) {
                 std::cout << "Office ID: " << currentOffice->data.id << std::endl;
                 std::cout << "Office Name: " << currentOffice->data.officeName << std::endl;
@@ -59,6 +62,7 @@ void clientRent::showRentedOffices(int currentClent) {
                 std::cout << "Office Size: " << currentOffice->data.officeSize << std::endl;
                 std::cout << "Office is Rented: " << currentOffice->data.isRented << std::endl;
                 std::cout << std::endl;
+                break;
             }
             currentOffice = currentOffice->next;
         }

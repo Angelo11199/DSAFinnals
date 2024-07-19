@@ -81,7 +81,7 @@ void office::printOffices() {
         std::cout << "Office Address: " << current->data.officeAddress << std::endl;
         std::cout << "Office Price: " << current->data.officePrice << std::endl;
         std::cout << "Office Size: " << current->data.officeSize << std::endl;
-        std::cout << "Office is Rented: " << current->data.isRented << std::endl;
+        std::cout << "Office is Rented: " << (current->data.isRented ? "Yes" : "No") << std::endl;
         current = current->next;
     }
     std::cout << "-------------------------------------------------------------------------" << std::endl;
