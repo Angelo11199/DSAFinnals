@@ -24,7 +24,7 @@ int main() {
     clientRent clientList = clientRent(-1);
     int clientId = -1;
     char hasAccount;
-    while (hasAccount != 'Y' && hasAccount != 'N') {
+    while ((hasAccount != 'Y' && hasAccount != 'N') || clientId == -1) {
         cout << "Welcome to Office Space Rental System\n";
         cout << "Do you have an account? (y/n): ";
         cin.get(hasAccount);

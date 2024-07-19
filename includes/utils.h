@@ -93,9 +93,7 @@ inline int password() {
 inline int clear() {
     int temp;
     std::cout << "-------------------------------------------------------------------------" << std::endl;
-    std::cout << "Input any key to continue: " << std::endl;
-    std::cin.get();
-    std::cin.ignore();
+    system("pause");
     return system("cls");
 }
 
