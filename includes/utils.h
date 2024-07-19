@@ -76,7 +76,7 @@ inline int displayMenu2() {
     std::cout << "\nClient Maintenance\n";
     std::cout << "[1] Add New Client\n";
     std::cout << "[2] Show Client Details\n";
-    std::cout << "[3] List of Videos Rented by a Customer\n";
+    std::cout << "[3] List of Offices Rented by a Customer\n";
     std::cout << "[4] Go back\n";
     std::cout << "-------------------------------------------------------------------------" << std::endl;
     return 0;
