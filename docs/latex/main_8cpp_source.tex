@@ -14,143 +14,245 @@
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00023}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{classclient_rent}{clientRent}}\ clientList\ =\ \mbox{\hyperlink{classclient_rent}{clientRent}}(-\/1);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{int}\ clientId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{int}\ clientId\ =\ -\/1;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{char}\ hasAccount;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Welcome\ to\ Office\ Space\ Rental\ System\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Do\ you\ have\ an\ account?\ (y/n):\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \ \ \ \ cin.get(hasAccount);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ \ \ \ \ hasAccount\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(toupper(hasAccount));}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{switch}\ (hasAccount)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'Y'}:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ clientId\ =\ (int)\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(\textcolor{stringliteral}{"{}Enter\ your\ Client\ ID:\ "{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore();}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ clientList\ =\ \mbox{\hyperlink{classclient_rent}{clientRent}}(clientId);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'N'}:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structclient_data}{clientData}}\ currentClient;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ currentClient.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}}\ =\ (int)\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(\textcolor{stringliteral}{"{}Enter\ new\ Client\ ID:\ "{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ clientId\ =\ currentClient.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ currentClient.\mbox{\hyperlink{structclient_data_aa7d4e5bdebb195966e8a52b9c9afe443}{isAdmin}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ currentClient.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ new\ Client\ Name:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ currentClient.\mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{clientName}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ new\ Client\ Address:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ currentClient.\mbox{\hyperlink{structclient_data_af291f8f1bdafcf0d81caa96ed7bb5a1e}{clientAddress}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ clientList.\mbox{\hyperlink{classclient_a733535fb656d02f5ab034f8b649cf3f0}{addClient}}(currentClient,\ \textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}New\ client\ added\ and\ logged\ in\ successfully!\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ clientId\ =\ currentClient.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{classoffice}{office}}\ officeList(clientId);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ isRunning\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{int}\ choice;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{while}\ (isRunning)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{displayMenu}}();}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ choice\ =\ (int)\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(\textcolor{stringliteral}{"{}Enter\ your\ choice:\ "{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ convert\ to\ if\ else\ statements}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*\ working\ and\ tested.}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ newOffice;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ ID:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ newOffice.\mbox{\hyperlink{structoffice_information_a7a3c6134937483f15293173b5d0d0781}{id}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore();}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ Name:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ newOffice.\mbox{\hyperlink{structoffice_information_a1777759322428f573a31f81100c637f5}{officeName}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ Address:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ newOffice.\mbox{\hyperlink{structoffice_information_a3d12d9835d989b693ee00442400f5170}{officeAddress}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ Price:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ newOffice.\mbox{\hyperlink{structoffice_information_af96310199f49ab6c7c2a122606c5b1d8}{officePrice}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ Size:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ newOffice.\mbox{\hyperlink{structoffice_information_a2eda87bd6168bb26af8e8cc67e3703a6}{officeSize}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newOffice.\mbox{\hyperlink{structoffice_information_a8dc545ed9d6125a55d8562ca04d3e18b}{isRented}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ officeList.\mbox{\hyperlink{classoffice_aff0f126b758cb0ea6fb6c6659e74c0e3}{addOffice}}(newOffice);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}New\ Office\ added\ successfully!\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*\ not\ yet\ tested}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ officeId;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ ID\ to\ rent:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ officeId;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ \mbox{\hyperlink{classoffice}{office}}\ =\ officeList.\mbox{\hyperlink{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2}{getOffice}}(officeId);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classoffice}{office}}.id\ !=\ 0\ \&\&\ !\mbox{\hyperlink{classoffice}{office}}.isRented)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoffice}{office}}.isRented\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ officeList.rentOffice(office,\ clientId);}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ rented\ sucessfully!\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ is\ not\ available\ for\ rent.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{while}\ (hasAccount\ !=\ \textcolor{charliteral}{'Y'}\ \&\&\ hasAccount\ !=\ \textcolor{charliteral}{'N'})\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Welcome\ to\ Office\ Space\ Rental\ System\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Do\ you\ have\ an\ account?\ (y/n):\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ cin.get(hasAccount);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ hasAccount\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(toupper(hasAccount));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (hasAccount)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'Y'}:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientId\ =\ (int)\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(\textcolor{stringliteral}{"{}Enter\ your\ Client\ ID:\ "{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientList\ =\ \mbox{\hyperlink{classclient_rent}{clientRent}}(clientId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'N'}:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structclient_data}{clientData}}\ currentClient;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentClient.\mbox{\hyperlink{structclient_data_aa7d4e5bdebb195966e8a52b9c9afe443}{isAdmin}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ new\ Client\ Name:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ currentClient.\mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{clientName}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ new\ Client\ Address:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ currentClient.\mbox{\hyperlink{structclient_data_af291f8f1bdafcf0d81caa96ed7bb5a1e}{clientAddress}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientId\ =\ clientList.\mbox{\hyperlink{classclient_a34c54ce970c56fcabf53bd506b807918}{addClient}}(currentClient,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}New\ client\ added\ and\ logged\ in\ successfully!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{classoffice}{office}}\ officeList(clientId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ isRunning\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordtype}{int}\ choice;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{while}\ (isRunning)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{displayMenu}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ choice\ =\ (int)\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(\textcolor{stringliteral}{"{}Enter\ your\ choice:\ "{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ adminPassed\ =\ \mbox{\hyperlink{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}{password}}()\ ==\ 1;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!adminPassed)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Password\ Incorrect!\ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ newOffice;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ Name:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ newOffice.\mbox{\hyperlink{structoffice_information_a1777759322428f573a31f81100c637f5}{officeName}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ Address:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ newOffice.\mbox{\hyperlink{structoffice_information_a3d12d9835d989b693ee00442400f5170}{officeAddress}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ Price:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ newOffice.\mbox{\hyperlink{structoffice_information_af96310199f49ab6c7c2a122606c5b1d8}{officePrice}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ Size:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ newOffice.\mbox{\hyperlink{structoffice_information_a2eda87bd6168bb26af8e8cc67e3703a6}{officeSize}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newOffice.\mbox{\hyperlink{structoffice_information_a8dc545ed9d6125a55d8562ca04d3e18b}{isRented}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ officeList.\mbox{\hyperlink{classoffice_aff0f126b758cb0ea6fb6c6659e74c0e3}{addOffice}}(newOffice);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}New\ Office\ added\ successfully!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ officeId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ ID\ to\ rent:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ officeId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ \mbox{\hyperlink{classoffice}{office}}\ =\ officeList.\mbox{\hyperlink{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2}{getOffice}}(officeId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classoffice}{office}}.id\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ not\ found.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*\ working\ and\ tested}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ officeId;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ office\ ID\ to\ return:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ officeId;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ officeInformation\ office\ =\ officeList.getOffice(officeId);}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (office.id\ !=\ 0\ \&\&\ office.isRented)\ \{}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ office.isRented\ =\ false;}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ //\ officeList.endRental(office);}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Office\ returned\ successfully!\(\backslash\)n"{};}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}\ else\ \{}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Office\ not\ currently\ rented.\(\backslash\)n"{};}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*\ not\ yet\ tested}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ officeId;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ ID\ to\ show\ details:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ officeId;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00117}00117\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ officeInformation\ officeData\ =\ officeList.getOffice(officeId);}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (officeData.id\ !=\ 0)\ \{}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Office\ ID:\ "{}\ <<\ officeData.id\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Office\ Name:\ "{}\ <<\ officeData.officeName\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Office\ Address:\ "{}\ <<\ officeData.officeAddress\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Office\ Price:\ "{}\ <<\ officeData.officePrice\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Office\ Size:\ "{}\ <<\ officeData.officeSize\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Is\ Office\ Rented?\ "{}\ <<\ (officeData.isRented\ ?\ "{}Yes"{}\ :\ "{}No"{})\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}\ else\ \{}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ cout\ <<\ "{}Office\ is\ not\ found.\(\backslash\)n"{};}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*\ not\ yet\ tested.\ incomplete}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Displaying\ all\ offices:\ \(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ officeList.\mbox{\hyperlink{classoffice_a9a3a6c95088ad84512d197d1e23e07dc}{printOffices}}();}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*\ working\ and\ tested.}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Client\ ID\ to\ show\ details:\ "{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ clientId;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structclient_data}{clientData}}\ \mbox{\hyperlink{classclient}{client}}\ =\ clientList.\mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{getClient}}(clientId);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classclient}{client}}.id)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ ID:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.id\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ Name:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.clientName\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ Address:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.clientAddress\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ not\ found.\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Exiting\ program...\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isRunning\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ choice.\ Please\ try\ again.\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00159}00159\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00160}00160\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00161}00161\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00162}00162\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classoffice}{office}}.isRented)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ officeList.\mbox{\hyperlink{classoffice_add96666ca2b1aa88a8f694afdfd7b7d1}{rentOffice}}(\mbox{\hyperlink{classoffice}{office}},\ clientId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientList.\mbox{\hyperlink{classclient_rent_a048ba46194aba6813cd16d8ae1d4fc4d}{rentOffice}}(\mbox{\hyperlink{classoffice}{office}}.id);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ rented\ sucessfully!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ is\ not\ available\ for\ rent.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ officeId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ office\ ID\ to\ return:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ officeId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ \mbox{\hyperlink{classoffice}{office}}\ =\ officeList.\mbox{\hyperlink{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2}{getOffice}}(officeId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classoffice}{office}}.id\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classoffice}{office}}.isRented\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classoffice}{office}}.id\ !=\ 0\ \&\&\ \mbox{\hyperlink{classoffice}{office}}.isRented)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoffice}{office}}.isRented\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ officeList.\mbox{\hyperlink{classoffice_aeaf5d37ae0c53f2b1b81bf83af292933}{endRental}}(\mbox{\hyperlink{classoffice}{office}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientList.\mbox{\hyperlink{classclient_rent_a6a772086e1a10827d46cacd67114f6f5}{endRental}}(\mbox{\hyperlink{classoffice}{office}}.id);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoffice}{office}}.isRented\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ returned\ successfully!\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ not\ currently\ rented.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ officeId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ ID\ to\ show\ details:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ officeId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ officeData\ =\ officeList.\mbox{\hyperlink{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2}{getOffice}}(officeId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (officeData.\mbox{\hyperlink{structoffice_information_a7a3c6134937483f15293173b5d0d0781}{id}}\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ ID:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_a7a3c6134937483f15293173b5d0d0781}{id}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ Name:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_a1777759322428f573a31f81100c637f5}{officeName}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ Address:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_a3d12d9835d989b693ee00442400f5170}{officeAddress}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ Price:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_af96310199f49ab6c7c2a122606c5b1d8}{officePrice}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ Size:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_a2eda87bd6168bb26af8e8cc67e3703a6}{officeSize}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Is\ Office\ Rented?\ "{}}\ <<\ (officeData.\mbox{\hyperlink{structoffice_information_a8dc545ed9d6125a55d8562ca04d3e18b}{isRented}}\ ?\ \textcolor{stringliteral}{"{}Yes"{}}\ :\ \textcolor{stringliteral}{"{}No"{}})\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ is\ not\ found.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Displaying\ all\ offices:\ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ officeList.\mbox{\hyperlink{classoffice_a9a3a6c95088ad84512d197d1e23e07dc}{printOffices}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ officeId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Office\ ID\ to\ show\ availability:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ officeId;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoffice_information}{officeInformation}}\ officeData\ =\ officeList.\mbox{\hyperlink{classoffice_ad4859f268ba0e77b6e0b7e77f6c287f2}{getOffice}}(officeId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (officeData.\mbox{\hyperlink{structoffice_information_a7a3c6134937483f15293173b5d0d0781}{id}}\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ ID:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_a7a3c6134937483f15293173b5d0d0781}{id}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ Name:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_a1777759322428f573a31f81100c637f5}{officeName}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ Address:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_a3d12d9835d989b693ee00442400f5170}{officeAddress}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ Price:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_af96310199f49ab6c7c2a122606c5b1d8}{officePrice}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ Size:\ "{}}\ <<\ officeData.\mbox{\hyperlink{structoffice_information_a2eda87bd6168bb26af8e8cc67e3703a6}{officeSize}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Availability:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (officeData.\mbox{\hyperlink{structoffice_information_a8dc545ed9d6125a55d8562ca04d3e18b}{isRented}})\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Already\ Rented\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Available\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Office\ not\ found.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Here\ are\ the\ office\ you\ have\ rented:\ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientList.\mbox{\hyperlink{classclient_rent_afe57321eac46cfc7231137db5dad85a2}{showRentedOffices}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*\ not\ yet\ tested}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ adminPassed\ =\ \mbox{\hyperlink{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}{password}}()\ ==\ 1;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!adminPassed)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Password\ Incorrect!\ \(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{utils_8h_a51229e227568ec1b39d35a7551914ca2}{displayMenu2}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ choice2\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ choice2\ =\ (int)\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(\textcolor{stringliteral}{"{}Enter\ your\ choice:\ "{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice2)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structclient_data}{clientData}}\ currentClient;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentClient.\mbox{\hyperlink{structclient_data_aa7d4e5bdebb195966e8a52b9c9afe443}{isAdmin}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ currentClient.\mbox{\hyperlink{structclient_data_a8fb74b661df7758b247507c2fb52732a}{id}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ new\ Client\ Name:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ currentClient.\mbox{\hyperlink{structclient_data_a12c7e81fbb3a0e65e6fa9b53b9415317}{clientName}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ new\ Client\ Address:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ currentClient.\mbox{\hyperlink{structclient_data_af291f8f1bdafcf0d81caa96ed7bb5a1e}{clientAddress}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientList.\mbox{\hyperlink{classclient_a34c54ce970c56fcabf53bd506b807918}{addClient}}(currentClient,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}New\ client\ added!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ clientIdSearch;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Client\ ID\ to\ show\ details:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ clientIdSearch;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structclient_data}{clientData}}\ \mbox{\hyperlink{classclient}{client}}\ =\ clientList.\mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{getClient}}(clientIdSearch);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classclient}{client}}.id\ !=\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ ID:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.id\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ Name:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.clientName\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ Address:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.clientAddress\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ not\ found.\ Going\ back.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ clientIdSearch;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ Client\ ID\ to\ show\ rented\ offices:\ "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ clientIdSearch;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structclient_data}{clientData}}\ \mbox{\hyperlink{classclient}{client}}\ =\ clientList.\mbox{\hyperlink{classclient_aa7eb5b91b3398910fe41ae20bac16714}{getClient}}(clientIdSearch);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientList\ =\ \mbox{\hyperlink{classclient_rent}{clientRent}}(clientIdSearch);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classclient}{client}}.id\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ ID:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.id\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ Name:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.clientName\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ Address:\ "{}}\ <<\ \mbox{\hyperlink{classclient}{client}}.clientAddress\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rented\ Offices:\ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientList.\mbox{\hyperlink{classclient_rent_afe57321eac46cfc7231137db5dad85a2}{showRentedOffices}}(clientId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clientList\ =\ \mbox{\hyperlink{classclient_rent}{clientRent}}(clientId);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Client\ not\ found.\ Going\ back.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Going\ back.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Exiting\ program...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isRunning\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ choice.\ Please\ try\ again.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00260}00260\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00261}00261\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00263}00263\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00264}00264\ \}}
 
 \end{DoxyCode}

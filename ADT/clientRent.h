@@ -25,7 +25,6 @@ class clientRent : public client, public LinkedList<clientRentData> {
      * @param clientId ID of the client using the rental management
      */
     clientRent(int clientID);
-
     /**
      * @brief Rents an office for the client
      *

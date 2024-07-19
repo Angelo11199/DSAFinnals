@@ -1,5 +1,6 @@
 \doxysection{includes/utils.h File Reference}
 \hypertarget{utils_8h}{}\label{utils_8h}\index{includes/utils.h@{includes/utils.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$array$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$sstream$>$}\newline
@@ -17,10 +18,26 @@ This graph shows which files directly or indirectly include this file\+:
 double \mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{get\+Double}} (std\+::string prompt="{}"{})
 \begin{DoxyCompactList}\small\item\em Prompts the user to enter a double value. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{display\+Menu}} ()
-\begin{DoxyCompactList}\small\item\em Displays a menu for an office rental system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Displays a menu for an office rental system. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{utils_8h_a51229e227568ec1b39d35a7551914ca2}{display\+Menu2}} ()
+\item 
+int \mbox{\hyperlink{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}{password}} ()
+\item 
+int \mbox{\hyperlink{utils_8h_a2cb0e4653a539a883b21a893d89cb648}{clear}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{utils_8h_a2cb0e4653a539a883b21a893d89cb648}\index{utils.h@{utils.h}!clear@{clear}}
+\index{clear@{clear}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{utils_8h_a2cb0e4653a539a883b21a893d89cb648} 
+int clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{utils_8h_source_l00098}{98}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+
 \Hypertarget{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}\index{utils.h@{utils.h}!displayMenu@{displayMenu}}
 \index{displayMenu@{displayMenu}!utils.h@{utils.h}}
 \doxysubsubsection{\texorpdfstring{displayMenu()}{displayMenu()}}
@@ -36,10 +53,22 @@ int The user\textquotesingle{}s selected option from the menu
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{utils_8h_source_l00057}{57}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+Definition at line \mbox{\hyperlink{utils_8h_source_l00059}{59}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
 
 Here is the caller graph for this function\+:
 % FIG 2
+\Hypertarget{utils_8h_a51229e227568ec1b39d35a7551914ca2}\index{utils.h@{utils.h}!displayMenu2@{displayMenu2}}
+\index{displayMenu2@{displayMenu2}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{displayMenu2()}{displayMenu2()}}
+{\footnotesize\ttfamily \label{utils_8h_a51229e227568ec1b39d35a7551914ca2} 
+int display\+Menu2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{utils_8h_source_l00075}{75}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
 \Hypertarget{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}\index{utils.h@{utils.h}!getDouble@{getDouble}}
 \index{getDouble@{getDouble}!utils.h@{utils.h}}
 \doxysubsubsection{\texorpdfstring{getDouble()}{getDouble()}}
@@ -60,10 +89,24 @@ double The double value entered by the user
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{utils_8h_source_l00035}{35}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+Definition at line \mbox{\hyperlink{utils_8h_source_l00037}{37}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
 
 Here is the caller graph for this function\+:
-% FIG 3
+% FIG 4
+\Hypertarget{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}\index{utils.h@{utils.h}!password@{password}}
+\index{password@{password}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{password()}{password()}}
+{\footnotesize\ttfamily \label{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513} 
+int password (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{utils_8h_source_l00086}{86}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
 \Hypertarget{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}\index{utils.h@{utils.h}!splitData@{splitData}}
 \index{splitData@{splitData}!utils.h@{utils.h}}
 \doxysubsubsection{\texorpdfstring{splitData()}{splitData()}}
@@ -87,7 +130,7 @@ std\+::vector$<$std\+::string$>$ Vector of strings containing the split parts
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{utils_8h_source_l00019}{19}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
+Definition at line \mbox{\hyperlink{utils_8h_source_l00021}{21}} of file \mbox{\hyperlink{utils_8h_source}{utils.\+h}}.
 
 Here is the caller graph for this function\+:
-% FIG 4
+% FIG 7

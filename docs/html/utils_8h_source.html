@@ -103,77 +103,107 @@ $(function(){initNavTree('utils_8h_source.html',''); initResizable(true); });
 <a href="utils_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UTILS_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UTILS_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_linked_list_8h.html">./LinkedList.h</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Definition of splitData function</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">splitData</a>(<span class="keyword">const</span> std::string&amp; input, <span class="keywordtype">char</span> delimiter, std::array&lt;std::string, N&gt;&amp; output) {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::istringstream stream(input);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::string token;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">size_t</span> index = 0;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">while</span> (std::getline(stream, token, delimiter) &amp;&amp; index &lt; N) {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        output[index++] = token;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_linked_list_8h.html">./LinkedList.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Definition of splitData function</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">   21</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">splitData</a>(<span class="keyword">const</span> std::string&amp; input, <span class="keywordtype">char</span> delimiter, std::array&lt;std::string, N&gt;&amp; output) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::istringstream stream(input);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::string token;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">size_t</span> index = 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">while</span> (std::getline(stream, token, delimiter) &amp;&amp; index &lt; N) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        output[index++] = token;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// gets a number from the user</span></div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">   35</a></span><span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">getDouble</a>(std::string prompt = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::string num;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">char</span>* p;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">do</span> {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        std::cout &lt;&lt; prompt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        std::cin &gt;&gt; num;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">double</span> convertedNum = strtod(num.c_str(), &amp;p);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (*p) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid input&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            std::cin.ignore();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span> convertedNum;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    } <span class="keywordflow">while</span> (<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// gets a number from the user</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">   37</a></span><span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">getDouble</a>(std::string prompt = <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::string num;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">char</span>* p;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        std::cout &lt;&lt; prompt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::cin &gt;&gt; num;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">double</span> convertedNum = strtod(num.c_str(), &amp;p);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (*p) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid input&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            std::cin.ignore();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">return</span> convertedNum;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    } <span class="keywordflow">while</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="utils_8h.html#aad9ed7a055a99883645739e4bfca0e5e">   57</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="utils_8h.html#aad9ed7a055a99883645739e4bfca0e5e">displayMenu</a>() {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Office Space Rental System\n&quot;</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[1] Add New Office\n&quot;</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[2] Rent an Office\n&quot;</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[3] Return an Office\n&quot;</span>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[4] Show Office Details\n&quot;</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[5] Display All Offices\n&quot;</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[6] Add New Client\n&quot;</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[7] Show Client Details\n&quot;</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[8] Exit\n&quot;</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Choose an option: &quot;</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="utils_8h.html#aad9ed7a055a99883645739e4bfca0e5e">   59</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="utils_8h.html#aad9ed7a055a99883645739e4bfca0e5e">displayMenu</a>() {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-------------------------------------------------------------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Office Space Rental System\n&quot;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[1] Add New Office\n&quot;</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[2] Rent an Office\n&quot;</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[3] Return an Office\n&quot;</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[4] Show Office Details\n&quot;</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[5] Display All Offices\n&quot;</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[6] Check Office Availability\n&quot;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[7] Show Rented Office\n&quot;</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[8] Client Maintenance\n&quot;</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[9] Exit\n&quot;</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-------------------------------------------------------------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// inline std::string generateRandomNumber() {</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//     srand(time(0));  // Seed the random number generator</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">//     std::string random_number_str;</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//     int digits = 10;  // Number of digits</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">//     for (int i = 0; i &lt; digits; ++i) {</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//         int random_number = rand() % 10;                     // Generate a random number between 0 and 9</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//         random_number_str += std::to_string(random_number);  // Append the digit to the string</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">//     }</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">//     return random_number_str;</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// }</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif  </span><span class="comment">// UTILS_H</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="utils_8h.html#a51229e227568ec1b39d35a7551914ca2">   75</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="utils_8h.html#a51229e227568ec1b39d35a7551914ca2">displayMenu2</a>() {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-------------------------------------------------------------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;\nClient Maintenance\n&quot;</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[1] Add New Client\n&quot;</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[2] Show Client Details\n&quot;</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[3] List of Videos Rented by a Customer\n&quot;</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[4] Go back\n&quot;</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-------------------------------------------------------------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="utils_8h.html#a67c3f0b5f9613c6e4f29add58bb0b513">   86</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="utils_8h.html#a67c3f0b5f9613c6e4f29add58bb0b513">password</a>() {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;In order to proceed.\n\n&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-------------------------------------------------------------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Enter password: &quot;</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="utils_8h.html#a67c3f0b5f9613c6e4f29add58bb0b513">password</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::cin &gt;&gt; <a class="code hl_function" href="utils_8h.html#a67c3f0b5f9613c6e4f29add58bb0b513">password</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="utils_8h.html#a67c3f0b5f9613c6e4f29add58bb0b513">password</a> == 0000)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="utils_8h.html#a2cb0e4653a539a883b21a893d89cb648">   98</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="utils_8h.html#a2cb0e4653a539a883b21a893d89cb648">clear</a>() {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-------------------------------------------------------------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Input any key to continue: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif  </span><span class="comment">// UTILS_H</span></div>
 <div class="ttc" id="a_linked_list_8h_html"><div class="ttname"><a href="_linked_list_8h.html">LinkedList.h</a></div></div>
-<div class="ttc" id="autils_8h_html_a0bbdc0fddc1e9cafefc319fbf2a7fe6f"><div class="ttname"><a href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">splitData</a></div><div class="ttdeci">void splitData(const std::string &amp;input, char delimiter, std::array&lt; std::string, N &gt; &amp;output)</div><div class="ttdoc">Splits a string into parts based on a delimiter.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">utils.h:19</a></div></div>
-<div class="ttc" id="autils_8h_html_a2c20bc98253e8f32fb63e75a010df7c6"><div class="ttname"><a href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">getDouble</a></div><div class="ttdeci">double getDouble(std::string prompt=&quot;&quot;)</div><div class="ttdoc">Prompts the user to enter a double value.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">utils.h:35</a></div></div>
-<div class="ttc" id="autils_8h_html_aad9ed7a055a99883645739e4bfca0e5e"><div class="ttname"><a href="utils_8h.html#aad9ed7a055a99883645739e4bfca0e5e">displayMenu</a></div><div class="ttdeci">int displayMenu()</div><div class="ttdoc">Displays a menu for an office rental system.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">utils.h:57</a></div></div>
+<div class="ttc" id="autils_8h_html_a0bbdc0fddc1e9cafefc319fbf2a7fe6f"><div class="ttname"><a href="utils_8h.html#a0bbdc0fddc1e9cafefc319fbf2a7fe6f">splitData</a></div><div class="ttdeci">void splitData(const std::string &amp;input, char delimiter, std::array&lt; std::string, N &gt; &amp;output)</div><div class="ttdoc">Splits a string into parts based on a delimiter.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">utils.h:21</a></div></div>
+<div class="ttc" id="autils_8h_html_a2c20bc98253e8f32fb63e75a010df7c6"><div class="ttname"><a href="utils_8h.html#a2c20bc98253e8f32fb63e75a010df7c6">getDouble</a></div><div class="ttdeci">double getDouble(std::string prompt=&quot;&quot;)</div><div class="ttdoc">Prompts the user to enter a double value.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">utils.h:37</a></div></div>
+<div class="ttc" id="autils_8h_html_a2cb0e4653a539a883b21a893d89cb648"><div class="ttname"><a href="utils_8h.html#a2cb0e4653a539a883b21a893d89cb648">clear</a></div><div class="ttdeci">int clear()</div><div class="ttdef"><b>Definition</b> <a href="#l00098">utils.h:98</a></div></div>
+<div class="ttc" id="autils_8h_html_a51229e227568ec1b39d35a7551914ca2"><div class="ttname"><a href="utils_8h.html#a51229e227568ec1b39d35a7551914ca2">displayMenu2</a></div><div class="ttdeci">int displayMenu2()</div><div class="ttdef"><b>Definition</b> <a href="#l00075">utils.h:75</a></div></div>
+<div class="ttc" id="autils_8h_html_a67c3f0b5f9613c6e4f29add58bb0b513"><div class="ttname"><a href="utils_8h.html#a67c3f0b5f9613c6e4f29add58bb0b513">password</a></div><div class="ttdeci">int password()</div><div class="ttdef"><b>Definition</b> <a href="#l00086">utils.h:86</a></div></div>
+<div class="ttc" id="autils_8h_html_aad9ed7a055a99883645739e4bfca0e5e"><div class="ttname"><a href="utils_8h.html#aad9ed7a055a99883645739e4bfca0e5e">displayMenu</a></div><div class="ttdeci">int displayMenu()</div><div class="ttdoc">Displays a menu for an office rental system.</div><div class="ttdef"><b>Definition</b> <a href="#l00059">utils.h:59</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

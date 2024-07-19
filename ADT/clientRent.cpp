@@ -49,6 +49,10 @@ void clientRent::showRentedOffices(int currentClent) {
     if (currentClent == 0) currentClent = clientId;
     auto currentOffice = office(currentClent).getHead();
     LinkedList<clientRentData>::Node* current = LinkedList<clientRentData>::getHead();
+    if (LinkedList<clientRentData>::size == 0) {
+        std::cout << "No offices rented" << std::endl;
+        return;
+    }
     while (current != nullptr) {
         while (currentOffice != nullptr) {
             if (current->data.officeId == -1) {

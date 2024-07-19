@@ -30,7 +30,6 @@ struct clientData {
     std::string clientName;
     std::string clientAddress;
     bool isAdmin;
-    LinkedList<officeInformation> rentedSpaces;
 };
 
 struct clientRentData {

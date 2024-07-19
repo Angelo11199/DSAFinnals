@@ -24,8 +24,10 @@ Collaboration diagram for client\+Rent\+:
 \begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classclient_rent}{client\+Rent} class. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classclient_rent_a048ba46194aba6813cd16d8ae1d4fc4d}{rent\+Office}} (int office\+Id)
 \begin{DoxyCompactList}\small\item\em Rents an office for the client. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classclient_rent_a18095e06209ac8de0b7fdbded86fa57f}{show\+Rented\+Offices}} ()
+void \mbox{\hyperlink{classclient_rent_afe57321eac46cfc7231137db5dad85a2}{show\+Rented\+Offices}} (int current\+Clent=0)
 \begin{DoxyCompactList}\small\item\em Shows available offices that can be rented. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclient_rent_a6a772086e1a10827d46cacd67114f6f5}{end\+Rental}} (int office\+Id)
+\item 
 \mbox{\hyperlink{classclient_rent_abce770e2f95bfad319fb5fb6fb16181f}{\texorpdfstring{$\sim$}{\string~}client\+Rent}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the client Rent object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classclient}{client}}}
@@ -35,7 +37,7 @@ void \mbox{\hyperlink{classclient_rent_a18095e06209ac8de0b7fdbded86fa57f}{show\+
 \begin{DoxyCompactList}\small\item\em Constructor for the client class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classclient_ad45e388579b8c0ffec6f29ed2c0c4de9}{\texorpdfstring{$\sim$}{\string~}client}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the client object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classclient_a733535fb656d02f5ab034f8b649cf3f0}{add\+Client}} (\mbox{\hyperlink{structclient_data}{client\+Data}} data, bool current=false)
+int \mbox{\hyperlink{classclient_a34c54ce970c56fcabf53bd506b807918}{add\+Client}} (\mbox{\hyperlink{structclient_data}{client\+Data}} data, bool current=false)
 \begin{DoxyCompactList}\small\item\em Adds a new client to the management system. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classclient_aa2e50f0061a672960762e9d17ea4fbc8}{add\+Rented\+Space}} (\mbox{\hyperlink{structoffice_information}{office\+Information}} data)
 \begin{DoxyCompactList}\small\item\em Adds information about an office rented by a client. \end{DoxyCompactList}\item 
@@ -128,11 +130,25 @@ Destroy the client Rent object.
 
 
 
-Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
+Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classclient_rent_a6a772086e1a10827d46cacd67114f6f5}\index{clientRent@{clientRent}!endRental@{endRental}}
+\index{endRental@{endRental}!clientRent@{clientRent}}
+\doxysubsubsection{\texorpdfstring{endRental()}{endRental()}}
+{\footnotesize\ttfamily \label{classclient_rent_a6a772086e1a10827d46cacd67114f6f5} 
+void client\+Rent\+::end\+Rental (\begin{DoxyParamCaption}\item[{int}]{office\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
 \Hypertarget{classclient_rent_a048ba46194aba6813cd16d8ae1d4fc4d}\index{clientRent@{clientRent}!rentOffice@{rentOffice}}
 \index{rentOffice@{rentOffice}!clientRent@{clientRent}}
 \doxysubsubsection{\texorpdfstring{rentOffice()}{rentOffice()}}
@@ -158,12 +174,14 @@ false Otherwise
 Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
 
 Here is the call graph for this function\+:
-% FIG 3
-\Hypertarget{classclient_rent_a18095e06209ac8de0b7fdbded86fa57f}\index{clientRent@{clientRent}!showRentedOffices@{showRentedOffices}}
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{classclient_rent_afe57321eac46cfc7231137db5dad85a2}\index{clientRent@{clientRent}!showRentedOffices@{showRentedOffices}}
 \index{showRentedOffices@{showRentedOffices}!clientRent@{clientRent}}
 \doxysubsubsection{\texorpdfstring{showRentedOffices()}{showRentedOffices()}}
-{\footnotesize\ttfamily \label{classclient_rent_a18095e06209ac8de0b7fdbded86fa57f} 
-void client\+Rent\+::show\+Rented\+Offices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classclient_rent_afe57321eac46cfc7231137db5dad85a2} 
+void client\+Rent\+::show\+Rented\+Offices (\begin{DoxyParamCaption}\item[{int}]{current\+Clent}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
 
 
 
@@ -171,10 +189,12 @@ Shows available offices that can be rented.
 
 
 
-Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
+Definition at line \mbox{\hyperlink{client_rent_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{client_rent_8cpp_source}{client\+Rent.\+cpp}}.
 
 Here is the call graph for this function\+:
-% FIG 4
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

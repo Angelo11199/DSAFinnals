@@ -118,6 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abb7d1207f8f5fbb5c20d7f4db99ec837" id="r_abb7d1207f8f5fbb5c20d7f4db99ec837"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb7d1207f8f5fbb5c20d7f4db99ec837">~fileHandling</a> ()</td></tr>
 <tr class="memdesc:abb7d1207f8f5fbb5c20d7f4db99ec837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor to clean up resources associated with the file handler.  <br /></td></tr>
 <tr class="separator:abb7d1207f8f5fbb5c20d7f4db99ec837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a271d0f0d252d2edb318046e497b1ebac" id="r_a271d0f0d252d2edb318046e497b1ebac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a271d0f0d252d2edb318046e497b1ebac">updateFile</a> (std::string newValue, int id, int column=0)</td></tr>
+<tr class="separator:a271d0f0d252d2edb318046e497b1ebac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508a606af29946619af8549a50e3e785" id="r_a508a606af29946619af8549a50e3e785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a508a606af29946619af8549a50e3e785">deleteRow</a> (int col, const std::string &amp;value)</td></tr>
+<tr class="separator:a508a606af29946619af8549a50e3e785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c7f79a289885a8f9b723cbced0b5f86" id="r_a8c7f79a289885a8f9b723cbced0b5f86"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8c7f79a289885a8f9b723cbced0b5f86"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8c7f79a289885a8f9b723cbced0b5f86">writeToFile</a> (const T &amp;last)</td></tr>
 <tr class="memdesc:a8c7f79a289885a8f9b723cbced0b5f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes data to the file.  <br /></td></tr>
@@ -138,7 +142,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for handling file operations such as reading from and writing to files. </p>
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00015">15</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00016">16</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac4ea9607ef136f721ebc8bb289fedf30" name="ac4ea9607ef136f721ebc8bb289fedf30"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4ea9607ef136f721ebc8bb289fedf30">&#9670;&#160;</a></span>fileHandling()</h2>
@@ -189,6 +193,42 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a508a606af29946619af8549a50e3e785" name="a508a606af29946619af8549a50e3e785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a508a606af29946619af8549a50e3e785">&#9670;&#160;</a></span>deleteRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fileHandling::deleteRow </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00093">93</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfile_handling_a508a606af29946619af8549a50e3e785_icgraph.png" border="0" usemap="#aclassfile_handling_a508a606af29946619af8549a50e3e785_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a66adba6f54765d5cce9350306cb6d11f" name="a66adba6f54765d5cce9350306cb6d11f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66adba6f54765d5cce9350306cb6d11f">&#9670;&#160;</a></span>readFromFile()</h2>
 
@@ -215,7 +255,7 @@ Public Attributes</h2></td></tr>
 <p>Reads data from the file into a linked list. </p>
 <dl class="section return"><dt>Returns</dt><dd>LinkedList&lt;std::string&gt; A linked list containing the data read from the file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00093">93</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00162">162</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -225,6 +265,47 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classfile_handling_a66adba6f54765d5cce9350306cb6d11f_icgraph.png" border="0" usemap="#aclassfile_handling_a66adba6f54765d5cce9350306cb6d11f_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a271d0f0d252d2edb318046e497b1ebac" name="a271d0f0d252d2edb318046e497b1ebac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a271d0f0d252d2edb318046e497b1ebac">&#9670;&#160;</a></span>updateFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fileHandling::updateFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>newValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>column</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00056">56</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfile_handling_a271d0f0d252d2edb318046e497b1ebac_icgraph.png" border="0" usemap="#aclassfile_handling_a271d0f0d252d2edb318046e497b1ebac_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -268,7 +349,7 @@ template&lt;typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00077">77</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00146">146</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
 
 </div>
 </div>
@@ -311,7 +392,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00063">63</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00132">132</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -333,7 +414,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00049">49</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_handling_8h_source.html#l00050">50</a> of file <a class="el" href="_file_handling_8h_source.html">FileHandling.h</a>.</p>
 
 </div>
 </div>

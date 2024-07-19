@@ -85,12 +85,10 @@ void client::printClients() {
         std::cout << "Client ID: " << current->data.id << std::endl;
         std::cout << "Client Name: " << current->data.clientName << std::endl;
         std::cout << "Client Phone: " << current->data.clientAddress << std::endl;
-        std::cout << "Client Rented Space: " << current->data.rentedSpaces.getSize() << std::endl;
         current = current->next;
     }
     std::cout << "-------------------------------------------------------------------------" << std::endl;
 }
-void client::addRentedSpace(officeInformation data) { head->data.rentedSpaces.add(data); };
 void client::changeClient(int clientId) {
     Node* current = head;
     while (current != nullptr) {

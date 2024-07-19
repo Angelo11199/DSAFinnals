@@ -16,6 +16,10 @@ Class for handling file operations such as reading from and writing to files.
 \begin{DoxyCompactList}\small\item\em Constructor to initialize the file handler with a specified filename. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfile_handling_abb7d1207f8f5fbb5c20d7f4db99ec837}{\texorpdfstring{$\sim$}{\string~}file\+Handling}} ()
 \begin{DoxyCompactList}\small\item\em Destructor to clean up resources associated with the file handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfile_handling_a271d0f0d252d2edb318046e497b1ebac}{update\+File}} (std\+::string new\+Value, int id, int column=0)
+\item 
+void \mbox{\hyperlink{classfile_handling_a508a606af29946619af8549a50e3e785}{delete\+Row}} (int col, const std\+::string \&value)
+\item 
 {\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classfile_handling_a8c7f79a289885a8f9b723cbced0b5f86}{write\+To\+File}} (const T \&last)
 \begin{DoxyCompactList}\small\item\em Writes data to the file. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classfile_handling_a7219b8ea967d3a4991500d6b8aef1b53}{write\+To\+File}} (const Args \&... args)
@@ -32,7 +36,7 @@ int \mbox{\hyperlink{classfile_handling_a375566f79650b29da038838fc74b9a3f}{size}
 \doxysubsection{Detailed Description}
 Class for handling file operations such as reading from and writing to files. 
 
-Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00015}{15}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
+Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00016}{16}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
 
 
 
@@ -73,6 +77,18 @@ Definition at line \mbox{\hyperlink{_file_handling_8cpp_source_l00012}{12}} of f
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classfile_handling_a508a606af29946619af8549a50e3e785}\index{fileHandling@{fileHandling}!deleteRow@{deleteRow}}
+\index{deleteRow@{deleteRow}!fileHandling@{fileHandling}}
+\doxysubsubsection{\texorpdfstring{deleteRow()}{deleteRow()}}
+{\footnotesize\ttfamily \label{classfile_handling_a508a606af29946619af8549a50e3e785} 
+void file\+Handling\+::delete\+Row (\begin{DoxyParamCaption}\item[{int}]{col}{, }\item[{const std\+::string \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00093}{93}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 0
 \Hypertarget{classfile_handling_a66adba6f54765d5cce9350306cb6d11f}\index{fileHandling@{fileHandling}!readFromFile@{readFromFile}}
 \index{readFromFile@{readFromFile}!fileHandling@{fileHandling}}
 \doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
@@ -88,12 +104,24 @@ Linked\+List$<$std\+::string$>$ A linked list containing the data read from the 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00093}{93}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
+Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00162}{162}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
 
 Here is the call graph for this function\+:
-% FIG 0
-Here is the caller graph for this function\+:
 % FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{classfile_handling_a271d0f0d252d2edb318046e497b1ebac}\index{fileHandling@{fileHandling}!updateFile@{updateFile}}
+\index{updateFile@{updateFile}!fileHandling@{fileHandling}}
+\doxysubsubsection{\texorpdfstring{updateFile()}{updateFile()}}
+{\footnotesize\ttfamily \label{classfile_handling_a271d0f0d252d2edb318046e497b1ebac} 
+void file\+Handling\+::update\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Value}{, }\item[{int}]{id}{, }\item[{int}]{column}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00056}{56}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
 \Hypertarget{classfile_handling_a7219b8ea967d3a4991500d6b8aef1b53}\index{fileHandling@{fileHandling}!writeToFile@{writeToFile}}
 \index{writeToFile@{writeToFile}!fileHandling@{fileHandling}}
 \doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -117,7 +145,7 @@ Writes multiple arguments to the file.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00077}{77}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
+Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00146}{146}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
 
 \Hypertarget{classfile_handling_a8c7f79a289885a8f9b723cbced0b5f86}\index{fileHandling@{fileHandling}!writeToFile@{writeToFile}}
 \index{writeToFile@{writeToFile}!fileHandling@{fileHandling}}
@@ -142,10 +170,10 @@ Writes data to the file.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00063}{63}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
+Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00132}{132}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
 
 Here is the caller graph for this function\+:
-% FIG 2
+% FIG 4
 
 
 \doxysubsection{Member Data Documentation}
@@ -157,7 +185,7 @@ int file\+Handling\+::size}
 
 
 
-Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00049}{49}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
+Definition at line \mbox{\hyperlink{_file_handling_8h_source_l00050}{50}} of file \mbox{\hyperlink{_file_handling_8h_source}{File\+Handling.\+h}}.
 
 
 

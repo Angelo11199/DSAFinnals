@@ -1,6 +1,8 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#include <windows.h>
+
 #include <array>
 #include <iostream>
 #include <sstream>
@@ -31,7 +33,6 @@ void splitData(const std::string& input, char delimiter, std::array<std::string,
  * @param prompt Optional prompt message to display to the user
  * @return double The double value entered by the user
  */
-// gets a number from the user
 inline double getDouble(std::string prompt = "") {
     std::string num;
     char* p;
@@ -82,15 +83,20 @@ inline int displayMenu2() {
 }
 
 inline int password() {
+    std::cout << "In order to proceed.\n\n";
     std::cout << "-------------------------------------------------------------------------" << std::endl;
-    std::cout << "In order to proceed. ";
-    std::cout << "Enter password: \n";
+    std::cout << "Enter password: ";
     int password;
     std::cin >> password;
-    if (password == 0000)
-        return 1;
-    else
-        return -1;
+    return password == 1234 ? 1 : 0;
+}
+inline int clear() {
+    int temp;
+    std::cout << "-------------------------------------------------------------------------" << std::endl;
+    std::cout << "Input any key to continue: " << std::endl;
+    std::cin.get();
+    std::cin.ignore();
+    return system("cls");
 }
 
 #endif  // UTILS_H

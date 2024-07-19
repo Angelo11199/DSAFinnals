@@ -45,6 +45,7 @@ int main() {
                 getline(cin, currentClient.clientAddress);
                 clientId = clientList.addClient(currentClient, true);
                 cout << "New client added and logged in successfully!\n";
+
                 break;
             }
         }
@@ -53,6 +54,7 @@ int main() {
     bool isRunning = true;
     int choice;
     while (isRunning) {
+        clear();
         displayMenu();
         choice = (int)getDouble("Enter your choice: ");
         switch (choice) {
@@ -183,7 +185,7 @@ int main() {
                      << endl;
                 bool adminPassed = password() == 1;
                 if (!adminPassed) {
-                    cout << "Password Incorrect! \n\n";
+                    cout << "Password Incorrect! \n";
                     break;
                 }
                 displayMenu2();
@@ -241,11 +243,7 @@ int main() {
                         }
                         break;
                     }
-                    case 4: {
-                        cout << "-------------------------------------------------------------------------" << endl;
-                        cout << "Going back.\n";
-                        break;
-                    }
+                    case 4:
                     default:
                         cout << "-------------------------------------------------------------------------" << endl;
                         cout << "Going back.\n";

@@ -5,66 +5,87 @@
 \DoxyCodeLine{\Hypertarget{utils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
 \DoxyCodeLine{\Hypertarget{utils_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
 \DoxyCodeLine{\Hypertarget{utils_8h_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <array>}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_linked_list_8h}{./LinkedList.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00017}00017\ \textcolor{comment}{//\ Definition\ of\ splitData\ function}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00018}00018\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{size\_t}\ N>}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00019}\mbox{\hyperlink{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}{splitData}}(\textcolor{keyword}{const}\ std::string\&\ input,\ \textcolor{keywordtype}{char}\ delimiter,\ std::array<std::string,\ N>\&\ output)\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00020}00020\ \ \ \ \ std::istringstream\ stream(input);}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00021}00021\ \ \ \ \ std::string\ token;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(stream,\ token,\ delimiter)\ \&\&\ index\ <\ N)\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ output[index++]\ =\ token;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00026}00026\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00027}00027\ \}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00034}00034\ \textcolor{comment}{//\ gets\ a\ number\ from\ the\ user}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00035}\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{00035}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(std::string\ prompt\ =\ \textcolor{stringliteral}{"{}"{}})\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00036}00036\ \ \ \ \ std::string\ num;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{char}*\ p;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ std::cout\ <<\ prompt;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ std::cin\ >>\ num;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ convertedNum\ =\ strtod(num.c\_str(),\ \&p);}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*p)\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ input"{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ convertedNum;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00048}00048\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00050}00050\ \}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00057}\mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{00057}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{displayMenu}}()\ \{}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00058}00058\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Office\ Space\ Rental\ System\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00059}00059\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ Add\ New\ Office\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00060}00060\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ Rent\ an\ Office\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00061}00061\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ Return\ an\ Office\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00062}00062\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[4]\ Show\ Office\ Details\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00063}00063\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[5]\ Display\ All\ Offices\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00064}00064\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[6]\ Add\ New\ Client\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00065}00065\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[7]\ Show\ Client\ Details\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00066}00066\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[8]\ Exit\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00067}00067\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Choose\ an\ option:\ "{}};}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00069}00069\ \}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00070}00070\ }
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00077}00077\ \textcolor{comment}{//\ inline\ std::string\ generateRandomNumber()\ \{}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00078}00078\ \textcolor{comment}{//\ \ \ \ \ srand(time(0));\ \ //\ Seed\ the\ random\ number\ generator}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00079}00079\ \textcolor{comment}{//\ \ \ \ \ std::string\ random\_number\_str;}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00080}00080\ \textcolor{comment}{//\ \ \ \ \ int\ digits\ =\ 10;\ \ //\ Number\ of\ digits}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00081}00081\ \textcolor{comment}{//\ \ \ \ \ for\ (int\ i\ =\ 0;\ i\ <\ digits;\ ++i)\ \{}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00082}00082\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ int\ random\_number\ =\ rand()\ \%\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Generate\ a\ random\ number\ between\ 0\ and\ 9}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00083}00083\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ random\_number\_str\ +=\ std::to\_string(random\_number);\ \ //\ Append\ the\ digit\ to\ the\ string}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00084}00084\ \textcolor{comment}{//\ \ \ \ \ \}}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00085}00085\ \textcolor{comment}{//\ \ \ \ \ return\ random\_number\_str;}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00086}00086\ \textcolor{comment}{//\ \}}}
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00087}00087\ }
-\DoxyCodeLine{\Hypertarget{utils_8h_source_l00088}00088\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ UTILS\_H}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_linked_list_8h}{./LinkedList.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00019}00019\ \textcolor{comment}{//\ Definition\ of\ splitData\ function}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00020}00020\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{size\_t}\ N>}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00021}\mbox{\hyperlink{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}{00021}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8h_a0bbdc0fddc1e9cafefc319fbf2a7fe6f}{splitData}}(\textcolor{keyword}{const}\ std::string\&\ input,\ \textcolor{keywordtype}{char}\ delimiter,\ std::array<std::string,\ N>\&\ output)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00022}00022\ \ \ \ \ std::istringstream\ stream(input);}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00023}00023\ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(stream,\ token,\ delimiter)\ \&\&\ index\ <\ N)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ output[index++]\ =\ token;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00036}00036\ \textcolor{comment}{//\ gets\ a\ number\ from\ the\ user}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00037}\mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{00037}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{utils_8h_a2c20bc98253e8f32fb63e75a010df7c6}{getDouble}}(std::string\ prompt\ =\ \textcolor{stringliteral}{"{}"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00038}00038\ \ \ \ \ std::string\ num;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{char}*\ p;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ std::cout\ <<\ prompt;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ std::cin\ >>\ num;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ convertedNum\ =\ strtod(num.c\_str(),\ \&p);}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*p)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ input"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ convertedNum;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00050}00050\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00059}\mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{00059}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{utils_8h_aad9ed7a055a99883645739e4bfca0e5e}{displayMenu}}()\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00060}00060\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00061}00061\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Office\ Space\ Rental\ System\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00062}00062\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ Add\ New\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00063}00063\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ Rent\ an\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00064}00064\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ Return\ an\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00065}00065\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[4]\ Show\ Office\ Details\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00066}00066\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[5]\ Display\ All\ Offices\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00067}00067\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[6]\ Check\ Office\ Availability\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00068}00068\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[7]\ Show\ Rented\ Office\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00069}00069\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[8]\ Client\ Maintenance\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00070}00070\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[9]\ Exit\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00071}00071\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00075}\mbox{\hyperlink{utils_8h_a51229e227568ec1b39d35a7551914ca2}{00075}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{utils_8h_a51229e227568ec1b39d35a7551914ca2}{displayMenu2}}()\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00076}00076\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00077}00077\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nClient\ Maintenance\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00078}00078\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ Add\ New\ Client\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00079}00079\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ Show\ Client\ Details\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00080}00080\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ List\ of\ Videos\ Rented\ by\ a\ Customer\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00081}00081\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[4]\ Go\ back\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00082}00082\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00086}\mbox{\hyperlink{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}{00086}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}{password}}()\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00087}00087\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}In\ order\ to\ proceed.\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00088}00088\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00089}00089\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Enter\ password:\ "{}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}{password}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00091}00091\ \ \ \ \ std::cin\ >>\ \mbox{\hyperlink{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}{password}};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{utils_8h_a67c3f0b5f9613c6e4f29add58bb0b513}{password}}\ ==\ 0000)}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00098}\mbox{\hyperlink{utils_8h_a2cb0e4653a539a883b21a893d89cb648}{00098}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{utils_8h_a2cb0e4653a539a883b21a893d89cb648}{clear}}()\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00099}00099\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00100}00100\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Input\ any\ key\ to\ continue:\ "{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00103}00103\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ UTILS\_H}}
 
 \end{DoxyCode}
