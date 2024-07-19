@@ -33,6 +33,8 @@ int main() {
             case 'Y': {
                 clientId = (int)getDouble("Enter your Client ID: ");
                 clientList = clientRent(clientId);
+                clientData exist = clientList.getClient(clientId);
+                if (exist.id == 0) clientId = -1;
                 break;
             }
             case 'N': {
