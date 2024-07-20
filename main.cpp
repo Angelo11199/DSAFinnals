@@ -76,10 +76,9 @@ int main() {
                 getline(cin, newOffice.officeName);
                 cout << "Enter Office Address: ";
                 getline(cin, newOffice.officeAddress);
-                cout << "Enter Office Price: ";
-                cin >> newOffice.officePrice;
+                newOffice.officePrice = (int) getDouble("Enter Office Price: ");
                 cout << "Enter Office Size: ";
-                cin >> newOffice.officeSize;
+                getline(cin, newOffice.officeSize);
                 newOffice.isRented = false;
                 officeList.addOffice(newOffice);
                 cout << "New Office added successfully!\n";
@@ -201,7 +200,7 @@ int main() {
                         currentClient.isAdmin = false;
                         cout << currentClient.id << endl;
                         cout << "Enter new Client Name: ";
-                        getline(cin, currentClient.clientName);
+                        getline(cin, currentClient.clientName);                        
                         cout << "Enter new Client Address: ";
                         getline(cin, currentClient.clientAddress);
                         clientList.addClient(currentClient, true);
